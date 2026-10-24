@@ -1,0 +1,87 @@
+# Prepared for a future GitHub repository. No hosted run has occurred in the
+# source-archive authoring environment. A green run still needs manual PC checks.
+name: Cross-platform verification
+on:
+  pull_request:
+  push:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: cross-platform-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    name: ${{ matrix.name }} · Swift 6.4.1
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: macos-15
+            name: macOS
+          - os: windows-latest
+            name: Windows-x64
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 60
+    env:
+      LOFTY_DESKTOP: '1'
+    steps:
+      # Commit pins verified against each action's upstream repository API.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Install the pinned Swift release
+        uses: compnerd/gha-setup-swift@775d3f4111c5be58a0f62f2efdd353bb8fac15c7
+        with:
+          swift-version: swift-6.4.1-release
+          swift-build: 6.4.1-RELEASE
+          build_arch: amd64
+          cache: 'false'
+      - name: Build pinned SDL on macOS
+        if: runner.os == 'macOS'
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dist/ci-macos
+          curl -fL 'https://github.com/libsdl-org/SDL/releases/download/release-3.4.0/SDL3-3.4.0.tar.gz' -o "$RUNNER_TEMP/SDL3-3.4.0.tar.gz"
+          echo "082cbf5f429e0d80820f68dc2b507a94d4cc1b4e70817b119bbb8ec6a69584b8  $RUNNER_TEMP/SDL3-3.4.0.tar.gz" | shasum -a 256 -c -
+          tar -xzf "$RUNNER_TEMP/SDL3-3.4.0.tar.gz" -C "$RUNNER_TEMP"
+          cmake -S "$RUNNER_TEMP/SDL3-3.4.0" -B "$RUNNER_TEMP/sdl-build" -DCMAKE_BUILD_TYPE=Release -DCMAKE_OSX_DEPLOYMENT_TARGET=13.0 -DSDL_SHARED=ON -DSDL_STATIC=OFF -DSDL_TESTS=OFF -DSDL_EXAMPLES=OFF -DCMAKE_INSTALL_PREFIX="$RUNNER_TEMP/lofty-sdl" 2>&1 | tee dist/ci-macos/sdl-configure.log
+          cmake --build "$RUNNER_TEMP/sdl-build" --parallel 3 2>&1 | tee dist/ci-macos/sdl-build.log
+          cmake --install "$RUNNER_TEMP/sdl-build" 2>&1 | tee dist/ci-macos/sdl-install.log
+          echo "LOFTY_SDL_ROOT=$RUNNER_TEMP/lofty-sdl" >> "$GITHUB_ENV"
+      - name: Mac native and portable tests, replay, and GUI smoke
+        if: runner.os == 'macOS'
+        shell: bash
+        run: |
+          set -euo pipefail
+          export DYLD_LIBRARY_PATH="$LOFTY_SDL_ROOT/lib${DYLD_LIBRARY_PATH:+:$DYLD_LIBRARY_PATH}"
+          swift --version | tee dist/ci-macos/swift-version.txt
+          swift test -c release --disable-sandbox 2>&1 | tee dist/ci-macos/tests.log
+          swift build -c release --disable-sandbox --product LoftyAmbitions 2>&1 | tee dist/ci-macos/native-build.log
+          swift build -c release --disable-sandbox --product LoftyDesktop 2>&1 | tee dist/ci-macos/desktop-build.log
+          swift build -c release --disable-sandbox --product TowerReplay 2>&1 | tee dist/ci-macos/replay-build.log
+          products="$(swift build -c release --disable-sandbox --show-bin-path)"
+          python3 scripts/check-parity.py --replay "$products/TowerReplay" --write-actual dist/ci-macos/replay.snapshot.json --report dist/ci-macos/parity.json
+          python3 -c 'import subprocess,sys; subprocess.run(sys.argv[1:],check=True,timeout=120)' "$products/LoftyDesktop" --smoke --smoke-output "$PWD/dist/ci-macos/desktop-smoke" 2>&1 | tee dist/ci-macos/desktop-smoke.log
+          python3 scripts/check-parity.py --actual dist/ci-macos/desktop-smoke/snapshot.json --report dist/ci-macos/desktop-parity.json
+      - name: Windows tests, runtime packaging, replay, and GUI smoke
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: ./scripts/build-windows.ps1
+      - name: Retain Mac logs and captures
+        if: always() && runner.os == 'macOS'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: macOS-verification-${{ github.sha }}
+          path: dist/ci-macos/
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Retain Windows package and diagnostics
+        if: always() && runner.os == 'Windows'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: Windows-verification-${{ github.sha }}
+          path: |
+            dist/windows/*.zip
+            dist/windows/*.sha256
+          if-no-files-found: warn
+          retention-days: 14
