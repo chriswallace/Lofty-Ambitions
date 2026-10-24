@@ -1,0 +1,354 @@
+{
+  "cash" : 32420,
+  "coreColumn" : 32,
+  "dailyExpenses" : 2247.5000000000086,
+  "dailyIncome" : 1035.4555555555567,
+  "day" : 1,
+  "earnedStars" : 1,
+  "elevators" : [
+    {
+      "bottomFloor" : 0,
+      "column" : 52,
+      "direction" : -1,
+      "doorTime" : 0,
+      "id" : 1,
+      "lobbyRise" : 0,
+      "passengers" : 4,
+      "position" : 1.6800000000000002,
+      "targetFloor" : 1,
+      "topFloor" : 3,
+      "type" : "wide"
+    }
+  ],
+  "events" : [
+    "Issue resolved · floor 1, unit 2.",
+    "Repairs in progress · floor 1, unit 2.",
+    "Fire damage · floor 1, unit 2.",
+    "Firefighters extinguishing · floor 1, unit 2.",
+    "Firefighters responding · floor 1, unit 2.",
+    "Room on fire · Office, floor 1, unit 2.",
+    "Ambition complete: Lunch, then a little shopping! +$4,000.",
+    "Ambition complete: Open for business! +$3,000.",
+    "Elevator 1 relocated.",
+    "Welcome to New Horizon. Build your first floor, add rooms, then connect an elevator."
+  ],
+  "floorSpans" : {
+    "0" : {
+      "left" : 0,
+      "right" : 66
+    },
+    "1" : {
+      "left" : 0,
+      "right" : 66
+    },
+    "2" : {
+      "left" : 0,
+      "right" : 66
+    },
+    "3" : {
+      "left" : 0,
+      "right" : 66
+    }
+  },
+  "history" : [
+
+  ],
+  "minute" : 1170,
+  "name" : "New Horizon",
+  "nextID" : 8,
+  "nextTravelerID" : 57,
+  "progression" : {
+    "abilityActivations" : {
+
+    },
+    "achievedAmbitionIDs" : [
+      "daily-essentials",
+      "first-business",
+      "vertical-neighborhood"
+    ],
+    "claimedAmbitionIDs" : [
+      "daily-essentials",
+      "first-business"
+    ]
+  },
+  "rooms" : [
+    {
+      "floor" : 0,
+      "happiness" : 0.80000000000000004,
+      "id" : 1,
+      "kind" : "lobby",
+      "occupancy" : 0,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 1,
+      "happiness" : 0.80000000000000004,
+      "id" : 2,
+      "incident" : {
+        "arrears" : 0,
+        "durationMinutes" : 180,
+        "kind" : "fire",
+        "remainingMinutes" : 180,
+        "responseRoute" : "ladder",
+        "severity" : 0.18000000000000002,
+        "stage" : "resolved"
+      },
+      "kind" : "office",
+      "occupancy" : 0,
+      "rent" : 1.1000000000000001,
+      "slot" : 0,
+      "style" : 1
+    },
+    {
+      "depositRequirement" : "none",
+      "floor" : 1,
+      "happiness" : 0.8600000000000001,
+      "id" : 3,
+      "kind" : "apartment",
+      "occupancy" : 0.64400000000000035,
+      "rent" : 1,
+      "screening" : "standard",
+      "slot" : 12,
+      "style" : 0,
+      "tenantDefaultRisk" : 1
+    },
+    {
+      "floor" : 1,
+      "happiness" : 0.8600000000000001,
+      "id" : 4,
+      "kind" : "apartment",
+      "occupancy" : 0.64400000000000035,
+      "rent" : 1,
+      "slot" : 16,
+      "style" : 2,
+      "tenantDefaultRisk" : 1
+    },
+    {
+      "floor" : 1,
+      "happiness" : 0.8600000000000001,
+      "id" : 5,
+      "kind" : "apartment",
+      "occupancy" : 0.64400000000000035,
+      "rent" : 1,
+      "slot" : 20,
+      "style" : 1,
+      "tenantDefaultRisk" : 1
+    },
+    {
+      "floor" : 2,
+      "happiness" : 0.8600000000000001,
+      "id" : 6,
+      "kind" : "restaurant",
+      "occupancy" : 0.64400000000000035,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 2,
+      "happiness" : 0.8600000000000001,
+      "id" : 7,
+      "kind" : "shop",
+      "occupancy" : 0.64400000000000035,
+      "rent" : 1,
+      "slot" : 32
+    }
+  ],
+  "scenerySeed" : 20261024,
+  "topFloor" : 3,
+  "travelers" : [
+    {
+      "destination" : 0,
+      "destinationX" : 1,
+      "floor" : 0,
+      "id" : 43,
+      "phase" : "walkingToRoom",
+      "roomID" : 6,
+      "route" : [
+
+      ],
+      "waited" : 28,
+      "x" : 22.900000000000077
+    },
+    {
+      "destination" : 0,
+      "destinationX" : 1,
+      "floor" : 0,
+      "id" : 44,
+      "phase" : "walkingToRoom",
+      "roomID" : 5,
+      "route" : [
+
+      ],
+      "waited" : 17,
+      "x" : 22.900000000000077
+    },
+    {
+      "destination" : 0,
+      "destinationX" : 1,
+      "floor" : 0,
+      "id" : 45,
+      "phase" : "walkingToRoom",
+      "roomID" : 4,
+      "route" : [
+
+      ],
+      "waited" : 0,
+      "x" : 22.900000000000077
+    },
+    {
+      "destination" : 0,
+      "destinationX" : 1,
+      "floor" : 0,
+      "id" : 46,
+      "phase" : "walkingToRoom",
+      "roomID" : 3,
+      "route" : [
+
+      ],
+      "waited" : 15,
+      "x" : 22.900000000000077
+    },
+    {
+      "destination" : 0,
+      "destinationX" : 1,
+      "floor" : 0,
+      "id" : 47,
+      "phase" : "walkingToRoom",
+      "roomID" : 7,
+      "route" : [
+
+      ],
+      "waited" : 22,
+      "x" : 22.900000000000077
+    },
+    {
+      "destination" : 0,
+      "destinationX" : 1,
+      "elevatorID" : 1,
+      "floor" : 2,
+      "id" : 48,
+      "phase" : "riding",
+      "roomID" : 6,
+      "route" : [
+        0
+      ],
+      "waited" : 32,
+      "x" : 56.5
+    },
+    {
+      "destination" : 0,
+      "destinationX" : 1,
+      "elevatorID" : 1,
+      "floor" : 1,
+      "id" : 49,
+      "phase" : "riding",
+      "roomID" : 5,
+      "route" : [
+        0
+      ],
+      "waited" : 21,
+      "x" : 56.5
+    },
+    {
+      "destination" : 0,
+      "destinationX" : 1,
+      "elevatorID" : 1,
+      "floor" : 1,
+      "id" : 50,
+      "phase" : "riding",
+      "roomID" : 4,
+      "route" : [
+        0
+      ],
+      "waited" : 4,
+      "x" : 56.5
+    },
+    {
+      "boardingElevatorID" : 1,
+      "destination" : 0,
+      "destinationX" : 1,
+      "floor" : 1,
+      "id" : 51,
+      "phase" : "waiting",
+      "roomID" : 3,
+      "route" : [
+        0
+      ],
+      "waited" : 13,
+      "x" : 56.5
+    },
+    {
+      "destination" : 0,
+      "destinationX" : 1,
+      "elevatorID" : 1,
+      "floor" : 2,
+      "id" : 52,
+      "phase" : "riding",
+      "roomID" : 7,
+      "route" : [
+        0
+      ],
+      "waited" : 26,
+      "x" : 56.5
+    },
+    {
+      "boardingElevatorID" : 1,
+      "destination" : 0,
+      "destinationX" : 1,
+      "floor" : 2,
+      "id" : 53,
+      "phase" : "walkingToLift",
+      "roomID" : 6,
+      "route" : [
+        0
+      ],
+      "waited" : 0,
+      "x" : 42.399999999999984
+    },
+    {
+      "boardingElevatorID" : 1,
+      "destination" : 0,
+      "destinationX" : 1,
+      "floor" : 1,
+      "id" : 54,
+      "phase" : "walkingToLift",
+      "roomID" : 5,
+      "route" : [
+        0
+      ],
+      "waited" : 0,
+      "x" : 46.799999999999955
+    },
+    {
+      "boardingElevatorID" : 1,
+      "destination" : 0,
+      "destinationX" : 1,
+      "floor" : 1,
+      "id" : 55,
+      "phase" : "walkingToLift",
+      "roomID" : 4,
+      "route" : [
+        0
+      ],
+      "waited" : 0,
+      "x" : 33.20000000000001
+    },
+    {
+      "boardingElevatorID" : 1,
+      "destination" : 0,
+      "destinationX" : 1,
+      "floor" : 1,
+      "id" : 56,
+      "phase" : "walkingToLift",
+      "roomID" : 3,
+      "route" : [
+        0
+      ],
+      "waited" : 0,
+      "x" : 19.600000000000005
+    }
+  ],
+  "tripsCompleted" : 42,
+  "version" : 2
+}

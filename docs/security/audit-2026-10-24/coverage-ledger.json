@@ -1,0 +1,1352 @@
+[
+  {
+    "coverage_id": ".github%2Fworkflows%2Fcross-platform.yml%23pull_request::.github%2Fworkflows%2Fcross-platform.yml%23permissions::.github::ATTACK-CLASSES.md%23Access%20control",
+    "canonical_refs": {
+      "surface": ".github/workflows/cross-platform.yml#pull_request",
+      "boundary": ".github/workflows/cross-platform.yml#permissions",
+      "subsystem": ".github",
+      "attack_class": "ATTACK-CLASSES.md#Access control"
+    },
+    "surface": ".github/workflows/cross-platform.yml#pull_request",
+    "boundary": ".github/workflows/cross-platform.yml#permissions",
+    "subsystem": ".github",
+    "attack_class": "Access control",
+    "starting_paths": [
+      ".github/workflows/cross-platform.yml",
+      "scripts/build-windows.ps1"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Access control",
+    "selected_companion_blocks": [
+      "SUPPLY-CHAIN-AND-RELEASE.md#Core discipline",
+      "SUPPLY-CHAIN-AND-RELEASE.md#Untrusted code in a privileged workflow",
+      "SUPPLY-CHAIN-AND-RELEASE.md#Workflow command and expression confusion",
+      "SUPPLY-CHAIN-AND-RELEASE.md#Cache, artifact, and workspace trust mixing",
+      "SUPPLY-CHAIN-AND-RELEASE.md#Universal moves",
+      "SUPPLY-CHAIN-AND-RELEASE.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "ATTACK-CLASSES.md#Injection",
+        "reason": "No separate Injection boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Resource and file handling",
+        "reason": "No separate Resource and file handling boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Cryptography and secrets",
+        "reason": "No separate Cryptography and secrets boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Business logic",
+        "reason": "No separate Business logic boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Feature abuse and data leakage",
+        "reason": "No separate Feature abuse and data leakage boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Chained vulnerabilities and trust boundaries",
+        "reason": "No separate Chained vulnerabilities and trust boundaries boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Wildcard",
+        "reason": "No separate Wildcard boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Obvious things",
+        "reason": "No separate Obvious things boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Important",
+        "reason": "No separate Important boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunt_release",
+    "reviewed_paths": [
+      ".github/workflows/cross-platform.yml",
+      "scripts/build-windows.ps1"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_release",
+        "reviewed_paths": [
+          ".github/workflows/cross-platform.yml",
+          "scripts/build-windows.ps1"
+        ],
+        "invariant": "Contributor-controlled CI code must not acquire protected credentials, write authority, or a trusted release consumer.",
+        "method": "source",
+        "result": "Workflow lines 4-9 use pull_request/push/workflow_dispatch and contents:read. Actions are commit-pinned at lines 30,32,72,80; setup caching is disabled at line 37. No source-visible secrets, protected environment, downstream workflow_run, deployment, publication, or cross-job artifact/cache consumer exists. Shell expressions use fixed matrix values and runner paths; contributor text is not interpolated into commands. Build outputs are verification artifacts, not an authorized release promotion.",
+        "artifact": null
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "assignment_owner": "hunt_release",
+    "hardening": [
+      ".gitignore:1-5 excludes builds and downloaded SDL but lacks common dotenv/key exclusions; make-pc-test-bundle.py:13-14 recursively includes selected source directories and follows file references. No actual credential or private file inclusion was found; explicit release-input and secret-file exclusions would reduce future accidental inclusion.",
+      "Dependency pin consistency was checked locally; external vulnerability advisories, hosted repository settings, installed runtime identities and actual Windows loader behavior were outside this source-only review."
+    ]
+  },
+  {
+    "coverage_id": "Package.swift%23package::scripts%2Fmake-pc-test-bundle.py%23files::scripts::ATTACK-CLASSES.md%23Obvious%20things",
+    "canonical_refs": {
+      "surface": "Package.swift#package",
+      "boundary": "scripts/make-pc-test-bundle.py#files",
+      "subsystem": "scripts",
+      "attack_class": "ATTACK-CLASSES.md#Obvious things"
+    },
+    "surface": "Package.swift#package",
+    "boundary": "scripts/make-pc-test-bundle.py#files",
+    "subsystem": "scripts",
+    "attack_class": "Obvious things",
+    "starting_paths": [
+      "Package.swift",
+      ".gitignore",
+      ".github/workflows/cross-platform.yml",
+      "scripts",
+      "Sources",
+      "Vendor/stb"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Obvious things",
+    "selected_companion_blocks": [
+      "DATA-ISOLATION-AND-LIFECYCLE.md#Core discipline",
+      "DATA-ISOLATION-AND-LIFECYCLE.md#Analytics, logs, traces, and diagnostics as alternate readers",
+      "DATA-ISOLATION-AND-LIFECYCLE.md#Universal moves",
+      "DATA-ISOLATION-AND-LIFECYCLE.md#Validation rules",
+      "SUPPLY-CHAIN-AND-RELEASE.md#Core discipline",
+      "SUPPLY-CHAIN-AND-RELEASE.md#Build-context inclusion",
+      "SUPPLY-CHAIN-AND-RELEASE.md#Universal moves",
+      "SUPPLY-CHAIN-AND-RELEASE.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "ATTACK-CLASSES.md#Injection",
+        "reason": "No separate Injection boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Access control",
+        "reason": "No separate Access control boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Resource and file handling",
+        "reason": "No separate Resource and file handling boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Cryptography and secrets",
+        "reason": "No separate Cryptography and secrets boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Business logic",
+        "reason": "No separate Business logic boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Feature abuse and data leakage",
+        "reason": "No separate Feature abuse and data leakage boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Chained vulnerabilities and trust boundaries",
+        "reason": "No separate Chained vulnerabilities and trust boundaries boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Wildcard",
+        "reason": "No separate Wildcard boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Important",
+        "reason": "No separate Important boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunt_release",
+    "reviewed_paths": [
+      "Package.swift",
+      ".gitignore",
+      ".github/workflows/cross-platform.yml",
+      "scripts/make-pc-test-bundle.py",
+      "scripts/build-windows.ps1",
+      "scripts/check-parity.py",
+      "Sources/TowerApp/main.swift",
+      "Sources/TowerReplay/main.swift",
+      "Sources/TowerDesktop/main.swift",
+      "Sources/CDesktop/desktop.c",
+      "Vendor/stb/README.md",
+      "docs/DESIGN.md"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_release",
+        "reviewed_paths": [
+          "Package.swift",
+          ".gitignore",
+          ".github/workflows/cross-platform.yml",
+          "scripts/make-pc-test-bundle.py",
+          "scripts/build-windows.ps1",
+          "scripts/check-parity.py",
+          "Vendor/stb/README.md",
+          "docs/DESIGN.md"
+        ],
+        "invariant": "Source bundles and diagnostics must not expose actual credentials or private local configuration.",
+        "method": "source",
+        "result": "Literal secret/security-comment searches across source, tests, scripts, workflow, vendor and bundled inputs found no credential or security-bypass marker; matches were dependency parser tokens, installed developer tools and gameplay text. Filename searches found no dotenv, credential, PEM/key or dependency-lock files in the reviewed source inputs. make-pc-test-bundle.py:13-17 selects named source directories and root files, excluding build/save locations; lines 19,27-34 bind and verify bundled bytes by SHA-256. Windows diagnostics record tool output, hardware metadata and operator-local errors, with no visible credential input or ambient-environment dump. No actual sensitive bundled file was established.",
+        "artifact": null
+      },
+      {
+        "agent_id": "hunt_release",
+        "reviewed_paths": [
+          "Sources/TowerApp/main.swift",
+          "Sources/TowerReplay/main.swift",
+          "Sources/TowerDesktop/main.swift",
+          "Sources/CDesktop/desktop.c",
+          "Package.swift"
+        ],
+        "invariant": "Debug interfaces, dynamic execution and diagnostics must not introduce an unauthorized remote or privileged reader.",
+        "method": "source",
+        "result": "App entrypoints expose local launcher-controlled demo/screenshot/smoke options; simulation grants are not security assets. Searches found no runtime HTTP server/client, webview, dynamic evaluator or process-launch API in application source. HTTP endpoints, cookies, CORS, redirects, seed authentication credentials and server stack-trace responses have no source-visible surface. Replay stdout and local GUI/stderr diagnostics remain within the invoking player's authority. Package.swift has no remote Swift package dependencies; SDL selection is an intentional developer toolchain input.",
+        "artifact": null
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "assignment_owner": "hunt_release",
+    "hardening": [
+      ".gitignore:1-5 excludes builds and downloaded SDL but lacks common dotenv/key exclusions; make-pc-test-bundle.py:13-14 recursively includes selected source directories and follows file references. No actual credential or private file inclusion was found; explicit release-input and secret-file exclusions would reduce future accidental inclusion.",
+      "Dependency pin consistency was checked locally; external vulnerability advisories, hosted repository settings, installed runtime identities and actual Windows loader behavior were outside this source-only review."
+    ]
+  },
+  {
+    "coverage_id": "Sources%2FCDesktop%2Fdesktop.c%23dialog_done::Sources%2FCDesktop%2Fdesktop.c%23lt_destroy::Sources%2FCDesktop::ATTACK-CLASSES.md%23Chained%20vulnerabilities%20and%20trust%20boundaries",
+    "canonical_refs": {
+      "surface": "Sources/CDesktop/desktop.c#dialog_done",
+      "boundary": "Sources/CDesktop/desktop.c#lt_destroy",
+      "subsystem": "Sources/CDesktop",
+      "attack_class": "ATTACK-CLASSES.md#Chained vulnerabilities and trust boundaries"
+    },
+    "surface": "Sources/CDesktop/desktop.c#dialog_done",
+    "boundary": "Sources/CDesktop/desktop.c#lt_destroy",
+    "subsystem": "Sources/CDesktop",
+    "attack_class": "Chained vulnerabilities and trust boundaries",
+    "starting_paths": [
+      "Sources/CDesktop/desktop.c",
+      "Sources/CDesktop/include/CDesktop.h",
+      "Sources/TowerDesktop/main.swift"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Chained vulnerabilities and trust boundaries",
+    "selected_companion_blocks": [
+      "MEMORY-SAFETY-AND-BINARY.md#Core discipline",
+      "MEMORY-SAFETY-AND-BINARY.md#Use-after-free, stale view, and double free",
+      "MEMORY-SAFETY-AND-BINARY.md#Reference-count and ownership races",
+      "MEMORY-SAFETY-AND-BINARY.md#Pointer-length and ownership contract mismatch",
+      "MEMORY-SAFETY-AND-BINARY.md#Universal moves",
+      "MEMORY-SAFETY-AND-BINARY.md#Validation rules",
+      "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Core discipline",
+      "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Pending-action and user-presence confusion",
+      "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Universal moves",
+      "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "ATTACK-CLASSES.md#Injection",
+        "reason": "No separate Injection boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Access control",
+        "reason": "No separate Access control boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Resource and file handling",
+        "reason": "No separate Resource and file handling boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Cryptography and secrets",
+        "reason": "No separate Cryptography and secrets boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Business logic",
+        "reason": "No separate Business logic boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Feature abuse and data leakage",
+        "reason": "No separate Feature abuse and data leakage boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Wildcard",
+        "reason": "No separate Wildcard boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Obvious things",
+        "reason": "No separate Obvious things boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Important",
+        "reason": "No separate Important boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunt_native",
+    "reviewed_paths": [
+      "Sources/CDesktop/desktop.c",
+      "Sources/CDesktop/include/CDesktop.h",
+      "Sources/TowerDesktop/main.swift"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_native",
+        "reviewed_paths": [
+          "Sources/CDesktop/desktop.c",
+          "Sources/CDesktop/include/CDesktop.h",
+          "Sources/TowerDesktop/main.swift"
+        ],
+        "invariant": "Dialog callbacks retain their queue through shutdown, copy borrowed paths, and do not retain Swift event pointers beyond their documented lifetime.",
+        "method": "source",
+        "result": "desktop.c:267-273 retains the queue before launching either dialog and owns a copied default path. dialog_done:82-94 duplicates the selected filename, updates alive/reference/queue state under one mutex, and frees request storage once. lt_destroy:118-128 marks the queue dead and releases only its own reference; outstanding callbacks reference no desktop/session storage. lt_poll:136-142 transfers path ownership into event_text. main.swift:456-457 copies that pointer into String before the next poll at :540. Initialization failure cleanup also follows the owning-reference path. No source-grounded lifetime violation identified.",
+        "artifact": null
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "assignment_owner": "hunt_native",
+    "hardening": [
+      "Sources/TowerDesktop/main.swift:422-438 should bind purpose and prior speed to each dialog request, or reject another request while one is pending. Currently a single mutable purpose handles asynchronous results; this is a reliability/intent-binding concern without an established lower-trust attacker.",
+      "Sources/CDesktop/desktop.c:73 only checks a 12-byte minimum before an explicitly unsafe font parser (Vendor/stb/stb_truetype.h:6-9). Preserve the trusted-installed-font restriction or use a bounds-validating parser before supporting downloaded fonts.",
+      "Sources/CDesktop/desktop.c:178-181 applies its image budget after whole-file loading and decoding. Preflight dimensions and cap input bytes if artwork becomes user-importable; current callers load publisher-bundled resources.",
+      "Sources/CDesktop/desktop.c:238-239 should handle a NULL glyph bitmap before dereferencing it. Vendor/stb/stb_truetype.h:3741-3750 can return NULL after allocation failure while retaining nonzero bitmap dimensions; no attacker-driven cross-boundary effect was established."
+    ]
+  },
+  {
+    "coverage_id": "Sources%2FCDesktop%2Fdesktop.c%23load_font::Sources%2FCDesktop%2Fdesktop.c%23lt_text::Sources%2FCDesktop::ATTACK-CLASSES.md%23Injection",
+    "canonical_refs": {
+      "surface": "Sources/CDesktop/desktop.c#load_font",
+      "boundary": "Sources/CDesktop/desktop.c#lt_text",
+      "subsystem": "Sources/CDesktop",
+      "attack_class": "ATTACK-CLASSES.md#Injection"
+    },
+    "surface": "Sources/CDesktop/desktop.c#load_font",
+    "boundary": "Sources/CDesktop/desktop.c#lt_text",
+    "subsystem": "Sources/CDesktop",
+    "attack_class": "Injection",
+    "starting_paths": [
+      "Sources/CDesktop/desktop.c",
+      "Sources/CDesktop/include/CDesktop.h",
+      "Vendor/stb/stb_truetype.h",
+      "Sources/TowerDesktop/main.swift"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Injection",
+    "selected_companion_blocks": [
+      "MEMORY-SAFETY-AND-BINARY.md#Core discipline",
+      "MEMORY-SAFETY-AND-BINARY.md#Out-of-bounds read or write",
+      "MEMORY-SAFETY-AND-BINARY.md#Pointer-length and ownership contract mismatch",
+      "MEMORY-SAFETY-AND-BINARY.md#Universal moves",
+      "MEMORY-SAFETY-AND-BINARY.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "ATTACK-CLASSES.md#Access control",
+        "reason": "No separate Access control boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Resource and file handling",
+        "reason": "No separate Resource and file handling boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Cryptography and secrets",
+        "reason": "No separate Cryptography and secrets boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Business logic",
+        "reason": "No separate Business logic boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Feature abuse and data leakage",
+        "reason": "No separate Feature abuse and data leakage boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Chained vulnerabilities and trust boundaries",
+        "reason": "No separate Chained vulnerabilities and trust boundaries boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Wildcard",
+        "reason": "No separate Wildcard boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Obvious things",
+        "reason": "No separate Obvious things boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Important",
+        "reason": "No separate Important boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunt_native",
+    "reviewed_paths": [
+      "Sources/CDesktop/desktop.c",
+      "Sources/CDesktop/include/CDesktop.h",
+      "Vendor/stb/stb_truetype.h",
+      "Sources/TowerDesktop/main.swift"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_native",
+        "reviewed_paths": [
+          "Sources/CDesktop/desktop.c",
+          "Sources/CDesktop/include/CDesktop.h",
+          "Vendor/stb/stb_truetype.h",
+          "Sources/TowerDesktop/main.swift"
+        ],
+        "invariant": "Trace font-byte trust, retained font ownership, Swift string lifetime, UTF-8 decoding, and text-raster buffer bounds.",
+        "method": "source",
+        "result": "desktop.c:55-76 loads fixed OS font paths or launcher-controlled overrides; no exchanged-save field selects a font. stb_truetype.h:1306-1314,1383-1401 uses unchecked file offsets, so the n>=12 check is not malformed-font validation. However, no meaningful lower-trust font delivery path is established: controlling this launcher's environment does not establish greater authority. Font allocations remain owned until desktop teardown (:127). main.swift:91-93 passes Swift strings synchronously; desktop.c:244 copies cache keys. lt_text:246-249 limits text to 4096 bytes and pixels to 512; utf8:213-220 stops at NUL and replaces invalid scalars. text_cache:232-239 checks destination dimensions and clips each destination write. No qualifying injection or native-buffer candidate survives the attacker-boundary gate.",
+        "artifact": null
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "assignment_owner": "hunt_native",
+    "hardening": [
+      "Sources/TowerDesktop/main.swift:422-438 should bind purpose and prior speed to each dialog request, or reject another request while one is pending. Currently a single mutable purpose handles asynchronous results; this is a reliability/intent-binding concern without an established lower-trust attacker.",
+      "Sources/CDesktop/desktop.c:73 only checks a 12-byte minimum before an explicitly unsafe font parser (Vendor/stb/stb_truetype.h:6-9). Preserve the trusted-installed-font restriction or use a bounds-validating parser before supporting downloaded fonts.",
+      "Sources/CDesktop/desktop.c:178-181 applies its image budget after whole-file loading and decoding. Preflight dimensions and cap input bytes if artwork becomes user-importable; current callers load publisher-bundled resources.",
+      "Sources/CDesktop/desktop.c:238-239 should handle a NULL glyph bitmap before dereferencing it. Vendor/stb/stb_truetype.h:3741-3750 can return NULL after allocation failure while retaining nonzero bitmap dimensions; no attacker-driven cross-boundary effect was established."
+    ]
+  },
+  {
+    "coverage_id": "Sources%2FCDesktop%2Fdesktop.c%23lt_image::Assets%2FTokyo%2FRuntime%2FAtlas.swift%23TowerAtlas::Sources%2FCDesktop::ATTACK-CLASSES.md%23Resource%20and%20file%20handling",
+    "canonical_refs": {
+      "surface": "Sources/CDesktop/desktop.c#lt_image",
+      "boundary": "Assets/Tokyo/Runtime/Atlas.swift#TowerAtlas",
+      "subsystem": "Sources/CDesktop",
+      "attack_class": "ATTACK-CLASSES.md#Resource and file handling"
+    },
+    "surface": "Sources/CDesktop/desktop.c#lt_image",
+    "boundary": "Assets/Tokyo/Runtime/Atlas.swift#TowerAtlas",
+    "subsystem": "Sources/CDesktop",
+    "attack_class": "Resource and file handling",
+    "starting_paths": [
+      "Sources/CDesktop/desktop.c",
+      "Assets/Tokyo/Runtime/Atlas.swift",
+      "Vendor/stb/stb_image.h"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Resource and file handling",
+    "selected_companion_blocks": [
+      "MEMORY-SAFETY-AND-BINARY.md#Core discipline",
+      "MEMORY-SAFETY-AND-BINARY.md#Out-of-bounds read or write",
+      "MEMORY-SAFETY-AND-BINARY.md#Integer overflow, underflow, truncation, and signedness",
+      "MEMORY-SAFETY-AND-BINARY.md#Universal moves",
+      "MEMORY-SAFETY-AND-BINARY.md#Validation rules",
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Core discipline",
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Superlinear parsing, matching, or evaluation",
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Universal moves",
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "ATTACK-CLASSES.md#Injection",
+        "reason": "No separate Injection boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Access control",
+        "reason": "No separate Access control boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Cryptography and secrets",
+        "reason": "No separate Cryptography and secrets boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Business logic",
+        "reason": "No separate Business logic boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Feature abuse and data leakage",
+        "reason": "No separate Feature abuse and data leakage boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Chained vulnerabilities and trust boundaries",
+        "reason": "No separate Chained vulnerabilities and trust boundaries boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Wildcard",
+        "reason": "No separate Wildcard boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Obvious things",
+        "reason": "No separate Obvious things boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Important",
+        "reason": "No separate Important boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunt_native",
+    "reviewed_paths": [
+      "Sources/CDesktop/desktop.c",
+      "Sources/CDesktop/include/CDesktop.h",
+      "Assets/Tokyo/Runtime/Atlas.swift",
+      "Assets/Tokyo/Runtime/CloudTexture.swift",
+      "Vendor/stb/stb_image.h",
+      "Sources/TowerDesktop/main.swift",
+      "Package.swift"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_native",
+        "reviewed_paths": [
+          "Sources/CDesktop/desktop.c",
+          "Sources/CDesktop/include/CDesktop.h",
+          "Assets/Tokyo/Runtime/Atlas.swift",
+          "Assets/Tokyo/Runtime/CloudTexture.swift",
+          "Vendor/stb/stb_image.h",
+          "Sources/TowerDesktop/main.swift",
+          "Package.swift"
+        ],
+        "invariant": "Image paths and dimensions must preserve resource trust, decoding lengths, allocation bounds, and Swift-to-C pixel-buffer ownership.",
+        "method": "source",
+        "result": "Package.swift:18 copies fixed artwork into TowerArt resources; Atlas.swift:176-179 resolves Bundle.module independently of the working directory. Desktop image callers at main.swift:131,188,237 derive paths from that resource root and bundled manifest, not save-controlled paths. Atlas.swift:67-74,90-94 validates frame counts, geometry, reference heights and anchors. desktop.c:179 checks size_t-to-int narrowing before stb; stb_image.h:5109-5126 bounds PNG dimensions/pixel products and :5182-5194 bounds compressed chunk growth. desktop.c:181 applies texture limits before texture upload, although after decoding. Dynamic cloud buffers have fixed 192\u00d796\u00d74 allocation at CloudTexture.swift:16,46; main.swift:140-142 pins that array for synchronous lt_pixels consumption, which copies pixels before returning. No lower-trust packaged-asset writer or qualifying shared-resource impact is established.",
+        "artifact": null
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "assignment_owner": "hunt_native",
+    "hardening": [
+      "Sources/TowerDesktop/main.swift:422-438 should bind purpose and prior speed to each dialog request, or reject another request while one is pending. Currently a single mutable purpose handles asynchronous results; this is a reliability/intent-binding concern without an established lower-trust attacker.",
+      "Sources/CDesktop/desktop.c:73 only checks a 12-byte minimum before an explicitly unsafe font parser (Vendor/stb/stb_truetype.h:6-9). Preserve the trusted-installed-font restriction or use a bounds-validating parser before supporting downloaded fonts.",
+      "Sources/CDesktop/desktop.c:178-181 applies its image budget after whole-file loading and decoding. Preflight dimensions and cap input bytes if artwork becomes user-importable; current callers load publisher-bundled resources.",
+      "Sources/CDesktop/desktop.c:238-239 should handle a NULL glyph bitmap before dereferencing it. Vendor/stb/stb_truetype.h:3741-3750 can return NULL after allocation failure while retaining nonzero bitmap dimensions; no attacker-driven cross-boundary effect was established."
+    ]
+  },
+  {
+    "coverage_id": "Sources%2FTowerApp%2Fmain.swift%23AppDelegate::Sources%2FTowerDesktop%2Fmain.swift%23DesktopGame::Sources%2FTowerDesktop::ATTACK-CLASSES.md%23Wildcard",
+    "canonical_refs": {
+      "surface": "Sources/TowerApp/main.swift#AppDelegate",
+      "boundary": "Sources/TowerDesktop/main.swift#DesktopGame",
+      "subsystem": "Sources/TowerDesktop",
+      "attack_class": "ATTACK-CLASSES.md#Wildcard"
+    },
+    "surface": "Sources/TowerApp/main.swift#AppDelegate",
+    "boundary": "Sources/TowerDesktop/main.swift#DesktopGame",
+    "subsystem": "Sources/TowerDesktop",
+    "attack_class": "Wildcard",
+    "starting_paths": [
+      "Sources/TowerApp/main.swift",
+      "Sources/TowerDesktop/main.swift",
+      "Sources/TowerDesktopModel/Interaction.swift",
+      "Sources/TowerPresentation/Scene.swift"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Wildcard",
+    "selected_companion_blocks": [
+      "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Core discipline",
+      "DESKTOP-MOBILE-AND-LOCAL-IPC.md#File-open and intent authority confusion",
+      "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Universal moves",
+      "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "ATTACK-CLASSES.md#Injection",
+        "reason": "No separate Injection boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Access control",
+        "reason": "No separate Access control boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Resource and file handling",
+        "reason": "No separate Resource and file handling boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Cryptography and secrets",
+        "reason": "No separate Cryptography and secrets boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Business logic",
+        "reason": "No separate Business logic boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Feature abuse and data leakage",
+        "reason": "No separate Feature abuse and data leakage boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Chained vulnerabilities and trust boundaries",
+        "reason": "No separate Chained vulnerabilities and trust boundaries boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Obvious things",
+        "reason": "No separate Obvious things boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Important",
+        "reason": "No separate Important boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunt_native",
+    "reviewed_paths": [
+      "Sources/TowerApp/main.swift",
+      "Sources/TowerApp/GameController.swift",
+      "Sources/TowerDesktop/main.swift",
+      "Sources/TowerDesktopModel/Interaction.swift",
+      "Sources/TowerPresentation/Scene.swift"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_native",
+        "reviewed_paths": [
+          "Sources/TowerApp/main.swift",
+          "Sources/TowerApp/GameController.swift",
+          "Sources/TowerDesktop/main.swift",
+          "Sources/TowerDesktopModel/Interaction.swift",
+          "Sources/TowerPresentation/Scene.swift"
+        ],
+        "invariant": "File-open, launch options, pending UI actions, and frontend adapters must not expand another principal's authority over local files.",
+        "method": "source",
+        "result": "AppDelegate exposes menu actions, demo controls and an explicit launcher-provided screenshot destination (:53-60); no custom URL handler, open-file event handler, IPC endpoint or native bridge is present in this entrypoint. GameController.swift:407-409,430-444 uses modal native panels and explicit selected URLs. DesktopGame:422-438 consumes native dialog paths, with session open/save calls as the handoff to peer-owned persistence coverage. Interaction.swift:32-50 maps gestures into session commands; Scene.swift:70-79 maps pointer coordinates into gameplay cells. Desktop launch output paths (:50-55,554-566) and LOCALAPPDATA at Interaction.swift:83 are same-launcher authority. The mutable pending dialog purpose can be overwritten by another UI request, but source establishes no lower-trust principal able to cause that transition. No qualifying authority-confusion candidate identified.",
+        "artifact": null
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "assignment_owner": "hunt_native",
+    "hardening": [
+      "Sources/TowerDesktop/main.swift:422-438 should bind purpose and prior speed to each dialog request, or reject another request while one is pending. Currently a single mutable purpose handles asynchronous results; this is a reliability/intent-binding concern without an established lower-trust attacker.",
+      "Sources/CDesktop/desktop.c:73 only checks a 12-byte minimum before an explicitly unsafe font parser (Vendor/stb/stb_truetype.h:6-9). Preserve the trusted-installed-font restriction or use a bounds-validating parser before supporting downloaded fonts.",
+      "Sources/CDesktop/desktop.c:178-181 applies its image budget after whole-file loading and decoding. Preflight dimensions and cap input bytes if artwork becomes user-importable; current callers load publisher-bundled resources.",
+      "Sources/CDesktop/desktop.c:238-239 should handle a NULL glyph bitmap before dereferencing it. Vendor/stb/stb_truetype.h:3741-3750 can return NULL after allocation failure while retaining nonzero bitmap dimensions; no attacker-driven cross-boundary effect was established."
+    ]
+  },
+  {
+    "coverage_id": "Sources%2FTowerCore%2FTowerSaveStore.swift%23read::Sources%2FTowerCore%2FSimulation.swift%23validated::Sources%2FTowerCore::ATTACK-CLASSES.md%23Resource%20and%20file%20handling",
+    "canonical_refs": {
+      "surface": "Sources/TowerCore/TowerSaveStore.swift#read",
+      "boundary": "Sources/TowerCore/Simulation.swift#validated",
+      "subsystem": "Sources/TowerCore",
+      "attack_class": "ATTACK-CLASSES.md#Resource and file handling"
+    },
+    "surface": "Sources/TowerCore/TowerSaveStore.swift#read",
+    "boundary": "Sources/TowerCore/Simulation.swift#validated",
+    "subsystem": "Sources/TowerCore",
+    "attack_class": "Resource and file handling",
+    "starting_paths": [
+      "Sources/TowerCore/TowerSaveStore.swift",
+      "Sources/TowerCore/Simulation.swift",
+      "Sources/TowerCore/Building.swift",
+      "Sources/TowerCore/Transit.swift"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Resource and file handling",
+    "selected_companion_blocks": [
+      "MEMORY-SAFETY-AND-BINARY.md#Core discipline",
+      "MEMORY-SAFETY-AND-BINARY.md#Integer overflow, underflow, truncation, and signedness",
+      "MEMORY-SAFETY-AND-BINARY.md#Universal moves",
+      "MEMORY-SAFETY-AND-BINARY.md#Validation rules",
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Core discipline",
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Superlinear parsing, matching, or evaluation",
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Universal moves",
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "ATTACK-CLASSES.md#Injection",
+        "reason": "No separate Injection boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Access control",
+        "reason": "No separate Access control boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Cryptography and secrets",
+        "reason": "No separate Cryptography and secrets boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Business logic",
+        "reason": "No separate Business logic boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Feature abuse and data leakage",
+        "reason": "No separate Feature abuse and data leakage boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Chained vulnerabilities and trust boundaries",
+        "reason": "No separate Chained vulnerabilities and trust boundaries boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Wildcard",
+        "reason": "No separate Wildcard boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Obvious things",
+        "reason": "No separate Obvious things boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Important",
+        "reason": "No separate Important boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "candidate",
+    "agent_id": "hunt_saves",
+    "reviewed_paths": [
+      "Sources/TowerCore/TowerSaveStore.swift",
+      "Sources/TowerCore/Simulation.swift",
+      "Sources/TowerCore/Building.swift",
+      "Sources/TowerCore/Transit.swift",
+      "Sources/TowerCore/Underground.swift",
+      "Sources/TowerCore/ElevatorPlacement.swift",
+      "Sources/TowerCore/LobbyUpgrades.swift",
+      "Sources/TowerCore/ApartmentPolicies.swift",
+      "Sources/TowerCore/Incidents.swift",
+      "Sources/TowerCore/Ambitions.swift",
+      "Sources/TowerCore/Progression.swift"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_saves",
+        "reviewed_paths": [
+          "Sources/TowerCore/TowerSaveStore.swift",
+          "Sources/TowerCore/Simulation.swift",
+          "Sources/TowerCore/Building.swift",
+          "Sources/TowerCore/Transit.swift",
+          "Sources/TowerCore/Underground.swift",
+          "Sources/TowerCore/ElevatorPlacement.swift",
+          "Sources/TowerCore/LobbyUpgrades.swift",
+          "Sources/TowerCore/ApartmentPolicies.swift",
+          "Sources/TowerCore/Incidents.swift",
+          "Sources/TowerCore/Ambitions.swift",
+          "Sources/TowerCore/Progression.swift"
+        ],
+        "invariant": "An exchanged save must be rejected safely before unchecked arithmetic or unsafe numeric conversions consume its fields.",
+        "method": "source",
+        "result": "TowerSaveStore.swift:10 decodes directly into validated(). Simulation.swift:301-349 checks versions, cardinality, geometry, finite room values and subsystem state; Ambitions.swift:156 also bounds the progression clock. However, Simulation.swift:320 evaluates unchecked FloorSpan.width before fully bounding both endpoints, and :333 reaches unchecked slot addition. Separately, :304 accepts finite daily totals that :245 later converts to Int without checking representability. No target code was executed.",
+        "artifact": null
+      }
+    ],
+    "result_fingerprints": [
+      "TowerCore/save-geometry-validation-overflow",
+      "TowerCore/save-daily-totals-int-conversion"
+    ],
+    "unresolved": [],
+    "assignment_owner": "hunt_saves",
+    "hardening": [
+      "Whole-file save decoding lacks an explicit byte budget; replay work is unbounded but launcher-authorized. Recovery policy compares lexical standardized paths. No extra principal for these hardening notes was established."
+    ]
+  },
+  {
+    "coverage_id": "Sources%2FTowerCore%2FTowerSaveStore.swift%23switching::Sources%2FTowerSession%2FTowerSession.swift%23TowerSavePolicy::Sources%2FTowerSession::ATTACK-CLASSES.md%23Feature%20abuse%20and%20data%20leakage",
+    "canonical_refs": {
+      "surface": "Sources/TowerCore/TowerSaveStore.swift#switching",
+      "boundary": "Sources/TowerSession/TowerSession.swift#TowerSavePolicy",
+      "subsystem": "Sources/TowerSession",
+      "attack_class": "ATTACK-CLASSES.md#Feature abuse and data leakage"
+    },
+    "surface": "Sources/TowerCore/TowerSaveStore.swift#switching",
+    "boundary": "Sources/TowerSession/TowerSession.swift#TowerSavePolicy",
+    "subsystem": "Sources/TowerSession",
+    "attack_class": "Feature abuse and data leakage",
+    "starting_paths": [
+      "Sources/TowerSession/TowerSession.swift",
+      "Sources/TowerCore/TowerSaveStore.swift",
+      "Sources/TowerApp/GameController.swift",
+      "Sources/TowerDesktop/main.swift"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Feature abuse and data leakage",
+    "selected_companion_blocks": [
+      "DATA-ISOLATION-AND-LIFECYCLE.md#Core discipline",
+      "DATA-ISOLATION-AND-LIFECYCLE.md#Import and restore authority expansion",
+      "DATA-ISOLATION-AND-LIFECYCLE.md#Restore reintroduces invalid state",
+      "DATA-ISOLATION-AND-LIFECYCLE.md#Universal moves",
+      "DATA-ISOLATION-AND-LIFECYCLE.md#Validation rules",
+      "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Core discipline",
+      "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Local file ownership and TOCTOU",
+      "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Universal moves",
+      "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "ATTACK-CLASSES.md#Injection",
+        "reason": "No separate Injection boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Access control",
+        "reason": "No separate Access control boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Resource and file handling",
+        "reason": "No separate Resource and file handling boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Cryptography and secrets",
+        "reason": "No separate Cryptography and secrets boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Business logic",
+        "reason": "No separate Business logic boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Chained vulnerabilities and trust boundaries",
+        "reason": "No separate Chained vulnerabilities and trust boundaries boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Wildcard",
+        "reason": "No separate Wildcard boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Obvious things",
+        "reason": "No separate Obvious things boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Important",
+        "reason": "No separate Important boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "candidate",
+    "agent_id": "hunt_saves",
+    "reviewed_paths": [
+      "Sources/TowerCore/TowerSaveStore.swift",
+      "Sources/TowerSession/TowerSession.swift",
+      "Sources/TowerApp/GameController.swift",
+      "Sources/TowerDesktop/main.swift",
+      "Sources/TowerDesktopModel/Interaction.swift",
+      "Tests/TowerCoreTests/SaveRecoveryTests.swift",
+      "Tests/TowerSessionTests/TowerSessionTests.swift"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_saves",
+        "reviewed_paths": [
+          "Sources/TowerCore/TowerSaveStore.swift",
+          "Sources/TowerSession/TowerSession.swift",
+          "Sources/TowerApp/GameController.swift",
+          "Sources/TowerDesktop/main.swift",
+          "Sources/TowerDesktopModel/Interaction.swift",
+          "Tests/TowerCoreTests/SaveRecoveryTests.swift",
+          "Tests/TowerSessionTests/TowerSessionTests.swift"
+        ],
+        "invariant": "Opening another tower preserves the current tower and cannot silently expand an imported file's write authority.",
+        "method": "source",
+        "result": "TowerSaveStore.swift:26-29 reads before preserving and returns only after recovery succeeds; session replacement follows that return at TowerSession.swift:113-117. Atomic writes and UUID recovery names appear at TowerSaveStore.swift:17-23. Save As policy uses the selected URL, never a path supplied by JSON (:138-139); both frontends preserve unreadable autosaves and block autosave if preservation fails. Exception paths preserve existing state, as also specified by the source-only tests. The geometry trap candidate bypasses those throwable-error paths before recovery: GameController.swift:435 even reads before presenting its save-before-switch prompt.",
+        "artifact": null
+      }
+    ],
+    "result_fingerprints": [
+      "TowerCore/save-geometry-validation-overflow"
+    ],
+    "unresolved": [],
+    "assignment_owner": "hunt_saves",
+    "hardening": [
+      "Whole-file save decoding lacks an explicit byte budget; replay work is unbounded but launcher-authorized. Recovery policy compares lexical standardized paths. No extra principal for these hardening notes was established."
+    ]
+  },
+  {
+    "coverage_id": "Sources%2FTowerReplay%2Fmain.swift%23run::Sources%2FTowerSession%2FTowerReplayTimeline.swift%23run::Sources%2FTowerSession::ATTACK-CLASSES.md%23Business%20logic",
+    "canonical_refs": {
+      "surface": "Sources/TowerReplay/main.swift#run",
+      "boundary": "Sources/TowerSession/TowerReplayTimeline.swift#run",
+      "subsystem": "Sources/TowerSession",
+      "attack_class": "ATTACK-CLASSES.md#Business logic"
+    },
+    "surface": "Sources/TowerReplay/main.swift#run",
+    "boundary": "Sources/TowerSession/TowerReplayTimeline.swift#run",
+    "subsystem": "Sources/TowerSession",
+    "attack_class": "Business logic",
+    "starting_paths": [
+      "Sources/TowerReplay/main.swift",
+      "Sources/TowerSession/TowerReplayTimeline.swift",
+      "Sources/TowerSession/TowerCommand.swift",
+      "Sources/TowerCore/Simulation.swift"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Business logic",
+    "selected_companion_blocks": [
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Core discipline",
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Superlinear parsing, matching, or evaluation",
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Universal moves",
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "ATTACK-CLASSES.md#Injection",
+        "reason": "No separate Injection boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Access control",
+        "reason": "No separate Access control boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Resource and file handling",
+        "reason": "No separate Resource and file handling boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Cryptography and secrets",
+        "reason": "No separate Cryptography and secrets boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Feature abuse and data leakage",
+        "reason": "No separate Feature abuse and data leakage boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Chained vulnerabilities and trust boundaries",
+        "reason": "No separate Chained vulnerabilities and trust boundaries boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Wildcard",
+        "reason": "No separate Wildcard boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Obvious things",
+        "reason": "No separate Obvious things boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Important",
+        "reason": "No separate Important boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunt_saves",
+    "reviewed_paths": [
+      "Sources/TowerReplay/main.swift",
+      "Sources/TowerSession/TowerReplayTimeline.swift",
+      "Sources/TowerSession/TowerCommand.swift",
+      "Sources/TowerSession/TowerSession.swift",
+      "Sources/TowerCore/Simulation.swift",
+      "Sources/TowerCore/Building.swift",
+      "Tests/TowerSessionTests/TowerSessionTests.swift"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_saves",
+        "reviewed_paths": [
+          "Sources/TowerReplay/main.swift",
+          "Sources/TowerSession/TowerReplayTimeline.swift",
+          "Sources/TowerSession/TowerCommand.swift",
+          "Sources/TowerSession/TowerSession.swift",
+          "Sources/TowerCore/Simulation.swift",
+          "Sources/TowerCore/Building.swift",
+          "Tests/TowerSessionTests/TowerSessionTests.swift"
+        ],
+        "invariant": "Replay commands cannot acquire file authority from fixture contents or partially commit a failed command to an existing interactive tower.",
+        "method": "source",
+        "result": "TowerReplay/main.swift:25-30 takes output authority only from explicit launcher arguments; :44 writes only after timeline execution and round-trip checks. TowerReplayTimeline.swift:15-18 checks the version, constructs a fresh session, executes commands sequentially and validates the result. TowerSession.swift:35-69 commits its copied candidate only after the command succeeds. Explicit confirmed demolition and new-game commands operate on that fresh fictional simulation. Unbounded advances and malformed numeric commands affect the invoked CLI process; no shared-service or existing-tower mutation boundary was established.",
+        "artifact": null
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "assignment_owner": "hunt_saves",
+    "hardening": [
+      "Whole-file save decoding lacks an explicit byte budget; replay work is unbounded but launcher-authorized. Recovery policy compares lexical standardized paths. No extra principal for these hardening notes was established."
+    ]
+  },
+  {
+    "coverage_id": "Sources%2FTowerSession%2FTowerSession.swift%23requestDemolition::Sources%2FTowerDesktop%2Fmain.swift%23drawModal::Sources%2FTowerDesktopModel::ATTACK-CLASSES.md%23Chained%20vulnerabilities%20and%20trust%20boundaries",
+    "canonical_refs": {
+      "surface": "Sources/TowerSession/TowerSession.swift#requestDemolition",
+      "boundary": "Sources/TowerDesktop/main.swift#drawModal",
+      "subsystem": "Sources/TowerDesktopModel",
+      "attack_class": "ATTACK-CLASSES.md#Chained vulnerabilities and trust boundaries"
+    },
+    "surface": "Sources/TowerSession/TowerSession.swift#requestDemolition",
+    "boundary": "Sources/TowerDesktop/main.swift#drawModal",
+    "subsystem": "Sources/TowerDesktopModel",
+    "attack_class": "Chained vulnerabilities and trust boundaries",
+    "starting_paths": [
+      "Sources/TowerSession/TowerSession.swift",
+      "Sources/TowerDesktopModel/Interaction.swift",
+      "Sources/TowerDesktop/main.swift",
+      "Sources/TowerApp/DemolitionConfirmation.swift"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Chained vulnerabilities and trust boundaries",
+    "selected_companion_blocks": [
+      "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Core discipline",
+      "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Pending-action and user-presence confusion",
+      "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Universal moves",
+      "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "ATTACK-CLASSES.md#Injection",
+        "reason": "No separate Injection boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Access control",
+        "reason": "No separate Access control boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Resource and file handling",
+        "reason": "No separate Resource and file handling boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Cryptography and secrets",
+        "reason": "No separate Cryptography and secrets boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Business logic",
+        "reason": "No separate Business logic boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Feature abuse and data leakage",
+        "reason": "No separate Feature abuse and data leakage boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Wildcard",
+        "reason": "No separate Wildcard boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Obvious things",
+        "reason": "No separate Obvious things boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Important",
+        "reason": "No separate Important boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunt_saves",
+    "reviewed_paths": [
+      "Sources/TowerSession/TowerSession.swift",
+      "Sources/TowerDesktopModel/Interaction.swift",
+      "Sources/TowerDesktop/main.swift",
+      "Sources/TowerApp/DemolitionConfirmation.swift",
+      "Sources/TowerApp/GameController.swift",
+      "Sources/TowerCore/Demolition.swift",
+      "Tests/TowerSessionTests/TowerSessionTests.swift",
+      "Tests/TowerDesktopModelTests/InteractionTests.swift"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_saves",
+        "reviewed_paths": [
+          "Sources/TowerSession/TowerSession.swift",
+          "Sources/TowerDesktopModel/Interaction.swift",
+          "Sources/TowerDesktop/main.swift",
+          "Sources/TowerApp/DemolitionConfirmation.swift",
+          "Sources/TowerApp/GameController.swift",
+          "Sources/TowerCore/Demolition.swift",
+          "Tests/TowerSessionTests/TowerSessionTests.swift",
+          "Tests/TowerDesktopModelTests/InteractionTests.swift"
+        ],
+        "invariant": "A pending demolition remains bound to its displayed target and requires an explicit destructive choice.",
+        "method": "source",
+        "result": "TowerSession.swift:87-99 stores the target, pauses, blocks other commands/switches, and resolves that same target with fresh demolitionQuote validation. Desktop main.swift:379-400 derives the modal from the pending target, replaces underlying actions, clears callbacks on dismissal, and defaults Return to cancellation through DesktopModalFocus. The AppKit sibling captures the target in its sheet callback, defaults Return to Keep it, pauses frame advancement, and revalidates through execute (DemolitionConfirmation.swift:12-36; GameController.swift:329). No lower-trust entry capable of replacing pending targets or forging confirmation was found. Tests were read, not executed.",
+        "artifact": null
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "assignment_owner": "hunt_saves",
+    "hardening": [
+      "Whole-file save decoding lacks an explicit byte budget; replay work is unbounded but launcher-authorized. Recovery policy compares lexical standardized paths. No extra principal for these hardening notes was established."
+    ]
+  },
+  {
+    "coverage_id": "scripts%2Fbootstrap-desktop.ps1%23download::scripts%2Fbootstrap-desktop.ps1%23SHA256::scripts::ATTACK-CLASSES.md%23Resource%20and%20file%20handling",
+    "canonical_refs": {
+      "surface": "scripts/bootstrap-desktop.ps1#download",
+      "boundary": "scripts/bootstrap-desktop.ps1#SHA256",
+      "subsystem": "scripts",
+      "attack_class": "ATTACK-CLASSES.md#Resource and file handling"
+    },
+    "surface": "scripts/bootstrap-desktop.ps1#download",
+    "boundary": "scripts/bootstrap-desktop.ps1#SHA256",
+    "subsystem": "scripts",
+    "attack_class": "Resource and file handling",
+    "starting_paths": [
+      "scripts/bootstrap-desktop.ps1",
+      "scripts/bootstrap-desktop.sh",
+      "Package.swift",
+      "Vendor/stb/README.md"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Resource and file handling",
+    "selected_companion_blocks": [
+      "SUPPLY-CHAIN-AND-RELEASE.md#Core discipline",
+      "SUPPLY-CHAIN-AND-RELEASE.md#Mutable and unbound build inputs",
+      "SUPPLY-CHAIN-AND-RELEASE.md#Dependency source and namespace confusion",
+      "SUPPLY-CHAIN-AND-RELEASE.md#Universal moves",
+      "SUPPLY-CHAIN-AND-RELEASE.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "ATTACK-CLASSES.md#Injection",
+        "reason": "No separate Injection boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Access control",
+        "reason": "No separate Access control boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Cryptography and secrets",
+        "reason": "No separate Cryptography and secrets boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Business logic",
+        "reason": "No separate Business logic boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Feature abuse and data leakage",
+        "reason": "No separate Feature abuse and data leakage boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Chained vulnerabilities and trust boundaries",
+        "reason": "No separate Chained vulnerabilities and trust boundaries boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Wildcard",
+        "reason": "No separate Wildcard boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Obvious things",
+        "reason": "No separate Obvious things boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Important",
+        "reason": "No separate Important boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunt_release",
+    "reviewed_paths": [
+      "scripts/bootstrap-desktop.ps1",
+      "scripts/bootstrap-desktop.sh",
+      ".github/workflows/cross-platform.yml",
+      "Package.swift",
+      "Vendor/stb/README.md",
+      "Vendor/stb/stb_image.h",
+      "Vendor/stb/stb_image_write.h",
+      "Vendor/stb/stb_truetype.h",
+      "Vendor/stb/LICENSE",
+      "scripts/build-windows.ps1"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_release",
+        "reviewed_paths": [
+          "scripts/bootstrap-desktop.ps1",
+          "scripts/bootstrap-desktop.sh",
+          ".github/workflows/cross-platform.yml",
+          "Package.swift",
+          "scripts/build-windows.ps1"
+        ],
+        "invariant": "Downloaded build inputs must match a source-controlled identity before extraction, execution or packaging.",
+        "method": "source",
+        "result": "bootstrap-desktop.ps1:4-6 pins SDL version, URL and SHA-256; lines 15-25 reject both new and cached archive mismatches before Expand-Archive at line 29. Extraction uses a developer-selected destination, and no lower-trust actor able to replace verified bytes after validation was established. macOS workflow:44-46 verifies a hardcoded digest before tar extraction. build-windows.ps1:79-84,225-234 verifies exact-release notice hashes. bootstrap-desktop.sh checks an already installed SDL version; installed package/tool identity is publisher-trusted and is not an established privilege escalation.",
+        "artifact": null
+      },
+      {
+        "agent_id": "hunt_release",
+        "reviewed_paths": [
+          "Vendor/stb/README.md",
+          "Vendor/stb/stb_image.h",
+          "Vendor/stb/stb_image_write.h",
+          "Vendor/stb/stb_truetype.h",
+          "Vendor/stb/LICENSE"
+        ],
+        "invariant": "Vendored dependency bytes must agree with their declared source pins.",
+        "method": "source",
+        "result": "Read-only SHA-256 calculation of all four vendored files exactly matched Vendor/stb/README.md:8-11. The README names a full upstream commit at lines 3-4,13-14. This establishes source-pin consistency, not an external CVE assessment.",
+        "artifact": null
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "assignment_owner": "hunt_release",
+    "hardening": [
+      ".gitignore:1-5 excludes builds and downloaded SDL but lacks common dotenv/key exclusions; make-pc-test-bundle.py:13-14 recursively includes selected source directories and follows file references. No actual credential or private file inclusion was found; explicit release-input and secret-file exclusions would reduce future accidental inclusion.",
+      "Dependency pin consistency was checked locally; external vulnerability advisories, hosted repository settings, installed runtime identities and actual Windows loader behavior were outside this source-only review."
+    ]
+  },
+  {
+    "coverage_id": "scripts%2Fbuild-windows.ps1%23package::scripts%2Fbuild-windows.ps1%23manifest::scripts::ATTACK-CLASSES.md%23Chained%20vulnerabilities%20and%20trust%20boundaries",
+    "canonical_refs": {
+      "surface": "scripts/build-windows.ps1#package",
+      "boundary": "scripts/build-windows.ps1#manifest",
+      "subsystem": "scripts",
+      "attack_class": "ATTACK-CLASSES.md#Chained vulnerabilities and trust boundaries"
+    },
+    "surface": "scripts/build-windows.ps1#package",
+    "boundary": "scripts/build-windows.ps1#manifest",
+    "subsystem": "scripts",
+    "attack_class": "Chained vulnerabilities and trust boundaries",
+    "starting_paths": [
+      "scripts/build-windows.ps1",
+      "scripts/build-app.sh",
+      "scripts/make-pc-test-bundle.py",
+      "scripts/check-parity.py"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Chained vulnerabilities and trust boundaries",
+    "selected_companion_blocks": [
+      "SUPPLY-CHAIN-AND-RELEASE.md#Core discipline",
+      "SUPPLY-CHAIN-AND-RELEASE.md#Build-context inclusion",
+      "SUPPLY-CHAIN-AND-RELEASE.md#Build-to-promotion substitution",
+      "SUPPLY-CHAIN-AND-RELEASE.md#Release authorization and signing-policy gaps",
+      "SUPPLY-CHAIN-AND-RELEASE.md#Universal moves",
+      "SUPPLY-CHAIN-AND-RELEASE.md#Validation rules",
+      "MEMORY-SAFETY-AND-BINARY.md#Core discipline",
+      "MEMORY-SAFETY-AND-BINARY.md#Library, plugin, and executable search-order trust",
+      "MEMORY-SAFETY-AND-BINARY.md#Universal moves",
+      "MEMORY-SAFETY-AND-BINARY.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "ATTACK-CLASSES.md#Injection",
+        "reason": "No separate Injection boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Access control",
+        "reason": "No separate Access control boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Resource and file handling",
+        "reason": "No separate Resource and file handling boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Cryptography and secrets",
+        "reason": "No separate Cryptography and secrets boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Business logic",
+        "reason": "No separate Business logic boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Feature abuse and data leakage",
+        "reason": "No separate Feature abuse and data leakage boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Wildcard",
+        "reason": "No separate Wildcard boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Obvious things",
+        "reason": "No separate Obvious things boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Important",
+        "reason": "No separate Important boundary in this unit; sibling units handle their selected classes; no runtime HTTP/auth/real-money service."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "candidate",
+    "agent_id": "hunt_release",
+    "reviewed_paths": [
+      "scripts/build-windows.ps1",
+      "scripts/build-app.sh",
+      "scripts/make-pc-test-bundle.py",
+      "scripts/check-parity.py",
+      "scripts/make-icon.sh",
+      "scripts/make-icon.swift",
+      "scripts/check-ui.sh",
+      "scripts/check-ui.swift",
+      "README.md",
+      "docs/porting/WINDOWS.md"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_release",
+        "reviewed_paths": [
+          "scripts/build-windows.ps1",
+          "scripts/build-app.sh",
+          "scripts/make-pc-test-bundle.py",
+          "scripts/check-parity.py",
+          "README.md",
+          "docs/porting/WINDOWS.md"
+        ],
+        "invariant": "Packaging must preserve tested artifact identity and must not treat lower-trust runtime or verification metadata as release authorization.",
+        "method": "source",
+        "result": "Windows builder validates numeric VERSION at lines 91-92, Swift version/architecture at 101-105, creates fresh staging at 129-133, validates resources at 139-143 and recursively checks x64 imports at 181-211. Runtime search roots derive from installed compiler/SDK/redistributable inputs; no less-trusted writer was established. Packaged executables are checked with developer PATH removed at 261-275, then file and ZIP digests are recorded at 276-285. No source consumer promotes a mutable filename or GITHUB_SHA field as release authorization. Mac output is explicitly ad-hoc signed development output (build-app.sh:38; README.md:19,174); clean-PC and public-release status remain explicitly pending.",
+        "artifact": null
+      },
+      {
+        "agent_id": "hunt_release",
+        "reviewed_paths": [
+          "scripts/build-app.sh",
+          "scripts/make-icon.sh",
+          "scripts/make-icon.swift",
+          "scripts/check-ui.sh",
+          "scripts/check-ui.swift"
+        ],
+        "invariant": "Developer image generation must not overwrite unrelated builder files through names precreated by another local principal.",
+        "method": "source",
+        "result": "build-app.sh:8 invokes icon generation when its output is absent. make-icon.sh:6 selects predictable ${TMPDIR:-/tmp}/lofty-icon.png; make-icon.swift:29 writes without explicit atomic, exclusive or no-follow options. A sibling variant writes fixed /tmp screenshot names in check-ui.swift:31,318 regardless of TMPDIR. check-ui.sh:12 creates a private executable directory, but screenshot outputs bypass it. Cross-principal filesystem behavior and resulting marker overwrite require bounded validation.",
+        "artifact": null
+      }
+    ],
+    "result_fingerprints": [
+      "scripts/predictable-temp-image-write"
+    ],
+    "unresolved": [],
+    "assignment_owner": "hunt_release",
+    "hardening": [
+      ".gitignore:1-5 excludes builds and downloaded SDL but lacks common dotenv/key exclusions; make-pc-test-bundle.py:13-14 recursively includes selected source directories and follows file references. No actual credential or private file inclusion was found; explicit release-input and secret-file exclusions would reduce future accidental inclusion.",
+      "Dependency pin consistency was checked locally; external vulnerability advisories, hosted repository settings, installed runtime identities and actual Windows loader behavior were outside this source-only review."
+    ]
+  },
+  {
+    "coverage_id": "scripts%2Fcheck-ui.sh%23check-ui::scripts%2Fcheck-ui.swift%23snapshot::scripts::ATTACK-CLASSES.md%23Resource%20and%20file%20handling",
+    "canonical_refs": {
+      "surface": "scripts/check-ui.sh#check-ui",
+      "boundary": "scripts/check-ui.swift#snapshot",
+      "subsystem": "scripts",
+      "attack_class": "ATTACK-CLASSES.md#Resource and file handling"
+    },
+    "surface": "scripts/check-ui.sh#check-ui",
+    "boundary": "scripts/check-ui.swift#snapshot",
+    "subsystem": "scripts",
+    "attack_class": "Resource and file handling",
+    "starting_paths": [
+      "scripts/check-ui.sh",
+      "scripts/check-ui.swift",
+      "scripts/make-icon.sh",
+      "scripts/make-icon.swift"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Resource and file handling",
+    "selected_companion_blocks": [
+      "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Core discipline",
+      "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Local file ownership and TOCTOU",
+      "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Universal moves",
+      "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Validation rules"
+    ],
+    "excluded_blocks": [],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 2,
+    "status": "deferred",
+    "agent_id": null,
+    "reviewed_paths": [],
+    "local_checks": [],
+    "result_fingerprints": [],
+    "unresolved": [
+      "User requested immediate GitHub/PC handoff before follow-up assignment and independent candidate verification."
+    ]
+  }
+]

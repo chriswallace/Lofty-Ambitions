@@ -1,0 +1,187 @@
+[
+  {
+    "proposed_verdict": "needs_validation",
+    "fingerprint": "TowerCore/save-daily-totals-int-conversion",
+    "title": "Accepted finite daily totals can trap during the first midnight tick",
+    "description": "An exchanged save can contain finite accumulated daily totals that exceed the integer range. Such values pass the visible finite checks and reach an unchecked conversion at midnight. Only recipient process termination is hypothesized; fictional money changes are not security impact.",
+    "claimed_root_cause": "Save validation requires daily totals to be finite but does not bound the Double values to the range consumed by Int conversion in tick().",
+    "trace": [
+      {
+        "kind": "entrypoint",
+        "file": "Sources/TowerCore/TowerSaveStore.swift",
+        "line": 10,
+        "scope": "TowerSaveStore.read",
+        "description": "Decodes exchanged totals and validates the tower."
+      },
+      {
+        "kind": "propagation",
+        "file": "Sources/TowerCore/Simulation.swift",
+        "line": 304,
+        "scope": "TowerState.validated",
+        "description": "Only isFinite is required for daily totals."
+      },
+      {
+        "kind": "propagation",
+        "file": "Sources/TowerSession/TowerSession.swift",
+        "line": 80,
+        "scope": "TowerSession.tick",
+        "description": "Normal advancement can cross midnight."
+      },
+      {
+        "kind": "sink",
+        "file": "Sources/TowerCore/Simulation.swift",
+        "line": 245,
+        "scope": "TowerState.tick",
+        "description": "Converts accumulated totals to Int for DailyReport."
+      }
+    ],
+    "evidence": [
+      {
+        "file": "Sources/TowerCore/Simulation.swift",
+        "line": 302,
+        "description": "Minute 1439 is permitted and totals have only finite-value validation."
+      },
+      {
+        "file": "Sources/TowerCore/Simulation.swift",
+        "line": 241,
+        "description": "Ordinary minute income does not bound an imported very large total."
+      },
+      {
+        "file": "Sources/TowerCore/Ambitions.swift",
+        "line": 156,
+        "description": "The progression clock check does not constrain accumulated daily totals."
+      }
+    ],
+    "blockers": [
+      "Target execution is prohibited: a complete parent-approved OS-enforced launcher proving no external network, an empty allowlisted environment, read-only source/tools, scratch-only writes, and low CPU/memory/process/file/disk/wall-clock limits together has not been established. No runtime termination or lost current tower was observed."
+    ],
+    "validation_plan": {
+      "local": "Inside the required sandbox, load a disposable valid tower at the last minute before midnight with one finite daily total larger than Int can represent. Check acceptance and advance only one minute in a child process, stopping at its return/termination diagnostic. Repeat for expenses. Regression expectation is rejection before installation."
+    }
+  },
+  {
+    "proposed_verdict": "needs_validation",
+    "fingerprint": "TowerCore/save-geometry-validation-overflow",
+    "title": "Malformed save geometry can trap before rejection and current-tower recovery",
+    "description": "An exchanged save can provide integer geometry that reaches trapping arithmetic during validation. A malformed span can pass one-sided endpoint checks before unchecked width subtraction; a non-lobby room can similarly reach unchecked slot addition. A termination before recovery could discard unsaved current-tower changes. This is a process-termination hypothesis, not memory corruption.",
+    "claimed_root_cause": "Validation bounds only one side of each floor endpoint before subtracting, and calls contains with an unbounded room slot before checking addition.",
+    "trace": [
+      {
+        "kind": "entrypoint",
+        "file": "Sources/TowerApp/GameController.swift",
+        "line": 435,
+        "scope": "GameController.openSave",
+        "description": "Reads the selected exchanged save before the save-before-switch prompt."
+      },
+      {
+        "kind": "propagation",
+        "file": "Sources/TowerCore/TowerSaveStore.swift",
+        "line": 10,
+        "scope": "TowerSaveStore.read",
+        "description": "Decodes integers then calls validated()."
+      },
+      {
+        "kind": "propagation",
+        "file": "Sources/TowerCore/Simulation.swift",
+        "line": 320,
+        "scope": "TowerState.validated",
+        "description": "Checks only left lower bound and right upper bound before evaluating width."
+      },
+      {
+        "kind": "sink",
+        "file": "Sources/TowerCore/Building.swift",
+        "line": 6,
+        "scope": "FloorSpan.width",
+        "description": "Unchecked right-left may exceed Int range."
+      }
+    ],
+    "evidence": [
+      {
+        "file": "Sources/TowerCore/Simulation.swift",
+        "line": 320,
+        "description": "Opposite endpoint limits and ordering are not checked before width."
+      },
+      {
+        "file": "Sources/TowerCore/Building.swift",
+        "line": 8,
+        "description": "contains uses unchecked column+width; non-lobby slots reach it from Simulation.swift:333."
+      },
+      {
+        "file": "Sources/TowerCore/TowerSaveStore.swift",
+        "line": 27,
+        "description": "switching reads before preserving the current tower."
+      }
+    ],
+    "blockers": [
+      "Target execution is prohibited: a complete parent-approved OS-enforced launcher proving no external network, an empty allowlisted environment, read-only source/tools, scratch-only writes, and low CPU/memory/process/file/disk/wall-clock limits together has not been established. No runtime termination or lost current tower was observed."
+    ],
+    "validation_plan": {
+      "local": "Inside the required sandbox, use a small dummy version-2 save with reversed extreme floor endpoints, and a separate dummy non-lobby room with an extreme positive slot. Invoke read in child processes and check whether each returns TowerError or terminates, stopping at the first diagnostic. With dummy current-tower data, check whether recovery precedes termination. Regression expectation is safe rejection."
+    }
+  },
+  {
+    "proposed_verdict": "needs_validation",
+    "fingerprint": "scripts/predictable-temp-image-write",
+    "title": "Predictable temporary image paths may follow another user's planted links",
+    "description": "Developer icon and UI-check image writers use predictable temporary filenames. A different local principal able to precreate one of those names as a symlink may redirect a PNG write into an unrelated file writable by the developer. The icon path requires a shared TMPDIR or the /tmp fallback; UI-check screenshots use /tmp directly. No overwrite was executed or observed.",
+    "claimed_root_cause": "Image outputs are written by pathname without a private per-run output directory or an explicit exclusive/no-follow creation contract. Source-visible private temporary-directory protection in check-ui.sh applies only to the executable, not its screenshots.",
+    "trace": [
+      {
+        "kind": "entrypoint",
+        "file": "scripts/build-app.sh",
+        "line": 8,
+        "scope": "icon generation",
+        "description": "A developer build invokes make-icon.sh when dist/AppIcon.icns is absent."
+      },
+      {
+        "kind": "propagation",
+        "file": "scripts/make-icon.sh",
+        "line": 6,
+        "scope": "temporary image destination",
+        "description": "The script passes predictable ${TMPDIR:-/tmp}/lofty-icon.png to the Swift image writer."
+      },
+      {
+        "kind": "sink",
+        "file": "scripts/make-icon.swift",
+        "line": 29,
+        "scope": "PNG Data.write",
+        "description": "PNG bytes are written to the supplied pathname without explicit atomic, exclusive or no-follow options."
+      }
+    ],
+    "evidence": [
+      {
+        "file": "scripts/make-icon.sh",
+        "line": 6,
+        "description": "The image filename is fixed; no private temporary directory is created."
+      },
+      {
+        "file": "scripts/make-icon.swift",
+        "line": 29,
+        "description": "The Data.write call supplies no writing options or explicit link check."
+      },
+      {
+        "file": "scripts/check-ui.sh",
+        "line": 12,
+        "description": "mktemp protects the check executable directory; line 17 does not pass that directory to screenshot writers."
+      },
+      {
+        "file": "scripts/check-ui.swift",
+        "line": 31,
+        "description": "snapshot writes /tmp/<name>.png; the first constant call at line 50 selects /tmp/lofty-title-screen.png."
+      },
+      {
+        "file": "scripts/check-ui.swift",
+        "line": 318,
+        "description": "A second direct writer selects fixed /tmp/room-delete-confirmation.png."
+      }
+    ],
+    "blockers": [
+      "No observation establishes whether a separate local principal can create the selected fallback/shared temporary path under the supported machine's directory ACLs and link protections.",
+      "Foundation Data.write behavior against a precreated symlink, including whether it follows the link and overwrites a developer-owned dummy target, was not executed or observed.",
+      "The required parent-approved execution sandbox with network isolation, empty allowlisted environment, read-only target/tools, scratch-only writes and resource limits is unavailable; this assignment permits source reads only."
+    ],
+    "validation_plan": {
+      "local": "In a parent-approved sandbox, use two disposable test identities and a scratch-contained shared temporary directory plus a harmless builder-owned marker. Observe whether the lower-trust identity can plant the predictable link, then exercise the minimal Foundation write used by these sinks and inspect only the dummy marker. Validate the icon fallback and the UI-check fixed-path variant separately, without running the full build or accessing real developer files."
+    }
+  }
+]

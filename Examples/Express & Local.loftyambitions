@@ -1,0 +1,5173 @@
+{
+  "cash" : 4610000,
+  "coreColumn" : 32,
+  "dailyExpenses" : 10860,
+  "dailyIncome" : 68270.76388888889,
+  "day" : 1,
+  "earnedStars" : 5,
+  "elevators" : [
+    {
+      "direction" : 1,
+      "doorTime" : 4,
+      "id" : 1,
+      "passengers" : 0,
+      "position" : 27,
+      "topFloor" : 29
+    },
+    {
+      "bottomFloor" : 0,
+      "direction" : 1,
+      "doorTime" : 7,
+      "id" : 2,
+      "passengers" : 2,
+      "position" : 29,
+      "topFloor" : 29,
+      "type" : "wide"
+    },
+    {
+      "bottomFloor" : 0,
+      "direction" : -1,
+      "doorTime" : 0,
+      "id" : 3,
+      "passengers" : 32,
+      "position" : 0,
+      "targetFloor" : 30,
+      "topFloor" : 50,
+      "type" : "express"
+    },
+    {
+      "bottomFloor" : 30,
+      "direction" : 1,
+      "doorTime" : 0,
+      "id" : 4,
+      "passengers" : 10,
+      "position" : 31.44,
+      "targetFloor" : 34,
+      "topFloor" : 50,
+      "type" : "wide"
+    }
+  ],
+  "events" : [
+    "Transport sandbox: express cars serve G, 15, 30 and 45. Upper locals carry people onward to floor 50.",
+    "Built for experimenting. Campaign progression is already unlocked and the treasury has extra funds."
+  ],
+  "floorSpans" : {
+    "0" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "1" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "10" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "11" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "12" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "13" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "14" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "15" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "16" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "17" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "18" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "19" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "2" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "20" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "21" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "22" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "23" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "24" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "25" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "26" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "27" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "28" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "29" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "3" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "30" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "31" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "32" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "33" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "34" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "35" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "36" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "37" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "38" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "39" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "4" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "40" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "41" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "42" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "43" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "44" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "45" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "46" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "47" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "48" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "49" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "5" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "50" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "6" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "7" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "8" : {
+      "left" : 0,
+      "right" : 64
+    },
+    "9" : {
+      "left" : 0,
+      "right" : 64
+    }
+  },
+  "history" : [
+
+  ],
+  "minute" : 720,
+  "name" : "Express & Local",
+  "nextID" : 341,
+  "nextTravelerID" : 151,
+  "rooms" : [
+    {
+      "floor" : 0,
+      "happiness" : 0.8,
+      "id" : 1,
+      "kind" : "lobby",
+      "occupancy" : 0,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 1,
+      "happiness" : 0.9400000000000001,
+      "id" : 2,
+      "kind" : "shop",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 1,
+      "happiness" : 0.9400000000000001,
+      "id" : 3,
+      "kind" : "restaurant",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 2,
+      "happiness" : 0.9400000000000001,
+      "id" : 4,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 2,
+      "happiness" : 0.9400000000000001,
+      "id" : 5,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 2,
+      "happiness" : 0.9400000000000001,
+      "id" : 6,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 18
+    },
+    {
+      "floor" : 2,
+      "happiness" : 0.9400000000000001,
+      "id" : 7,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 2,
+      "happiness" : 0.9400000000000001,
+      "id" : 8,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 41
+    },
+    {
+      "floor" : 3,
+      "happiness" : 0.9400000000000001,
+      "id" : 9,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 3,
+      "happiness" : 0.9400000000000001,
+      "id" : 10,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 4
+    },
+    {
+      "floor" : 3,
+      "happiness" : 0.9400000000000001,
+      "id" : 11,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 8
+    },
+    {
+      "floor" : 3,
+      "happiness" : 0.9400000000000001,
+      "id" : 12,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 12
+    },
+    {
+      "floor" : 3,
+      "happiness" : 0.9400000000000001,
+      "id" : 13,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 3,
+      "happiness" : 0.9400000000000001,
+      "id" : 14,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 36
+    },
+    {
+      "floor" : 4,
+      "happiness" : 0.9400000000000001,
+      "id" : 15,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 4,
+      "happiness" : 0.9400000000000001,
+      "id" : 16,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 4,
+      "happiness" : 0.9400000000000001,
+      "id" : 17,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 5,
+      "happiness" : 0.9400000000000001,
+      "id" : 18,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 5,
+      "happiness" : 0.9400000000000001,
+      "id" : 19,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 5,
+      "happiness" : 0.9400000000000001,
+      "id" : 20,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 18
+    },
+    {
+      "floor" : 5,
+      "happiness" : 0.9400000000000001,
+      "id" : 21,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 5,
+      "happiness" : 0.9400000000000001,
+      "id" : 22,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 41
+    },
+    {
+      "floor" : 5,
+      "happiness" : 0.9400000000000001,
+      "id" : 23,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 50
+    },
+    {
+      "floor" : 6,
+      "happiness" : 0.9400000000000001,
+      "id" : 24,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 6,
+      "happiness" : 0.9400000000000001,
+      "id" : 25,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 4
+    },
+    {
+      "floor" : 6,
+      "happiness" : 0.9400000000000001,
+      "id" : 26,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 8
+    },
+    {
+      "floor" : 6,
+      "happiness" : 0.9400000000000001,
+      "id" : 27,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 12
+    },
+    {
+      "floor" : 6,
+      "happiness" : 0.9400000000000001,
+      "id" : 28,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 16
+    },
+    {
+      "floor" : 6,
+      "happiness" : 0.9400000000000001,
+      "id" : 29,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 20
+    },
+    {
+      "floor" : 6,
+      "happiness" : 0.9400000000000001,
+      "id" : 30,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 6,
+      "happiness" : 0.9400000000000001,
+      "id" : 31,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 36
+    },
+    {
+      "floor" : 6,
+      "happiness" : 0.9400000000000001,
+      "id" : 32,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 40
+    },
+    {
+      "floor" : 6,
+      "happiness" : 0.9400000000000001,
+      "id" : 33,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 44
+    },
+    {
+      "floor" : 6,
+      "happiness" : 0.9400000000000001,
+      "id" : 34,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 48
+    },
+    {
+      "floor" : 6,
+      "happiness" : 0.9400000000000001,
+      "id" : 35,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 52
+    },
+    {
+      "floor" : 6,
+      "happiness" : 0.9400000000000001,
+      "id" : 36,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 56
+    },
+    {
+      "floor" : 6,
+      "happiness" : 0.9400000000000001,
+      "id" : 37,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 60
+    },
+    {
+      "floor" : 7,
+      "happiness" : 0.9400000000000001,
+      "id" : 38,
+      "kind" : "hotel",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 7,
+      "happiness" : 0.75,
+      "id" : 39,
+      "kind" : "housekeeping",
+      "occupancy" : 0,
+      "rent" : 1,
+      "slot" : 16
+    },
+    {
+      "floor" : 7,
+      "happiness" : 0.9400000000000001,
+      "id" : 40,
+      "kind" : "hotel",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 8,
+      "happiness" : 0.9400000000000001,
+      "id" : 41,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 8,
+      "happiness" : 0.9400000000000001,
+      "id" : 42,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 8,
+      "happiness" : 0.9400000000000001,
+      "id" : 43,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 18
+    },
+    {
+      "floor" : 8,
+      "happiness" : 0.9400000000000001,
+      "id" : 44,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 8,
+      "happiness" : 0.9400000000000001,
+      "id" : 45,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 41
+    },
+    {
+      "floor" : 8,
+      "happiness" : 0.9400000000000001,
+      "id" : 46,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 50
+    },
+    {
+      "floor" : 9,
+      "happiness" : 0.9400000000000001,
+      "id" : 47,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 9,
+      "happiness" : 0.9400000000000001,
+      "id" : 48,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 4
+    },
+    {
+      "floor" : 9,
+      "happiness" : 0.9400000000000001,
+      "id" : 49,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 8
+    },
+    {
+      "floor" : 9,
+      "happiness" : 0.9400000000000001,
+      "id" : 50,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 12
+    },
+    {
+      "floor" : 9,
+      "happiness" : 0.9400000000000001,
+      "id" : 51,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 16
+    },
+    {
+      "floor" : 9,
+      "happiness" : 0.9400000000000001,
+      "id" : 52,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 20
+    },
+    {
+      "floor" : 9,
+      "happiness" : 0.9400000000000001,
+      "id" : 53,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 9,
+      "happiness" : 0.9400000000000001,
+      "id" : 54,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 36
+    },
+    {
+      "floor" : 9,
+      "happiness" : 0.9400000000000001,
+      "id" : 55,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 40
+    },
+    {
+      "floor" : 9,
+      "happiness" : 0.9400000000000001,
+      "id" : 56,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 44
+    },
+    {
+      "floor" : 9,
+      "happiness" : 0.9400000000000001,
+      "id" : 57,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 48
+    },
+    {
+      "floor" : 9,
+      "happiness" : 0.9400000000000001,
+      "id" : 58,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 52
+    },
+    {
+      "floor" : 9,
+      "happiness" : 0.9400000000000001,
+      "id" : 59,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 56
+    },
+    {
+      "floor" : 9,
+      "happiness" : 0.9400000000000001,
+      "id" : 60,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 60
+    },
+    {
+      "floor" : 10,
+      "happiness" : 0.9400000000000001,
+      "id" : 61,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 10,
+      "happiness" : 0.9400000000000001,
+      "id" : 62,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 10,
+      "happiness" : 0.9400000000000001,
+      "id" : 63,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 18
+    },
+    {
+      "floor" : 10,
+      "happiness" : 0.9400000000000001,
+      "id" : 64,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 10,
+      "happiness" : 0.9400000000000001,
+      "id" : 65,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 41
+    },
+    {
+      "floor" : 10,
+      "happiness" : 0.9400000000000001,
+      "id" : 66,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 50
+    },
+    {
+      "floor" : 11,
+      "happiness" : 0.9400000000000001,
+      "id" : 67,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 11,
+      "happiness" : 0.9400000000000001,
+      "id" : 68,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 11,
+      "happiness" : 0.9400000000000001,
+      "id" : 69,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 18
+    },
+    {
+      "floor" : 11,
+      "happiness" : 0.9400000000000001,
+      "id" : 70,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 11,
+      "happiness" : 0.9400000000000001,
+      "id" : 71,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 41
+    },
+    {
+      "floor" : 11,
+      "happiness" : 0.9400000000000001,
+      "id" : 72,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 50
+    },
+    {
+      "floor" : 12,
+      "happiness" : 0.9400000000000001,
+      "id" : 73,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 12,
+      "happiness" : 0.9400000000000001,
+      "id" : 74,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 4
+    },
+    {
+      "floor" : 12,
+      "happiness" : 0.9400000000000001,
+      "id" : 75,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 8
+    },
+    {
+      "floor" : 12,
+      "happiness" : 0.9400000000000001,
+      "id" : 76,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 12
+    },
+    {
+      "floor" : 12,
+      "happiness" : 0.9400000000000001,
+      "id" : 77,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 16
+    },
+    {
+      "floor" : 12,
+      "happiness" : 0.9400000000000001,
+      "id" : 78,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 20
+    },
+    {
+      "floor" : 12,
+      "happiness" : 0.9400000000000001,
+      "id" : 79,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 12,
+      "happiness" : 0.9400000000000001,
+      "id" : 80,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 36
+    },
+    {
+      "floor" : 12,
+      "happiness" : 0.9400000000000001,
+      "id" : 81,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 40
+    },
+    {
+      "floor" : 12,
+      "happiness" : 0.9400000000000001,
+      "id" : 82,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 44
+    },
+    {
+      "floor" : 12,
+      "happiness" : 0.9400000000000001,
+      "id" : 83,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 48
+    },
+    {
+      "floor" : 12,
+      "happiness" : 0.9400000000000001,
+      "id" : 84,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 52
+    },
+    {
+      "floor" : 12,
+      "happiness" : 0.9400000000000001,
+      "id" : 85,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 56
+    },
+    {
+      "floor" : 12,
+      "happiness" : 0.9400000000000001,
+      "id" : 86,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 60
+    },
+    {
+      "floor" : 13,
+      "happiness" : 0.9400000000000001,
+      "id" : 87,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 13,
+      "happiness" : 0.9400000000000001,
+      "id" : 88,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 13,
+      "happiness" : 0.9400000000000001,
+      "id" : 89,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 18
+    },
+    {
+      "floor" : 13,
+      "happiness" : 0.9400000000000001,
+      "id" : 90,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 13,
+      "happiness" : 0.9400000000000001,
+      "id" : 91,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 41
+    },
+    {
+      "floor" : 13,
+      "happiness" : 0.9400000000000001,
+      "id" : 92,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 50
+    },
+    {
+      "floor" : 14,
+      "happiness" : 0.9400000000000001,
+      "id" : 93,
+      "kind" : "hotel",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 14,
+      "happiness" : 0.75,
+      "id" : 94,
+      "kind" : "housekeeping",
+      "occupancy" : 0,
+      "rent" : 1,
+      "slot" : 16
+    },
+    {
+      "floor" : 14,
+      "happiness" : 0.9400000000000001,
+      "id" : 95,
+      "kind" : "hotel",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 15,
+      "happiness" : 0.75,
+      "id" : 96,
+      "kind" : "garden",
+      "occupancy" : 0,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 15,
+      "happiness" : 0.9400000000000001,
+      "id" : 97,
+      "kind" : "restaurant",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 16,
+      "happiness" : 0.9400000000000001,
+      "id" : 98,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 16,
+      "happiness" : 0.9400000000000001,
+      "id" : 99,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 16,
+      "happiness" : 0.9400000000000001,
+      "id" : 100,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 18
+    },
+    {
+      "floor" : 16,
+      "happiness" : 0.9400000000000001,
+      "id" : 101,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 16,
+      "happiness" : 0.9400000000000001,
+      "id" : 102,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 41
+    },
+    {
+      "floor" : 16,
+      "happiness" : 0.9400000000000001,
+      "id" : 103,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 50
+    },
+    {
+      "floor" : 17,
+      "happiness" : 0.9400000000000001,
+      "id" : 104,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 17,
+      "happiness" : 0.9400000000000001,
+      "id" : 105,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 17,
+      "happiness" : 0.9400000000000001,
+      "id" : 106,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 18
+    },
+    {
+      "floor" : 17,
+      "happiness" : 0.9400000000000001,
+      "id" : 107,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 17,
+      "happiness" : 0.9400000000000001,
+      "id" : 108,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 41
+    },
+    {
+      "floor" : 17,
+      "happiness" : 0.9400000000000001,
+      "id" : 109,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 50
+    },
+    {
+      "floor" : 18,
+      "happiness" : 0.9400000000000001,
+      "id" : 110,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 18,
+      "happiness" : 0.9400000000000001,
+      "id" : 111,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 4
+    },
+    {
+      "floor" : 18,
+      "happiness" : 0.9400000000000001,
+      "id" : 112,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 8
+    },
+    {
+      "floor" : 18,
+      "happiness" : 0.9400000000000001,
+      "id" : 113,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 12
+    },
+    {
+      "floor" : 18,
+      "happiness" : 0.9400000000000001,
+      "id" : 114,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 16
+    },
+    {
+      "floor" : 18,
+      "happiness" : 0.9400000000000001,
+      "id" : 115,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 20
+    },
+    {
+      "floor" : 18,
+      "happiness" : 0.9400000000000001,
+      "id" : 116,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 18,
+      "happiness" : 0.9400000000000001,
+      "id" : 117,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 36
+    },
+    {
+      "floor" : 18,
+      "happiness" : 0.9400000000000001,
+      "id" : 118,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 40
+    },
+    {
+      "floor" : 18,
+      "happiness" : 0.9400000000000001,
+      "id" : 119,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 44
+    },
+    {
+      "floor" : 18,
+      "happiness" : 0.9400000000000001,
+      "id" : 120,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 48
+    },
+    {
+      "floor" : 18,
+      "happiness" : 0.9400000000000001,
+      "id" : 121,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 52
+    },
+    {
+      "floor" : 18,
+      "happiness" : 0.9400000000000001,
+      "id" : 122,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 56
+    },
+    {
+      "floor" : 18,
+      "happiness" : 0.9400000000000001,
+      "id" : 123,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 60
+    },
+    {
+      "floor" : 19,
+      "happiness" : 0.9400000000000001,
+      "id" : 124,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 19,
+      "happiness" : 0.9400000000000001,
+      "id" : 125,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 19,
+      "happiness" : 0.9400000000000001,
+      "id" : 126,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 18
+    },
+    {
+      "floor" : 19,
+      "happiness" : 0.9400000000000001,
+      "id" : 127,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 19,
+      "happiness" : 0.9400000000000001,
+      "id" : 128,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 41
+    },
+    {
+      "floor" : 19,
+      "happiness" : 0.9400000000000001,
+      "id" : 129,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 50
+    },
+    {
+      "floor" : 20,
+      "happiness" : 0.9400000000000001,
+      "id" : 130,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 20,
+      "happiness" : 0.9400000000000001,
+      "id" : 131,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 20,
+      "happiness" : 0.9400000000000001,
+      "id" : 132,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 18
+    },
+    {
+      "floor" : 20,
+      "happiness" : 0.9400000000000001,
+      "id" : 133,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 20,
+      "happiness" : 0.9400000000000001,
+      "id" : 134,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 41
+    },
+    {
+      "floor" : 20,
+      "happiness" : 0.9400000000000001,
+      "id" : 135,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 50
+    },
+    {
+      "floor" : 21,
+      "happiness" : 0.9400000000000001,
+      "id" : 136,
+      "kind" : "hotel",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 21,
+      "happiness" : 0.75,
+      "id" : 137,
+      "kind" : "housekeeping",
+      "occupancy" : 0,
+      "rent" : 1,
+      "slot" : 16
+    },
+    {
+      "floor" : 21,
+      "happiness" : 0.9400000000000001,
+      "id" : 138,
+      "kind" : "hotel",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 22,
+      "happiness" : 0.9400000000000001,
+      "id" : 139,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 22,
+      "happiness" : 0.9400000000000001,
+      "id" : 140,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 22,
+      "happiness" : 0.9400000000000001,
+      "id" : 141,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 18
+    },
+    {
+      "floor" : 22,
+      "happiness" : 0.9400000000000001,
+      "id" : 142,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 22,
+      "happiness" : 0.9400000000000001,
+      "id" : 143,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 41
+    },
+    {
+      "floor" : 22,
+      "happiness" : 0.9400000000000001,
+      "id" : 144,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 50
+    },
+    {
+      "floor" : 23,
+      "happiness" : 0.9400000000000001,
+      "id" : 145,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 23,
+      "happiness" : 0.9400000000000001,
+      "id" : 146,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 23,
+      "happiness" : 0.9400000000000001,
+      "id" : 147,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 18
+    },
+    {
+      "floor" : 23,
+      "happiness" : 0.9400000000000001,
+      "id" : 148,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 23,
+      "happiness" : 0.9400000000000001,
+      "id" : 149,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 41
+    },
+    {
+      "floor" : 23,
+      "happiness" : 0.9400000000000001,
+      "id" : 150,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 50
+    },
+    {
+      "floor" : 24,
+      "happiness" : 0.9400000000000001,
+      "id" : 151,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 24,
+      "happiness" : 0.9400000000000001,
+      "id" : 152,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 4
+    },
+    {
+      "floor" : 24,
+      "happiness" : 0.9400000000000001,
+      "id" : 153,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 8
+    },
+    {
+      "floor" : 24,
+      "happiness" : 0.9400000000000001,
+      "id" : 154,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 12
+    },
+    {
+      "floor" : 24,
+      "happiness" : 0.9400000000000001,
+      "id" : 155,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 16
+    },
+    {
+      "floor" : 24,
+      "happiness" : 0.9400000000000001,
+      "id" : 156,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 20
+    },
+    {
+      "floor" : 24,
+      "happiness" : 0.9400000000000001,
+      "id" : 157,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 24,
+      "happiness" : 0.9400000000000001,
+      "id" : 158,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 36
+    },
+    {
+      "floor" : 24,
+      "happiness" : 0.9400000000000001,
+      "id" : 159,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 40
+    },
+    {
+      "floor" : 24,
+      "happiness" : 0.9400000000000001,
+      "id" : 160,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 44
+    },
+    {
+      "floor" : 24,
+      "happiness" : 0.9400000000000001,
+      "id" : 161,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 48
+    },
+    {
+      "floor" : 24,
+      "happiness" : 0.9400000000000001,
+      "id" : 162,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 52
+    },
+    {
+      "floor" : 24,
+      "happiness" : 0.9400000000000001,
+      "id" : 163,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 56
+    },
+    {
+      "floor" : 24,
+      "happiness" : 0.9400000000000001,
+      "id" : 164,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 60
+    },
+    {
+      "floor" : 25,
+      "happiness" : 0.9400000000000001,
+      "id" : 165,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 25,
+      "happiness" : 0.9400000000000001,
+      "id" : 166,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 25,
+      "happiness" : 0.9400000000000001,
+      "id" : 167,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 18
+    },
+    {
+      "floor" : 25,
+      "happiness" : 0.9400000000000001,
+      "id" : 168,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 25,
+      "happiness" : 0.9400000000000001,
+      "id" : 169,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 41
+    },
+    {
+      "floor" : 25,
+      "happiness" : 0.9400000000000001,
+      "id" : 170,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 50
+    },
+    {
+      "floor" : 26,
+      "happiness" : 0.9400000000000001,
+      "id" : 171,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 26,
+      "happiness" : 0.9400000000000001,
+      "id" : 172,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 26,
+      "happiness" : 0.9400000000000001,
+      "id" : 173,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 18
+    },
+    {
+      "floor" : 26,
+      "happiness" : 0.9400000000000001,
+      "id" : 174,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 26,
+      "happiness" : 0.9400000000000001,
+      "id" : 175,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 41
+    },
+    {
+      "floor" : 26,
+      "happiness" : 0.9400000000000001,
+      "id" : 176,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 50
+    },
+    {
+      "floor" : 27,
+      "happiness" : 0.9400000000000001,
+      "id" : 177,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 27,
+      "happiness" : 0.9400000000000001,
+      "id" : 178,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 4
+    },
+    {
+      "floor" : 27,
+      "happiness" : 0.9400000000000001,
+      "id" : 179,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 8
+    },
+    {
+      "floor" : 27,
+      "happiness" : 0.9400000000000001,
+      "id" : 180,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 12
+    },
+    {
+      "floor" : 27,
+      "happiness" : 0.9400000000000001,
+      "id" : 181,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 16
+    },
+    {
+      "floor" : 27,
+      "happiness" : 0.9400000000000001,
+      "id" : 182,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 20
+    },
+    {
+      "floor" : 27,
+      "happiness" : 0.9400000000000001,
+      "id" : 183,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 27,
+      "happiness" : 0.9400000000000001,
+      "id" : 184,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 36
+    },
+    {
+      "floor" : 27,
+      "happiness" : 0.9400000000000001,
+      "id" : 185,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 40
+    },
+    {
+      "floor" : 27,
+      "happiness" : 0.9400000000000001,
+      "id" : 186,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 44
+    },
+    {
+      "floor" : 27,
+      "happiness" : 0.9400000000000001,
+      "id" : 187,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 48
+    },
+    {
+      "floor" : 27,
+      "happiness" : 0.9400000000000001,
+      "id" : 188,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 52
+    },
+    {
+      "floor" : 27,
+      "happiness" : 0.9400000000000001,
+      "id" : 189,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 56
+    },
+    {
+      "floor" : 27,
+      "happiness" : 0.9400000000000001,
+      "id" : 190,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 60
+    },
+    {
+      "floor" : 28,
+      "happiness" : 0.9400000000000001,
+      "id" : 191,
+      "kind" : "hotel",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 28,
+      "happiness" : 0.75,
+      "id" : 192,
+      "kind" : "housekeeping",
+      "occupancy" : 0,
+      "rent" : 1,
+      "slot" : 16
+    },
+    {
+      "floor" : 28,
+      "happiness" : 0.9400000000000001,
+      "id" : 193,
+      "kind" : "hotel",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 29,
+      "happiness" : 0.9400000000000001,
+      "id" : 194,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 29,
+      "happiness" : 0.9400000000000001,
+      "id" : 195,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 29,
+      "happiness" : 0.9400000000000001,
+      "id" : 196,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 18
+    },
+    {
+      "floor" : 29,
+      "happiness" : 0.9400000000000001,
+      "id" : 197,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 29,
+      "happiness" : 0.9400000000000001,
+      "id" : 198,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 41
+    },
+    {
+      "floor" : 29,
+      "happiness" : 0.9400000000000001,
+      "id" : 199,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 50
+    },
+    {
+      "floor" : 30,
+      "happiness" : 0.75,
+      "id" : 200,
+      "kind" : "garden",
+      "occupancy" : 0,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 30,
+      "happiness" : 0.9400000000000001,
+      "id" : 201,
+      "kind" : "restaurant",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 31,
+      "happiness" : 0.9400000000000001,
+      "id" : 202,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 31,
+      "happiness" : 0.9400000000000001,
+      "id" : 203,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 31,
+      "happiness" : 0.9400000000000001,
+      "id" : 204,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 18
+    },
+    {
+      "floor" : 31,
+      "happiness" : 0.9400000000000001,
+      "id" : 205,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 31,
+      "happiness" : 0.9400000000000001,
+      "id" : 206,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 41
+    },
+    {
+      "floor" : 31,
+      "happiness" : 0.9400000000000001,
+      "id" : 207,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 50
+    },
+    {
+      "floor" : 32,
+      "happiness" : 0.9400000000000001,
+      "id" : 208,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 32,
+      "happiness" : 0.9400000000000001,
+      "id" : 209,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 32,
+      "happiness" : 0.9400000000000001,
+      "id" : 210,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 18
+    },
+    {
+      "floor" : 32,
+      "happiness" : 0.9400000000000001,
+      "id" : 211,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 32,
+      "happiness" : 0.9400000000000001,
+      "id" : 212,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 41
+    },
+    {
+      "floor" : 32,
+      "happiness" : 0.9400000000000001,
+      "id" : 213,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 50
+    },
+    {
+      "floor" : 33,
+      "happiness" : 0.9400000000000001,
+      "id" : 214,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 33,
+      "happiness" : 0.9400000000000001,
+      "id" : 215,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 4
+    },
+    {
+      "floor" : 33,
+      "happiness" : 0.9400000000000001,
+      "id" : 216,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 8
+    },
+    {
+      "floor" : 33,
+      "happiness" : 0.9400000000000001,
+      "id" : 217,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 12
+    },
+    {
+      "floor" : 33,
+      "happiness" : 0.9400000000000001,
+      "id" : 218,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 16
+    },
+    {
+      "floor" : 33,
+      "happiness" : 0.9400000000000001,
+      "id" : 219,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 20
+    },
+    {
+      "floor" : 33,
+      "happiness" : 0.9400000000000001,
+      "id" : 220,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 33,
+      "happiness" : 0.9400000000000001,
+      "id" : 221,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 36
+    },
+    {
+      "floor" : 33,
+      "happiness" : 0.9400000000000001,
+      "id" : 222,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 40
+    },
+    {
+      "floor" : 33,
+      "happiness" : 0.9400000000000001,
+      "id" : 223,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 44
+    },
+    {
+      "floor" : 33,
+      "happiness" : 0.9400000000000001,
+      "id" : 224,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 48
+    },
+    {
+      "floor" : 33,
+      "happiness" : 0.9400000000000001,
+      "id" : 225,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 52
+    },
+    {
+      "floor" : 33,
+      "happiness" : 0.9400000000000001,
+      "id" : 226,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 56
+    },
+    {
+      "floor" : 33,
+      "happiness" : 0.9400000000000001,
+      "id" : 227,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 60
+    },
+    {
+      "floor" : 34,
+      "happiness" : 0.9400000000000001,
+      "id" : 228,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 34,
+      "happiness" : 0.9400000000000001,
+      "id" : 229,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 34,
+      "happiness" : 0.9400000000000001,
+      "id" : 230,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 18
+    },
+    {
+      "floor" : 34,
+      "happiness" : 0.9400000000000001,
+      "id" : 231,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 34,
+      "happiness" : 0.9400000000000001,
+      "id" : 232,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 41
+    },
+    {
+      "floor" : 34,
+      "happiness" : 0.9400000000000001,
+      "id" : 233,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 50
+    },
+    {
+      "floor" : 35,
+      "happiness" : 0.9400000000000001,
+      "id" : 234,
+      "kind" : "hotel",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 35,
+      "happiness" : 0.75,
+      "id" : 235,
+      "kind" : "housekeeping",
+      "occupancy" : 0,
+      "rent" : 1,
+      "slot" : 16
+    },
+    {
+      "floor" : 35,
+      "happiness" : 0.9400000000000001,
+      "id" : 236,
+      "kind" : "hotel",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 36,
+      "happiness" : 0.9400000000000001,
+      "id" : 237,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 36,
+      "happiness" : 0.9400000000000001,
+      "id" : 238,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 4
+    },
+    {
+      "floor" : 36,
+      "happiness" : 0.9400000000000001,
+      "id" : 239,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 8
+    },
+    {
+      "floor" : 36,
+      "happiness" : 0.9400000000000001,
+      "id" : 240,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 12
+    },
+    {
+      "floor" : 36,
+      "happiness" : 0.9400000000000001,
+      "id" : 241,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 16
+    },
+    {
+      "floor" : 36,
+      "happiness" : 0.9400000000000001,
+      "id" : 242,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 20
+    },
+    {
+      "floor" : 36,
+      "happiness" : 0.9400000000000001,
+      "id" : 243,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 36,
+      "happiness" : 0.9400000000000001,
+      "id" : 244,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 36
+    },
+    {
+      "floor" : 36,
+      "happiness" : 0.9400000000000001,
+      "id" : 245,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 40
+    },
+    {
+      "floor" : 36,
+      "happiness" : 0.9400000000000001,
+      "id" : 246,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 44
+    },
+    {
+      "floor" : 36,
+      "happiness" : 0.9400000000000001,
+      "id" : 247,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 48
+    },
+    {
+      "floor" : 36,
+      "happiness" : 0.9400000000000001,
+      "id" : 248,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 52
+    },
+    {
+      "floor" : 36,
+      "happiness" : 0.9400000000000001,
+      "id" : 249,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 56
+    },
+    {
+      "floor" : 36,
+      "happiness" : 0.9400000000000001,
+      "id" : 250,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 60
+    },
+    {
+      "floor" : 37,
+      "happiness" : 0.9400000000000001,
+      "id" : 251,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 37,
+      "happiness" : 0.9400000000000001,
+      "id" : 252,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 37,
+      "happiness" : 0.9400000000000001,
+      "id" : 253,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 18
+    },
+    {
+      "floor" : 37,
+      "happiness" : 0.9400000000000001,
+      "id" : 254,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 37,
+      "happiness" : 0.9400000000000001,
+      "id" : 255,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 41
+    },
+    {
+      "floor" : 37,
+      "happiness" : 0.9400000000000001,
+      "id" : 256,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 50
+    },
+    {
+      "floor" : 38,
+      "happiness" : 0.9400000000000001,
+      "id" : 257,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 38,
+      "happiness" : 0.9400000000000001,
+      "id" : 258,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 38,
+      "happiness" : 0.9400000000000001,
+      "id" : 259,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 18
+    },
+    {
+      "floor" : 38,
+      "happiness" : 0.9400000000000001,
+      "id" : 260,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 38,
+      "happiness" : 0.9400000000000001,
+      "id" : 261,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 41
+    },
+    {
+      "floor" : 38,
+      "happiness" : 0.9400000000000001,
+      "id" : 262,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 50
+    },
+    {
+      "floor" : 39,
+      "happiness" : 0.9400000000000001,
+      "id" : 263,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 39,
+      "happiness" : 0.9400000000000001,
+      "id" : 264,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 4
+    },
+    {
+      "floor" : 39,
+      "happiness" : 0.9400000000000001,
+      "id" : 265,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 8
+    },
+    {
+      "floor" : 39,
+      "happiness" : 0.9400000000000001,
+      "id" : 266,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 12
+    },
+    {
+      "floor" : 39,
+      "happiness" : 0.9400000000000001,
+      "id" : 267,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 16
+    },
+    {
+      "floor" : 39,
+      "happiness" : 0.9400000000000001,
+      "id" : 268,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 20
+    },
+    {
+      "floor" : 39,
+      "happiness" : 0.9400000000000001,
+      "id" : 269,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 39,
+      "happiness" : 0.9400000000000001,
+      "id" : 270,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 36
+    },
+    {
+      "floor" : 39,
+      "happiness" : 0.9400000000000001,
+      "id" : 271,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 40
+    },
+    {
+      "floor" : 39,
+      "happiness" : 0.9400000000000001,
+      "id" : 272,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 44
+    },
+    {
+      "floor" : 39,
+      "happiness" : 0.9400000000000001,
+      "id" : 273,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 48
+    },
+    {
+      "floor" : 39,
+      "happiness" : 0.9400000000000001,
+      "id" : 274,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 52
+    },
+    {
+      "floor" : 39,
+      "happiness" : 0.9400000000000001,
+      "id" : 275,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 56
+    },
+    {
+      "floor" : 39,
+      "happiness" : 0.9400000000000001,
+      "id" : 276,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 60
+    },
+    {
+      "floor" : 40,
+      "happiness" : 0.9400000000000001,
+      "id" : 277,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 40,
+      "happiness" : 0.9400000000000001,
+      "id" : 278,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 40,
+      "happiness" : 0.9400000000000001,
+      "id" : 279,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 18
+    },
+    {
+      "floor" : 40,
+      "happiness" : 0.9400000000000001,
+      "id" : 280,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 40,
+      "happiness" : 0.9400000000000001,
+      "id" : 281,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 41
+    },
+    {
+      "floor" : 40,
+      "happiness" : 0.9400000000000001,
+      "id" : 282,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 50
+    },
+    {
+      "floor" : 41,
+      "happiness" : 0.9400000000000001,
+      "id" : 283,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 41,
+      "happiness" : 0.9400000000000001,
+      "id" : 284,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 41,
+      "happiness" : 0.9400000000000001,
+      "id" : 285,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 18
+    },
+    {
+      "floor" : 41,
+      "happiness" : 0.9400000000000001,
+      "id" : 286,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 41,
+      "happiness" : 0.9400000000000001,
+      "id" : 287,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 41
+    },
+    {
+      "floor" : 41,
+      "happiness" : 0.9400000000000001,
+      "id" : 288,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 50
+    },
+    {
+      "floor" : 42,
+      "happiness" : 0.9400000000000001,
+      "id" : 289,
+      "kind" : "hotel",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 42,
+      "happiness" : 0.75,
+      "id" : 290,
+      "kind" : "housekeeping",
+      "occupancy" : 0,
+      "rent" : 1,
+      "slot" : 16
+    },
+    {
+      "floor" : 42,
+      "happiness" : 0.9400000000000001,
+      "id" : 291,
+      "kind" : "hotel",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 43,
+      "happiness" : 0.9400000000000001,
+      "id" : 292,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 43,
+      "happiness" : 0.9400000000000001,
+      "id" : 293,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 43,
+      "happiness" : 0.9400000000000001,
+      "id" : 294,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 18
+    },
+    {
+      "floor" : 43,
+      "happiness" : 0.9400000000000001,
+      "id" : 295,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 43,
+      "happiness" : 0.9400000000000001,
+      "id" : 296,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 41
+    },
+    {
+      "floor" : 43,
+      "happiness" : 0.9400000000000001,
+      "id" : 297,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 50
+    },
+    {
+      "floor" : 44,
+      "happiness" : 0.9400000000000001,
+      "id" : 298,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 44,
+      "happiness" : 0.9400000000000001,
+      "id" : 299,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 44,
+      "happiness" : 0.9400000000000001,
+      "id" : 300,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 18
+    },
+    {
+      "floor" : 44,
+      "happiness" : 0.9400000000000001,
+      "id" : 301,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 44,
+      "happiness" : 0.9400000000000001,
+      "id" : 302,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 41
+    },
+    {
+      "floor" : 44,
+      "happiness" : 0.9400000000000001,
+      "id" : 303,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 50
+    },
+    {
+      "floor" : 45,
+      "happiness" : 0.75,
+      "id" : 304,
+      "kind" : "garden",
+      "occupancy" : 0,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 45,
+      "happiness" : 0.9400000000000001,
+      "id" : 305,
+      "kind" : "restaurant",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 46,
+      "happiness" : 0.9400000000000001,
+      "id" : 306,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 46,
+      "happiness" : 0.9400000000000001,
+      "id" : 307,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 46,
+      "happiness" : 0.9400000000000001,
+      "id" : 308,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 18
+    },
+    {
+      "floor" : 46,
+      "happiness" : 0.9400000000000001,
+      "id" : 309,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 46,
+      "happiness" : 0.9400000000000001,
+      "id" : 310,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 41
+    },
+    {
+      "floor" : 46,
+      "happiness" : 0.9400000000000001,
+      "id" : 311,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 50
+    },
+    {
+      "floor" : 47,
+      "happiness" : 0.9400000000000001,
+      "id" : 312,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 47,
+      "happiness" : 0.9400000000000001,
+      "id" : 313,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 47,
+      "happiness" : 0.9400000000000001,
+      "id" : 314,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 18
+    },
+    {
+      "floor" : 47,
+      "happiness" : 0.9400000000000001,
+      "id" : 315,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 47,
+      "happiness" : 0.9400000000000001,
+      "id" : 316,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 41
+    },
+    {
+      "floor" : 47,
+      "happiness" : 0.9400000000000001,
+      "id" : 317,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 50
+    },
+    {
+      "floor" : 48,
+      "happiness" : 0.9400000000000001,
+      "id" : 318,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 48,
+      "happiness" : 0.9400000000000001,
+      "id" : 319,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 4
+    },
+    {
+      "floor" : 48,
+      "happiness" : 0.9400000000000001,
+      "id" : 320,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 8
+    },
+    {
+      "floor" : 48,
+      "happiness" : 0.9400000000000001,
+      "id" : 321,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 12
+    },
+    {
+      "floor" : 48,
+      "happiness" : 0.9400000000000001,
+      "id" : 322,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 16
+    },
+    {
+      "floor" : 48,
+      "happiness" : 0.9400000000000001,
+      "id" : 323,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 20
+    },
+    {
+      "floor" : 48,
+      "happiness" : 0.9400000000000001,
+      "id" : 324,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 48,
+      "happiness" : 0.9400000000000001,
+      "id" : 325,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 36
+    },
+    {
+      "floor" : 48,
+      "happiness" : 0.9400000000000001,
+      "id" : 326,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 40
+    },
+    {
+      "floor" : 48,
+      "happiness" : 0.9400000000000001,
+      "id" : 327,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 44
+    },
+    {
+      "floor" : 48,
+      "happiness" : 0.9400000000000001,
+      "id" : 328,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 48
+    },
+    {
+      "floor" : 48,
+      "happiness" : 0.9400000000000001,
+      "id" : 329,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 52
+    },
+    {
+      "floor" : 48,
+      "happiness" : 0.9400000000000001,
+      "id" : 330,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 56
+    },
+    {
+      "floor" : 48,
+      "happiness" : 0.9400000000000001,
+      "id" : 331,
+      "kind" : "apartment",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 60
+    },
+    {
+      "floor" : 49,
+      "happiness" : 0.9400000000000001,
+      "id" : 332,
+      "kind" : "hotel",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 49,
+      "happiness" : 0.75,
+      "id" : 333,
+      "kind" : "housekeeping",
+      "occupancy" : 0,
+      "rent" : 1,
+      "slot" : 16
+    },
+    {
+      "floor" : 49,
+      "happiness" : 0.9400000000000001,
+      "id" : 334,
+      "kind" : "hotel",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 50,
+      "happiness" : 0.9400000000000001,
+      "id" : 335,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 0
+    },
+    {
+      "floor" : 50,
+      "happiness" : 0.9400000000000001,
+      "id" : 336,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 9
+    },
+    {
+      "floor" : 50,
+      "happiness" : 0.9400000000000001,
+      "id" : 337,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 18
+    },
+    {
+      "floor" : 50,
+      "happiness" : 0.9400000000000001,
+      "id" : 338,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 32
+    },
+    {
+      "floor" : 50,
+      "happiness" : 0.9400000000000001,
+      "id" : 339,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 41
+    },
+    {
+      "floor" : 50,
+      "happiness" : 0.9400000000000001,
+      "id" : 340,
+      "kind" : "office",
+      "occupancy" : 1,
+      "rent" : 1,
+      "slot" : 50
+    }
+  ],
+  "topFloor" : 50,
+  "travelers" : [
+    {
+      "destination" : 49,
+      "destinationX" : 8,
+      "elevatorID" : 4,
+      "floor" : 30,
+      "id" : 21,
+      "phase" : "riding",
+      "roomID" : 332,
+      "route" : [
+        49
+      ],
+      "waited" : 120,
+      "x" : 32
+    },
+    {
+      "destination" : 49,
+      "destinationX" : 8,
+      "elevatorID" : 4,
+      "floor" : 30,
+      "id" : 22,
+      "phase" : "riding",
+      "roomID" : 332,
+      "route" : [
+        49
+      ],
+      "waited" : 120,
+      "x" : 32
+    },
+    {
+      "destination" : 49,
+      "destinationX" : 8,
+      "elevatorID" : 4,
+      "floor" : 30,
+      "id" : 23,
+      "phase" : "riding",
+      "roomID" : 332,
+      "route" : [
+        49
+      ],
+      "waited" : 120,
+      "x" : 32
+    },
+    {
+      "destination" : 49,
+      "destinationX" : 8,
+      "elevatorID" : 4,
+      "floor" : 30,
+      "id" : 24,
+      "phase" : "riding",
+      "roomID" : 332,
+      "route" : [
+        49
+      ],
+      "waited" : 120,
+      "x" : 32
+    },
+    {
+      "destination" : 49,
+      "destinationX" : 8,
+      "elevatorID" : 4,
+      "floor" : 30,
+      "id" : 25,
+      "phase" : "riding",
+      "roomID" : 332,
+      "route" : [
+        49
+      ],
+      "waited" : 120,
+      "x" : 32
+    },
+    {
+      "destination" : 50,
+      "destinationX" : 4.5,
+      "elevatorID" : 4,
+      "floor" : 30,
+      "id" : 26,
+      "phase" : "riding",
+      "roomID" : 335,
+      "route" : [
+        50
+      ],
+      "waited" : 120,
+      "x" : 32
+    },
+    {
+      "destination" : 50,
+      "destinationX" : 4.5,
+      "elevatorID" : 4,
+      "floor" : 30,
+      "id" : 27,
+      "phase" : "riding",
+      "roomID" : 335,
+      "route" : [
+        50
+      ],
+      "waited" : 120,
+      "x" : 32
+    },
+    {
+      "destination" : 50,
+      "destinationX" : 4.5,
+      "elevatorID" : 4,
+      "floor" : 30,
+      "id" : 28,
+      "phase" : "riding",
+      "roomID" : 335,
+      "route" : [
+        50
+      ],
+      "waited" : 120,
+      "x" : 32
+    },
+    {
+      "destination" : 50,
+      "destinationX" : 4.5,
+      "elevatorID" : 4,
+      "floor" : 30,
+      "id" : 29,
+      "phase" : "riding",
+      "roomID" : 335,
+      "route" : [
+        50
+      ],
+      "waited" : 120,
+      "x" : 32
+    },
+    {
+      "destination" : 50,
+      "destinationX" : 4.5,
+      "elevatorID" : 4,
+      "floor" : 30,
+      "id" : 30,
+      "phase" : "riding",
+      "roomID" : 335,
+      "route" : [
+        50
+      ],
+      "waited" : 120,
+      "x" : 32
+    },
+    {
+      "destination" : 27,
+      "destinationX" : 2,
+      "floor" : 0,
+      "id" : 31,
+      "phase" : "waiting",
+      "roomID" : 177,
+      "route" : [
+        27
+      ],
+      "waited" : 190,
+      "x" : 32
+    },
+    {
+      "destination" : 27,
+      "destinationX" : 62,
+      "floor" : 0,
+      "id" : 32,
+      "phase" : "waiting",
+      "roomID" : 190,
+      "route" : [
+        27
+      ],
+      "waited" : 190,
+      "x" : 32
+    },
+    {
+      "destination" : 31,
+      "destinationX" : 36.5,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 33,
+      "phase" : "riding",
+      "roomID" : 205,
+      "route" : [
+        30,
+        31
+      ],
+      "waited" : 182,
+      "x" : 32
+    },
+    {
+      "destination" : 0,
+      "destinationX" : 1,
+      "floor" : 0,
+      "id" : 34,
+      "phase" : "walkingToRoom",
+      "roomID" : 218,
+      "route" : [
+
+      ],
+      "waited" : 47,
+      "x" : 25.599999999999994
+    },
+    {
+      "destination" : 34,
+      "destinationX" : 36.5,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 35,
+      "phase" : "riding",
+      "roomID" : 231,
+      "route" : [
+        30,
+        34
+      ],
+      "waited" : 182,
+      "x" : 32
+    },
+    {
+      "destination" : 36,
+      "destinationX" : 42,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 36,
+      "phase" : "riding",
+      "roomID" : 245,
+      "route" : [
+        30,
+        36
+      ],
+      "waited" : 182,
+      "x" : 32
+    },
+    {
+      "destination" : 0,
+      "destinationX" : 1,
+      "elevatorID" : 2,
+      "floor" : 27,
+      "id" : 37,
+      "phase" : "riding",
+      "roomID" : 181,
+      "route" : [
+        0
+      ],
+      "waited" : 177,
+      "x" : 32
+    },
+    {
+      "destination" : 29,
+      "destinationX" : 13.5,
+      "floor" : 0,
+      "id" : 38,
+      "phase" : "waiting",
+      "roomID" : 195,
+      "route" : [
+        29
+      ],
+      "waited" : 178,
+      "x" : 32
+    },
+    {
+      "destination" : 32,
+      "destinationX" : 13.5,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 39,
+      "phase" : "riding",
+      "roomID" : 209,
+      "route" : [
+        30,
+        32
+      ],
+      "waited" : 170,
+      "x" : 32
+    },
+    {
+      "destination" : 33,
+      "destinationX" : 42,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 40,
+      "phase" : "riding",
+      "roomID" : 222,
+      "route" : [
+        30,
+        33
+      ],
+      "waited" : 170,
+      "x" : 32
+    },
+    {
+      "destination" : 35,
+      "destinationX" : 40,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 41,
+      "phase" : "riding",
+      "roomID" : 236,
+      "route" : [
+        30,
+        35
+      ],
+      "waited" : 170,
+      "x" : 32
+    },
+    {
+      "destination" : 36,
+      "destinationX" : 58,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 42,
+      "phase" : "riding",
+      "roomID" : 249,
+      "route" : [
+        30,
+        36
+      ],
+      "waited" : 170,
+      "x" : 32
+    },
+    {
+      "destination" : 27,
+      "destinationX" : 42,
+      "floor" : 0,
+      "id" : 43,
+      "phase" : "waiting",
+      "roomID" : 185,
+      "route" : [
+        27
+      ],
+      "waited" : 166,
+      "x" : 32
+    },
+    {
+      "destination" : 29,
+      "destinationX" : 54.5,
+      "floor" : 0,
+      "id" : 44,
+      "phase" : "waiting",
+      "roomID" : 199,
+      "route" : [
+        29
+      ],
+      "waited" : 166,
+      "x" : 32
+    },
+    {
+      "destination" : 32,
+      "destinationX" : 54.5,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 45,
+      "phase" : "riding",
+      "roomID" : 213,
+      "route" : [
+        30,
+        32
+      ],
+      "waited" : 158,
+      "x" : 32
+    },
+    {
+      "destination" : 33,
+      "destinationX" : 58,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 46,
+      "phase" : "riding",
+      "roomID" : 226,
+      "route" : [
+        30,
+        33
+      ],
+      "waited" : 158,
+      "x" : 32
+    },
+    {
+      "destination" : 36,
+      "destinationX" : 14,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 47,
+      "phase" : "riding",
+      "roomID" : 240,
+      "route" : [
+        30,
+        36
+      ],
+      "waited" : 158,
+      "x" : 32
+    },
+    {
+      "destination" : 37,
+      "destinationX" : 22.5,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 48,
+      "phase" : "riding",
+      "roomID" : 253,
+      "route" : [
+        30,
+        37
+      ],
+      "waited" : 158,
+      "x" : 32
+    },
+    {
+      "destination" : 27,
+      "destinationX" : 58,
+      "floor" : 0,
+      "id" : 49,
+      "phase" : "waiting",
+      "roomID" : 189,
+      "route" : [
+        27
+      ],
+      "waited" : 154,
+      "x" : 32
+    },
+    {
+      "destination" : 31,
+      "destinationX" : 22.5,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 50,
+      "phase" : "riding",
+      "roomID" : 204,
+      "route" : [
+        30,
+        31
+      ],
+      "waited" : 146,
+      "x" : 32
+    },
+    {
+      "destination" : 33,
+      "destinationX" : 14,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 51,
+      "phase" : "riding",
+      "roomID" : 217,
+      "route" : [
+        30,
+        33
+      ],
+      "waited" : 146,
+      "x" : 32
+    },
+    {
+      "destination" : 0,
+      "destinationX" : 1,
+      "floor" : 30,
+      "id" : 52,
+      "phase" : "waiting",
+      "roomID" : 230,
+      "route" : [
+        0
+      ],
+      "waited" : 70,
+      "x" : 32
+    },
+    {
+      "destination" : 36,
+      "destinationX" : 38,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 53,
+      "phase" : "riding",
+      "roomID" : 244,
+      "route" : [
+        30,
+        36
+      ],
+      "waited" : 146,
+      "x" : 32
+    },
+    {
+      "destination" : 38,
+      "destinationX" : 4.5,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 54,
+      "phase" : "riding",
+      "roomID" : 257,
+      "route" : [
+        30,
+        38
+      ],
+      "waited" : 146,
+      "x" : 32
+    },
+    {
+      "destination" : 0,
+      "destinationX" : 1,
+      "elevatorID" : 2,
+      "floor" : 29,
+      "id" : 55,
+      "phase" : "riding",
+      "roomID" : 194,
+      "route" : [
+        0
+      ],
+      "waited" : 146,
+      "x" : 32
+    },
+    {
+      "destination" : 32,
+      "destinationX" : 4.5,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 56,
+      "phase" : "riding",
+      "roomID" : 208,
+      "route" : [
+        30,
+        32
+      ],
+      "waited" : 134,
+      "x" : 32
+    },
+    {
+      "destination" : 33,
+      "destinationX" : 38,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 57,
+      "phase" : "riding",
+      "roomID" : 221,
+      "route" : [
+        30,
+        33
+      ],
+      "waited" : 134,
+      "x" : 32
+    },
+    {
+      "destination" : 35,
+      "destinationX" : 8,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 58,
+      "phase" : "riding",
+      "roomID" : 234,
+      "route" : [
+        30,
+        35
+      ],
+      "waited" : 134,
+      "x" : 32
+    },
+    {
+      "destination" : 36,
+      "destinationX" : 54,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 59,
+      "phase" : "riding",
+      "roomID" : 248,
+      "route" : [
+        30,
+        36
+      ],
+      "waited" : 134,
+      "x" : 32
+    },
+    {
+      "destination" : 38,
+      "destinationX" : 45.5,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 60,
+      "phase" : "riding",
+      "roomID" : 261,
+      "route" : [
+        30,
+        38
+      ],
+      "waited" : 134,
+      "x" : 32
+    },
+    {
+      "destination" : 29,
+      "destinationX" : 45.5,
+      "floor" : 0,
+      "id" : 61,
+      "phase" : "waiting",
+      "roomID" : 198,
+      "route" : [
+        29
+      ],
+      "waited" : 130,
+      "x" : 32
+    },
+    {
+      "destination" : 32,
+      "destinationX" : 45.5,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 62,
+      "phase" : "riding",
+      "roomID" : 212,
+      "route" : [
+        30,
+        32
+      ],
+      "waited" : 122,
+      "x" : 32
+    },
+    {
+      "destination" : 33,
+      "destinationX" : 54,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 63,
+      "phase" : "riding",
+      "roomID" : 225,
+      "route" : [
+        30,
+        33
+      ],
+      "waited" : 122,
+      "x" : 32
+    },
+    {
+      "destination" : 36,
+      "destinationX" : 10,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 64,
+      "phase" : "riding",
+      "roomID" : 239,
+      "route" : [
+        30,
+        36
+      ],
+      "waited" : 122,
+      "x" : 32
+    },
+    {
+      "destination" : 37,
+      "destinationX" : 13.5,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 65,
+      "phase" : "riding",
+      "roomID" : 252,
+      "route" : [
+        30,
+        37
+      ],
+      "waited" : 122,
+      "x" : 32
+    },
+    {
+      "destination" : 39,
+      "destinationX" : 10,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 66,
+      "phase" : "riding",
+      "roomID" : 265,
+      "route" : [
+        30,
+        39
+      ],
+      "waited" : 122,
+      "x" : 32
+    },
+    {
+      "destination" : 31,
+      "destinationX" : 13.5,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 67,
+      "phase" : "riding",
+      "roomID" : 203,
+      "route" : [
+        30,
+        31
+      ],
+      "waited" : 110,
+      "x" : 32
+    },
+    {
+      "destination" : 33,
+      "destinationX" : 10,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 68,
+      "phase" : "riding",
+      "roomID" : 216,
+      "route" : [
+        30,
+        33
+      ],
+      "waited" : 110,
+      "x" : 32
+    },
+    {
+      "destination" : 34,
+      "destinationX" : 13.5,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 69,
+      "phase" : "riding",
+      "roomID" : 229,
+      "route" : [
+        30,
+        34
+      ],
+      "waited" : 110,
+      "x" : 32
+    },
+    {
+      "destination" : 0,
+      "destinationX" : 1,
+      "floor" : 30,
+      "id" : 70,
+      "phase" : "waiting",
+      "roomID" : 243,
+      "route" : [
+        0
+      ],
+      "waited" : 65,
+      "x" : 32
+    },
+    {
+      "destination" : 37,
+      "destinationX" : 54.5,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 71,
+      "phase" : "riding",
+      "roomID" : 256,
+      "route" : [
+        30,
+        37
+      ],
+      "waited" : 110,
+      "x" : 32
+    },
+    {
+      "destination" : 39,
+      "destinationX" : 34,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 72,
+      "phase" : "riding",
+      "roomID" : 269,
+      "route" : [
+        30,
+        39
+      ],
+      "waited" : 110,
+      "x" : 32
+    },
+    {
+      "destination" : 0,
+      "destinationX" : 1,
+      "floor" : 30,
+      "id" : 73,
+      "phase" : "waiting",
+      "roomID" : 207,
+      "route" : [
+        0
+      ],
+      "waited" : 100,
+      "x" : 32
+    },
+    {
+      "destination" : 33,
+      "destinationX" : 34,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 74,
+      "phase" : "riding",
+      "roomID" : 220,
+      "route" : [
+        30,
+        33
+      ],
+      "waited" : 98,
+      "x" : 32
+    },
+    {
+      "destination" : 34,
+      "destinationX" : 54.5,
+      "elevatorID" : 3,
+      "floor" : 0,
+      "id" : 75,
+      "phase" : "riding",
+      "roomID" : 233,
+      "route" : [
+        30,
+        34
+      ],
+      "waited" : 98,
+      "x" : 32
+    },
+    {
+      "destination" : 36,
+      "destinationX" : 50,
+      "floor" : 0,
+      "id" : 76,
+      "phase" : "waiting",
+      "roomID" : 247,
+      "route" : [
+        30,
+        36
+      ],
+      "waited" : 106,
+      "x" : 32
+    },
+    {
+      "destination" : 38,
+      "destinationX" : 36.5,
+      "floor" : 0,
+      "id" : 77,
+      "phase" : "waiting",
+      "roomID" : 260,
+      "route" : [
+        30,
+        38
+      ],
+      "waited" : 106,
+      "x" : 32
+    },
+    {
+      "destination" : 39,
+      "destinationX" : 50,
+      "floor" : 0,
+      "id" : 78,
+      "phase" : "waiting",
+      "roomID" : 273,
+      "route" : [
+        30,
+        39
+      ],
+      "waited" : 106,
+      "x" : 32
+    },
+    {
+      "destination" : 32,
+      "destinationX" : 36.5,
+      "floor" : 0,
+      "id" : 79,
+      "phase" : "waiting",
+      "roomID" : 211,
+      "route" : [
+        30,
+        32
+      ],
+      "waited" : 94,
+      "x" : 32
+    },
+    {
+      "destination" : 33,
+      "destinationX" : 50,
+      "floor" : 0,
+      "id" : 80,
+      "phase" : "waiting",
+      "roomID" : 224,
+      "route" : [
+        30,
+        33
+      ],
+      "waited" : 94,
+      "x" : 32
+    },
+    {
+      "destination" : 36,
+      "destinationX" : 6,
+      "floor" : 0,
+      "id" : 81,
+      "phase" : "waiting",
+      "roomID" : 238,
+      "route" : [
+        30,
+        36
+      ],
+      "waited" : 94,
+      "x" : 32
+    },
+    {
+      "destination" : 37,
+      "destinationX" : 4.5,
+      "floor" : 0,
+      "id" : 82,
+      "phase" : "waiting",
+      "roomID" : 251,
+      "route" : [
+        30,
+        37
+      ],
+      "waited" : 94,
+      "x" : 32
+    },
+    {
+      "destination" : 39,
+      "destinationX" : 6,
+      "floor" : 0,
+      "id" : 83,
+      "phase" : "waiting",
+      "roomID" : 264,
+      "route" : [
+        30,
+        39
+      ],
+      "waited" : 94,
+      "x" : 32
+    },
+    {
+      "destination" : 40,
+      "destinationX" : 4.5,
+      "floor" : 0,
+      "id" : 84,
+      "phase" : "waiting",
+      "roomID" : 277,
+      "route" : [
+        30,
+        40
+      ],
+      "waited" : 94,
+      "x" : 32
+    },
+    {
+      "destination" : 33,
+      "destinationX" : 6,
+      "floor" : 0,
+      "id" : 85,
+      "phase" : "waiting",
+      "roomID" : 215,
+      "route" : [
+        30,
+        33
+      ],
+      "waited" : 82,
+      "x" : 32
+    },
+    {
+      "destination" : 34,
+      "destinationX" : 4.5,
+      "floor" : 0,
+      "id" : 86,
+      "phase" : "waiting",
+      "roomID" : 228,
+      "route" : [
+        30,
+        34
+      ],
+      "waited" : 82,
+      "x" : 32
+    },
+    {
+      "destination" : 36,
+      "destinationX" : 22,
+      "floor" : 0,
+      "id" : 87,
+      "phase" : "waiting",
+      "roomID" : 242,
+      "route" : [
+        30,
+        36
+      ],
+      "waited" : 82,
+      "x" : 32
+    },
+    {
+      "destination" : 0,
+      "destinationX" : 1,
+      "floor" : 30,
+      "id" : 88,
+      "phase" : "waiting",
+      "roomID" : 255,
+      "route" : [
+        0
+      ],
+      "waited" : 31,
+      "x" : 32
+    },
+    {
+      "destination" : 39,
+      "destinationX" : 22,
+      "floor" : 0,
+      "id" : 89,
+      "phase" : "waiting",
+      "roomID" : 268,
+      "route" : [
+        30,
+        39
+      ],
+      "waited" : 82,
+      "x" : 32
+    },
+    {
+      "destination" : 40,
+      "destinationX" : 45.5,
+      "floor" : 0,
+      "id" : 90,
+      "phase" : "waiting",
+      "roomID" : 281,
+      "route" : [
+        30,
+        40
+      ],
+      "waited" : 82,
+      "x" : 32
+    },
+    {
+      "destination" : 0,
+      "destinationX" : 1,
+      "floor" : 30,
+      "id" : 91,
+      "phase" : "waiting",
+      "roomID" : 219,
+      "route" : [
+        0
+      ],
+      "waited" : 58,
+      "x" : 32
+    },
+    {
+      "destination" : 34,
+      "destinationX" : 45.5,
+      "floor" : 0,
+      "id" : 92,
+      "phase" : "waiting",
+      "roomID" : 232,
+      "route" : [
+        30,
+        34
+      ],
+      "waited" : 70,
+      "x" : 32
+    },
+    {
+      "destination" : 36,
+      "destinationX" : 46,
+      "floor" : 0,
+      "id" : 93,
+      "phase" : "waiting",
+      "roomID" : 246,
+      "route" : [
+        30,
+        36
+      ],
+      "waited" : 70,
+      "x" : 32
+    },
+    {
+      "destination" : 38,
+      "destinationX" : 22.5,
+      "floor" : 0,
+      "id" : 94,
+      "phase" : "waiting",
+      "roomID" : 259,
+      "route" : [
+        30,
+        38
+      ],
+      "waited" : 70,
+      "x" : 32
+    },
+    {
+      "destination" : 39,
+      "destinationX" : 46,
+      "floor" : 0,
+      "id" : 95,
+      "phase" : "waiting",
+      "roomID" : 272,
+      "route" : [
+        30,
+        39
+      ],
+      "waited" : 70,
+      "x" : 32
+    },
+    {
+      "destination" : 41,
+      "destinationX" : 22.5,
+      "floor" : 0,
+      "id" : 96,
+      "phase" : "waiting",
+      "roomID" : 285,
+      "route" : [
+        30,
+        41
+      ],
+      "waited" : 70,
+      "x" : 32
+    },
+    {
+      "destination" : 33,
+      "destinationX" : 46,
+      "floor" : 0,
+      "id" : 97,
+      "phase" : "waiting",
+      "roomID" : 223,
+      "route" : [
+        30,
+        33
+      ],
+      "waited" : 58,
+      "x" : 32
+    },
+    {
+      "destination" : 36,
+      "destinationX" : 2,
+      "floor" : 0,
+      "id" : 98,
+      "phase" : "waiting",
+      "roomID" : 237,
+      "route" : [
+        30,
+        36
+      ],
+      "waited" : 58,
+      "x" : 32
+    },
+    {
+      "destination" : 36,
+      "destinationX" : 62,
+      "floor" : 0,
+      "id" : 99,
+      "phase" : "waiting",
+      "roomID" : 250,
+      "route" : [
+        30,
+        36
+      ],
+      "waited" : 58,
+      "x" : 32
+    },
+    {
+      "destination" : 39,
+      "destinationX" : 2,
+      "floor" : 0,
+      "id" : 100,
+      "phase" : "waiting",
+      "roomID" : 263,
+      "route" : [
+        30,
+        39
+      ],
+      "waited" : 58,
+      "x" : 32
+    },
+    {
+      "destination" : 39,
+      "destinationX" : 62,
+      "floor" : 0,
+      "id" : 101,
+      "phase" : "waiting",
+      "roomID" : 276,
+      "route" : [
+        30,
+        39
+      ],
+      "waited" : 58,
+      "x" : 32
+    },
+    {
+      "destination" : 42,
+      "destinationX" : 8,
+      "floor" : 0,
+      "id" : 102,
+      "phase" : "waiting",
+      "roomID" : 289,
+      "route" : [
+        30,
+        42
+      ],
+      "waited" : 58,
+      "x" : 32
+    },
+    {
+      "destination" : 33,
+      "destinationX" : 62,
+      "floor" : 0,
+      "id" : 103,
+      "phase" : "waiting",
+      "roomID" : 227,
+      "route" : [
+        30,
+        33
+      ],
+      "waited" : 46,
+      "x" : 32
+    },
+    {
+      "destination" : 36,
+      "destinationX" : 18,
+      "floor" : 0,
+      "id" : 104,
+      "phase" : "waiting",
+      "roomID" : 241,
+      "route" : [
+        30,
+        36
+      ],
+      "waited" : 46,
+      "x" : 32
+    },
+    {
+      "destination" : 37,
+      "destinationX" : 36.5,
+      "floor" : 0,
+      "id" : 105,
+      "phase" : "waiting",
+      "roomID" : 254,
+      "route" : [
+        30,
+        37
+      ],
+      "waited" : 46,
+      "x" : 32
+    },
+    {
+      "destination" : 0,
+      "destinationX" : 1,
+      "floor" : 39,
+      "id" : 106,
+      "phase" : "waiting",
+      "roomID" : 267,
+      "route" : [
+        30,
+        0
+      ],
+      "waited" : 67,
+      "x" : 32
+    },
+    {
+      "destination" : 40,
+      "destinationX" : 36.5,
+      "floor" : 0,
+      "id" : 107,
+      "phase" : "waiting",
+      "roomID" : 280,
+      "route" : [
+        30,
+        40
+      ],
+      "waited" : 46,
+      "x" : 32
+    },
+    {
+      "destination" : 43,
+      "destinationX" : 22.5,
+      "floor" : 0,
+      "id" : 108,
+      "phase" : "waiting",
+      "roomID" : 294,
+      "route" : [
+        30,
+        43
+      ],
+      "waited" : 46,
+      "x" : 32
+    },
+    {
+      "destination" : 0,
+      "destinationX" : 1,
+      "floor" : 34,
+      "id" : 109,
+      "phase" : "waiting",
+      "roomID" : 231,
+      "route" : [
+        30,
+        0
+      ],
+      "waited" : 67,
+      "x" : 32
+    },
+    {
+      "destination" : 36,
+      "destinationX" : 42,
+      "floor" : 0,
+      "id" : 110,
+      "phase" : "waiting",
+      "roomID" : 245,
+      "route" : [
+        30,
+        36
+      ],
+      "waited" : 34,
+      "x" : 32
+    },
+    {
+      "destination" : 38,
+      "destinationX" : 13.5,
+      "floor" : 0,
+      "id" : 111,
+      "phase" : "waiting",
+      "roomID" : 258,
+      "route" : [
+        30,
+        38
+      ],
+      "waited" : 34,
+      "x" : 32
+    },
+    {
+      "destination" : 39,
+      "destinationX" : 42,
+      "floor" : 0,
+      "id" : 112,
+      "phase" : "waiting",
+      "roomID" : 271,
+      "route" : [
+        30,
+        39
+      ],
+      "waited" : 34,
+      "x" : 32
+    },
+    {
+      "destination" : 41,
+      "destinationX" : 13.5,
+      "floor" : 0,
+      "id" : 113,
+      "phase" : "waiting",
+      "roomID" : 284,
+      "route" : [
+        30,
+        41
+      ],
+      "waited" : 34,
+      "x" : 32
+    },
+    {
+      "destination" : 44,
+      "destinationX" : 4.5,
+      "floor" : 0,
+      "id" : 114,
+      "phase" : "waiting",
+      "roomID" : 298,
+      "route" : [
+        30,
+        44
+      ],
+      "waited" : 34,
+      "x" : 32
+    },
+    {
+      "destination" : 35,
+      "destinationX" : 40,
+      "floor" : 0,
+      "id" : 115,
+      "phase" : "waiting",
+      "roomID" : 236,
+      "route" : [
+        30,
+        35
+      ],
+      "waited" : 22,
+      "x" : 32
+    },
+    {
+      "destination" : 36,
+      "destinationX" : 58,
+      "floor" : 0,
+      "id" : 116,
+      "phase" : "waiting",
+      "roomID" : 249,
+      "route" : [
+        30,
+        36
+      ],
+      "waited" : 22,
+      "x" : 32
+    },
+    {
+      "destination" : 38,
+      "destinationX" : 54.5,
+      "floor" : 0,
+      "id" : 117,
+      "phase" : "waiting",
+      "roomID" : 262,
+      "route" : [
+        30,
+        38
+      ],
+      "waited" : 22,
+      "x" : 32
+    },
+    {
+      "destination" : 39,
+      "destinationX" : 58,
+      "floor" : 0,
+      "id" : 118,
+      "phase" : "waiting",
+      "roomID" : 275,
+      "route" : [
+        30,
+        39
+      ],
+      "waited" : 22,
+      "x" : 32
+    },
+    {
+      "destination" : 41,
+      "destinationX" : 54.5,
+      "floor" : 0,
+      "id" : 119,
+      "phase" : "waiting",
+      "roomID" : 288,
+      "route" : [
+        30,
+        41
+      ],
+      "waited" : 22,
+      "x" : 32
+    },
+    {
+      "destination" : 44,
+      "destinationX" : 45.5,
+      "floor" : 0,
+      "id" : 120,
+      "phase" : "waiting",
+      "roomID" : 302,
+      "route" : [
+        30,
+        44
+      ],
+      "waited" : 22,
+      "x" : 32
+    },
+    {
+      "destination" : 36,
+      "destinationX" : 14,
+      "floor" : 0,
+      "id" : 121,
+      "phase" : "waiting",
+      "roomID" : 240,
+      "route" : [
+        30,
+        36
+      ],
+      "waited" : 10,
+      "x" : 32
+    },
+    {
+      "destination" : 37,
+      "destinationX" : 22.5,
+      "floor" : 0,
+      "id" : 122,
+      "phase" : "waiting",
+      "roomID" : 253,
+      "route" : [
+        30,
+        37
+      ],
+      "waited" : 10,
+      "x" : 32
+    },
+    {
+      "destination" : 39,
+      "destinationX" : 14,
+      "floor" : 0,
+      "id" : 123,
+      "phase" : "waiting",
+      "roomID" : 266,
+      "route" : [
+        30,
+        39
+      ],
+      "waited" : 10,
+      "x" : 32
+    },
+    {
+      "destination" : 0,
+      "destinationX" : 1,
+      "floor" : 40,
+      "id" : 124,
+      "phase" : "waiting",
+      "roomID" : 279,
+      "route" : [
+        30,
+        0
+      ],
+      "waited" : 37,
+      "x" : 32
+    },
+    {
+      "destination" : 43,
+      "destinationX" : 13.5,
+      "floor" : 0,
+      "id" : 125,
+      "phase" : "waiting",
+      "roomID" : 293,
+      "route" : [
+        30,
+        43
+      ],
+      "waited" : 10,
+      "x" : 32
+    },
+    {
+      "destination" : 46,
+      "destinationX" : 13.5,
+      "floor" : 0,
+      "id" : 126,
+      "phase" : "waiting",
+      "roomID" : 307,
+      "route" : [
+        30,
+        46
+      ],
+      "waited" : 10,
+      "x" : 32
+    },
+    {
+      "destination" : 0,
+      "destinationX" : 1,
+      "floor" : 36,
+      "id" : 127,
+      "phase" : "waiting",
+      "roomID" : 244,
+      "route" : [
+        30,
+        0
+      ],
+      "waited" : 29,
+      "x" : 32
+    },
+    {
+      "destination" : 38,
+      "destinationX" : 4.5,
+      "floor" : 0,
+      "id" : 128,
+      "phase" : "walkingToLift",
+      "roomID" : 257,
+      "route" : [
+        30,
+        38
+      ],
+      "waited" : 0,
+      "x" : 30.60000000000002
+    },
+    {
+      "destination" : 39,
+      "destinationX" : 38,
+      "floor" : 0,
+      "id" : 129,
+      "phase" : "walkingToLift",
+      "roomID" : 270,
+      "route" : [
+        30,
+        39
+      ],
+      "waited" : 0,
+      "x" : 30.60000000000002
+    },
+    {
+      "destination" : 41,
+      "destinationX" : 4.5,
+      "floor" : 0,
+      "id" : 130,
+      "phase" : "walkingToLift",
+      "roomID" : 283,
+      "route" : [
+        30,
+        41
+      ],
+      "waited" : 0,
+      "x" : 30.60000000000002
+    },
+    {
+      "destination" : 43,
+      "destinationX" : 54.5,
+      "floor" : 0,
+      "id" : 131,
+      "phase" : "walkingToLift",
+      "roomID" : 297,
+      "route" : [
+        30,
+        43
+      ],
+      "waited" : 0,
+      "x" : 30.60000000000002
+    },
+    {
+      "destination" : 46,
+      "destinationX" : 54.5,
+      "floor" : 0,
+      "id" : 132,
+      "phase" : "walkingToLift",
+      "roomID" : 311,
+      "route" : [
+        30,
+        46
+      ],
+      "waited" : 0,
+      "x" : 30.60000000000002
+    },
+    {
+      "destination" : 36,
+      "destinationX" : 54,
+      "floor" : 0,
+      "id" : 133,
+      "phase" : "walkingToLift",
+      "roomID" : 248,
+      "route" : [
+        30,
+        36
+      ],
+      "waited" : 0,
+      "x" : 21.00000000000001
+    },
+    {
+      "destination" : 38,
+      "destinationX" : 45.5,
+      "floor" : 0,
+      "id" : 134,
+      "phase" : "walkingToLift",
+      "roomID" : 261,
+      "route" : [
+        30,
+        38
+      ],
+      "waited" : 0,
+      "x" : 21.00000000000001
+    },
+    {
+      "destination" : 39,
+      "destinationX" : 54,
+      "floor" : 0,
+      "id" : 135,
+      "phase" : "walkingToLift",
+      "roomID" : 274,
+      "route" : [
+        30,
+        39
+      ],
+      "waited" : 0,
+      "x" : 21.00000000000001
+    },
+    {
+      "destination" : 41,
+      "destinationX" : 45.5,
+      "floor" : 0,
+      "id" : 136,
+      "phase" : "walkingToLift",
+      "roomID" : 287,
+      "route" : [
+        30,
+        41
+      ],
+      "waited" : 0,
+      "x" : 21.00000000000001
+    },
+    {
+      "destination" : 44,
+      "destinationX" : 36.5,
+      "floor" : 0,
+      "id" : 137,
+      "phase" : "walkingToLift",
+      "roomID" : 301,
+      "route" : [
+        30,
+        44
+      ],
+      "waited" : 0,
+      "x" : 21.00000000000001
+    },
+    {
+      "destination" : 47,
+      "destinationX" : 36.5,
+      "floor" : 0,
+      "id" : 138,
+      "phase" : "walkingToLift",
+      "roomID" : 315,
+      "route" : [
+        30,
+        47
+      ],
+      "waited" : 0,
+      "x" : 21.00000000000001
+    },
+    {
+      "destination" : 37,
+      "destinationX" : 13.5,
+      "floor" : 0,
+      "id" : 139,
+      "phase" : "walkingToLift",
+      "roomID" : 252,
+      "route" : [
+        30,
+        37
+      ],
+      "waited" : 0,
+      "x" : 11.400000000000002
+    },
+    {
+      "destination" : 39,
+      "destinationX" : 10,
+      "floor" : 0,
+      "id" : 140,
+      "phase" : "walkingToLift",
+      "roomID" : 265,
+      "route" : [
+        30,
+        39
+      ],
+      "waited" : 0,
+      "x" : 11.400000000000002
+    },
+    {
+      "destination" : 40,
+      "destinationX" : 13.5,
+      "floor" : 0,
+      "id" : 141,
+      "phase" : "walkingToLift",
+      "roomID" : 278,
+      "route" : [
+        30,
+        40
+      ],
+      "waited" : 0,
+      "x" : 11.400000000000002
+    },
+    {
+      "destination" : 0,
+      "destinationX" : 1,
+      "floor" : 43,
+      "id" : 142,
+      "phase" : "walkingToLift",
+      "roomID" : 292,
+      "route" : [
+        30,
+        0
+      ],
+      "waited" : 0,
+      "x" : 14.900000000000006
+    },
+    {
+      "destination" : 46,
+      "destinationX" : 4.5,
+      "floor" : 0,
+      "id" : 143,
+      "phase" : "walkingToLift",
+      "roomID" : 306,
+      "route" : [
+        30,
+        46
+      ],
+      "waited" : 0,
+      "x" : 11.400000000000002
+    },
+    {
+      "destination" : 48,
+      "destinationX" : 6,
+      "floor" : 0,
+      "id" : 144,
+      "phase" : "walkingToLift",
+      "roomID" : 319,
+      "route" : [
+        30,
+        48
+      ],
+      "waited" : 0,
+      "x" : 11.400000000000002
+    },
+    {
+      "destination" : 0,
+      "destinationX" : 1,
+      "floor" : 37,
+      "id" : 145,
+      "phase" : "walkingToLift",
+      "roomID" : 256,
+      "route" : [
+        30,
+        0
+      ],
+      "waited" : 0,
+      "x" : 53.7
+    },
+    {
+      "destination" : 39,
+      "destinationX" : 34,
+      "floor" : 0,
+      "id" : 146,
+      "phase" : "walkingToLift",
+      "roomID" : 269,
+      "route" : [
+        30,
+        39
+      ],
+      "waited" : 0,
+      "x" : 1.8
+    },
+    {
+      "destination" : 40,
+      "destinationX" : 54.5,
+      "floor" : 0,
+      "id" : 147,
+      "phase" : "walkingToLift",
+      "roomID" : 282,
+      "route" : [
+        30,
+        40
+      ],
+      "waited" : 0,
+      "x" : 1.8
+    },
+    {
+      "destination" : 43,
+      "destinationX" : 45.5,
+      "floor" : 0,
+      "id" : 148,
+      "phase" : "walkingToLift",
+      "roomID" : 296,
+      "route" : [
+        30,
+        43
+      ],
+      "waited" : 0,
+      "x" : 1.8
+    },
+    {
+      "destination" : 46,
+      "destinationX" : 45.5,
+      "floor" : 0,
+      "id" : 149,
+      "phase" : "walkingToLift",
+      "roomID" : 310,
+      "route" : [
+        30,
+        46
+      ],
+      "waited" : 0,
+      "x" : 1.8
+    },
+    {
+      "destination" : 48,
+      "destinationX" : 22,
+      "floor" : 0,
+      "id" : 150,
+      "phase" : "walkingToLift",
+      "roomID" : 323,
+      "route" : [
+        30,
+        48
+      ],
+      "waited" : 0,
+      "x" : 1.8
+    }
+  ],
+  "tripsCompleted" : 20,
+  "version" : 2
+}

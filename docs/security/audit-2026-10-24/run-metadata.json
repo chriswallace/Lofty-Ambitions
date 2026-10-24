@@ -1,0 +1,44 @@
+{
+  "run_id": "run-1",
+  "repo": "yoot-tower",
+  "target": "/Users/chriswallace/Projects/yoot-tower",
+  "source_ref": "unversioned-source-sha256:2f9466c2610c73b0dead941b806075b0a0e1fd01169b6a8485da916c163f9e34",
+  "profile": "standard",
+  "scope_paths": [
+    "Sources",
+    "Tests",
+    "scripts",
+    ".github",
+    "Vendor/stb",
+    "Assets/Tokyo/Runtime",
+    "Package.swift"
+  ],
+  "budget": null,
+  "execution_policy": "sandboxed-source-and-local-only",
+  "selected_companion_files": [
+    "MEMORY-SAFETY-AND-BINARY.md",
+    "DESKTOP-MOBILE-AND-LOCAL-IPC.md",
+    "SUPPLY-CHAIN-AND-RELEASE.md",
+    "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md",
+    "DATA-ISOLATION-AND-LIFECYCLE.md"
+  ],
+  "prior_run_paths": [],
+  "shared_file_owners": {
+    "all_shared_run_files": "parent"
+  },
+  "run_status": "incomplete",
+  "execution_limits": "Source inspection only until every required sandbox control is demonstrated; no live service probes or target execution during reconnaissance.",
+  "agent_plan": {
+    "reconnaissance": 4,
+    "hunters_initial": 3,
+    "critics_minimum": 2,
+    "verifiers_per_candidate": 2
+  },
+  "source_notes": "No Git metadata or prior compatible audit records; initial snapshot before Steam integration.",
+  "incomplete_reason": "user_requested_immediate_github_PC_handoff_before_candidate_validation",
+  "target_execution_performed": false,
+  "post_wave_critic": "completed_one_new_temp_file_unit_accepted",
+  "final_clean_critic": "not_run",
+  "independent_candidate_validation": "not_run",
+  "next_steps": "Resume source validation on PC or Mac; establish required audit sandbox before any dynamic checks; apply and test fixes separately."
+}

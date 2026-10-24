@@ -147,3 +147,42 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# Original local project rules
+.build/
+dist/
+.DS_Store
+__pycache__/
+Vendor/SDL3/
+
+# Game builds, local saves, and downloaded SDKs
+/.build/
+/dist/
+.DS_Store
+__pycache__/
+/Vendor/SDL3/
+/Vendor/Steamworks/
+/Vendor/steamworks_sdk/
+steam_appid.txt
+*.loftyambitions
+!/Examples/*.loftyambitions
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Artwork authoring archives and generated marketing media
+/Assets/Tokyo/HD/
+/Assets/Tokyo/PixelStudies/
+/Assets/Tokyo/Concepts/
+/Assets/Tokyo/StateStudies/
+/Assets/Tokyo/tokyo-hd-sprites.zip
+/Assets/Tokyo/Branding/*
+!/Assets/Tokyo/Branding/lofty-ambitions-splash-v3.png
+/Marketing/**/*.zip
+/Marketing/**/*.mp4
+/Marketing/**/*.gif
+/Marketing/**/*.wav
+/Marketing/**/*.png

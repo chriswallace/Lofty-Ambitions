@@ -1,0 +1,154 @@
+{
+  "commands": [
+    {
+      "addFloor": {}
+    },
+    {
+      "constructFloor": {
+        "floor": 2,
+        "from": 0,
+        "to": 63
+      }
+    },
+    {
+      "build": {
+        "_0": "office",
+        "floor": 1,
+        "slot": 0
+      }
+    },
+    {
+      "build": {
+        "_0": "apartment",
+        "floor": 1,
+        "slot": 12
+      }
+    },
+    {
+      "buildRow": {
+        "_0": "apartment",
+        "floor": 1,
+        "from": 16,
+        "to": 20
+      }
+    },
+    {
+      "build": {
+        "_0": "restaurant",
+        "floor": 2,
+        "slot": 0
+      }
+    },
+    {
+      "build": {
+        "_0": "shop",
+        "floor": 2,
+        "slot": 32
+      }
+    },
+    {
+      "addElevator": {
+        "_0": "standard",
+        "column": 56,
+        "from": 0,
+        "to": 2
+      }
+    },
+    {
+      "upgradeElevator": {
+        "_0": 1
+      }
+    },
+    {
+      "relocateElevator": {
+        "_0": 1,
+        "column": 52,
+        "from": 0,
+        "to": 2
+      }
+    },
+    {
+      "addFloor": {}
+    },
+    {
+      "extendElevators": {}
+    },
+    {
+      "widenTower": {
+        "cells": 2,
+        "left": false
+      }
+    },
+    {
+      "setRoomStyle": {
+        "_0": 2,
+        "style": 1
+      }
+    },
+    {
+      "setRent": {
+        "_0": 2,
+        "value": 1.1
+      }
+    },
+    {
+      "setApartmentPolicy": {
+        "_0": 3,
+        "deposit": "none",
+        "screening": "standard"
+      }
+    },
+    {
+      "claimAmbition": {
+        "_0": "first-business"
+      }
+    },
+    {
+      "claimAmbition": {
+        "_0": "daily-essentials"
+      }
+    },
+    {
+      "requestTrip": {
+        "from": 0,
+        "roomID": 2,
+        "to": 1
+      }
+    },
+    {
+      "advance": {
+        "minutes": 240
+      }
+    },
+    {
+      "triggerIncident": {
+        "_0": "fire",
+        "roomID": 2
+      }
+    },
+    {
+      "respondToIncident": {
+        "_0": 2,
+        "action": "dispatchFireDepartment"
+      }
+    },
+    {
+      "advance": {
+        "minutes": 210
+      }
+    },
+    {
+      "respondToIncident": {
+        "_0": 2,
+        "action": "repair"
+      }
+    },
+    {
+      "advance": {
+        "minutes": 240
+      }
+    }
+  ],
+  "formatVersion": 1,
+  "scenerySeed": 20261024
+}

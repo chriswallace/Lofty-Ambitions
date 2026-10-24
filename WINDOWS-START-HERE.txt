@@ -1,0 +1,31 @@
+LOFTY AMBITIONS — FIRST WINDOWS TEST
+
+This is a source/build test kit, not a prebuilt Windows game.
+The Mac and Windows applications use one shared game, artwork and save format.
+Windows execution and final clean-PC delivery have not yet been verified.
+
+1. Extract this ZIP to a writable folder on your Windows 11 x64 PC.
+2. Install Swift 6.4.1 and the official Windows prerequisites:
+   https://www.swift.org/install/windows/
+   https://www.swift.org/install/windows/manual/
+   These include Visual Studio C++ x64 tools, a Windows SDK, Python and Git.
+3. Open PowerShell in the extracted project folder and run:
+
+   powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\build-windows.ps1
+
+The script downloads verified SDL files, builds, tests, checks saved-state
+parity, exercises the interface using disposable towers, and packages the game.
+It does not install developer tools or replace your ordinary game saves.
+
+4. Return the newest file matching:
+   dist\windows\Lofty-Windows-Diagnostics-*.zip
+   A diagnostics ZIP is also produced when a build stage fails.
+
+5. If the build succeeds, double-click the packaged LoftyDesktop.exe and try
+   building, elevators, save/open and an emergency. Report any failure.
+
+Full instructions and the first-release PC checklist:
+   docs\porting\WINDOWS.md
+
+A final player ZIP must also be tested on a Windows PC without development
+tools installed. That check is still pending.

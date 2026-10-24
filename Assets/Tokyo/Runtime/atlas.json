@@ -1,0 +1,3894 @@
+{
+  "version": 1,
+  "coordinateSystem": "top_left_pixels",
+  "frames": {
+    "civilian.0.0": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        49,
+        39,
+        91,
+        231
+      ],
+      "referenceHeight": 229,
+      "footAnchor": [
+        47.5,
+        1
+      ]
+    },
+    "civilian.0.1": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        221,
+        45,
+        105,
+        227
+      ],
+      "referenceHeight": 229,
+      "footAnchor": [
+        51.5,
+        1
+      ]
+    },
+    "civilian.0.2": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        394,
+        45,
+        109,
+        227
+      ],
+      "referenceHeight": 229,
+      "footAnchor": [
+        58.0,
+        1
+      ]
+    },
+    "civilian.0.3": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        569,
+        46,
+        110,
+        226
+      ],
+      "referenceHeight": 229,
+      "footAnchor": [
+        63.0,
+        0
+      ]
+    },
+    "civilian.0.4": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        741,
+        45,
+        137,
+        226
+      ],
+      "referenceHeight": 229,
+      "footAnchor": [
+        90.0,
+        1
+      ]
+    },
+    "civilian.0.5": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        924,
+        45,
+        156,
+        227
+      ],
+      "referenceHeight": 229,
+      "footAnchor": [
+        113.5,
+        1
+      ]
+    },
+    "civilian.0.6": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        1138,
+        77,
+        108,
+        195
+      ],
+      "referenceHeight": 229,
+      "footAnchor": [
+        46.5,
+        0
+      ]
+    },
+    "civilian.0.7": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        1313,
+        76,
+        110,
+        196
+      ],
+      "referenceHeight": 229,
+      "footAnchor": [
+        44.0,
+        0
+      ]
+    },
+    "civilian.1.0": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        48,
+        312,
+        92,
+        227
+      ],
+      "referenceHeight": 225,
+      "footAnchor": [
+        46.0,
+        1
+      ]
+    },
+    "civilian.1.1": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        220,
+        317,
+        106,
+        225
+      ],
+      "referenceHeight": 225,
+      "footAnchor": [
+        48.5,
+        1
+      ]
+    },
+    "civilian.1.2": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        393,
+        317,
+        110,
+        226
+      ],
+      "referenceHeight": 225,
+      "footAnchor": [
+        54.5,
+        1
+      ]
+    },
+    "civilian.1.3": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        568,
+        317,
+        112,
+        226
+      ],
+      "referenceHeight": 225,
+      "footAnchor": [
+        60.0,
+        0
+      ]
+    },
+    "civilian.1.4": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        743,
+        317,
+        135,
+        226
+      ],
+      "referenceHeight": 225,
+      "footAnchor": [
+        87.0,
+        1
+      ]
+    },
+    "civilian.1.5": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        924,
+        317,
+        155,
+        226
+      ],
+      "referenceHeight": 225,
+      "footAnchor": [
+        107.5,
+        1
+      ]
+    },
+    "civilian.1.6": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        1138,
+        272,
+        112,
+        270
+      ],
+      "referenceHeight": 225,
+      "footAnchor": [
+        47.0,
+        1
+      ]
+    },
+    "civilian.1.7": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        1313,
+        272,
+        112,
+        270
+      ],
+      "referenceHeight": 225,
+      "footAnchor": [
+        47.0,
+        0
+      ]
+    },
+    "civilian.2.0": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        47,
+        575,
+        96,
+        232
+      ],
+      "referenceHeight": 230,
+      "footAnchor": [
+        49.5,
+        1
+      ]
+    },
+    "civilian.2.1": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        215,
+        578,
+        111,
+        230
+      ],
+      "referenceHeight": 230,
+      "footAnchor": [
+        55.5,
+        0
+      ]
+    },
+    "civilian.2.2": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        389,
+        578,
+        114,
+        231
+      ],
+      "referenceHeight": 230,
+      "footAnchor": [
+        62.0,
+        1
+      ]
+    },
+    "civilian.2.3": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        567,
+        578,
+        113,
+        231
+      ],
+      "referenceHeight": 230,
+      "footAnchor": [
+        65.0,
+        1
+      ]
+    },
+    "civilian.2.4": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        730,
+        578,
+        148,
+        229
+      ],
+      "referenceHeight": 230,
+      "footAnchor": [
+        99.0,
+        0
+      ]
+    },
+    "civilian.2.5": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        921,
+        578,
+        157,
+        231
+      ],
+      "referenceHeight": 230,
+      "footAnchor": [
+        109.5,
+        1
+      ]
+    },
+    "civilian.2.6": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        1137,
+        608,
+        110,
+        201
+      ],
+      "referenceHeight": 230,
+      "footAnchor": [
+        48.5,
+        1
+      ]
+    },
+    "civilian.2.7": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        1310,
+        607,
+        113,
+        202
+      ],
+      "referenceHeight": 230,
+      "footAnchor": [
+        46.0,
+        1
+      ]
+    },
+    "civilian.3.0": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        53,
+        843,
+        82,
+        225
+      ],
+      "referenceHeight": 223,
+      "footAnchor": [
+        41.0,
+        1
+      ]
+    },
+    "civilian.3.1": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        217,
+        849,
+        109,
+        218
+      ],
+      "referenceHeight": 223,
+      "footAnchor": [
+        51.5,
+        0
+      ]
+    },
+    "civilian.3.2": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        389,
+        849,
+        113,
+        218
+      ],
+      "referenceHeight": 223,
+      "footAnchor": [
+        56.5,
+        0
+      ]
+    },
+    "civilian.3.3": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        568,
+        849,
+        110,
+        218
+      ],
+      "referenceHeight": 223,
+      "footAnchor": [
+        59.0,
+        0
+      ]
+    },
+    "civilian.3.4": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        738,
+        850,
+        139,
+        217
+      ],
+      "referenceHeight": 223,
+      "footAnchor": [
+        89.5,
+        0
+      ]
+    },
+    "civilian.3.5": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        923,
+        850,
+        155,
+        217
+      ],
+      "referenceHeight": 223,
+      "footAnchor": [
+        113.0,
+        0
+      ]
+    },
+    "civilian.3.6": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        1140,
+        870,
+        110,
+        198
+      ],
+      "referenceHeight": 223,
+      "footAnchor": [
+        41.5,
+        1
+      ]
+    },
+    "civilian.3.7": {
+      "sheet": "Characters/civilians.png",
+      "rect": [
+        1315,
+        870,
+        107,
+        197
+      ],
+      "referenceHeight": 223,
+      "footAnchor": [
+        42.5,
+        0
+      ]
+    },
+    "responder.0.0": {
+      "sheet": "Characters/responders.png",
+      "rect": [
+        99,
+        34,
+        157,
+        280
+      ],
+      "referenceHeight": 280
+    },
+    "responder.0.1": {
+      "sheet": "Characters/responders.png",
+      "rect": [
+        396,
+        34,
+        166,
+        280
+      ],
+      "referenceHeight": 280
+    },
+    "responder.0.2": {
+      "sheet": "Characters/responders.png",
+      "rect": [
+        709,
+        34,
+        163,
+        280
+      ],
+      "referenceHeight": 280
+    },
+    "responder.0.3": {
+      "sheet": "Characters/responders.png",
+      "rect": [
+        1022,
+        34,
+        162,
+        280
+      ],
+      "referenceHeight": 280
+    },
+    "responder.1.0": {
+      "sheet": "Characters/responders.png",
+      "rect": [
+        43,
+        314,
+        240,
+        310
+      ],
+      "referenceHeight": 310
+    },
+    "responder.1.1": {
+      "sheet": "Characters/responders.png",
+      "rect": [
+        352,
+        314,
+        244,
+        310
+      ],
+      "referenceHeight": 310
+    },
+    "responder.1.2": {
+      "sheet": "Characters/responders.png",
+      "rect": [
+        666,
+        314,
+        243,
+        310
+      ],
+      "referenceHeight": 310
+    },
+    "responder.1.3": {
+      "sheet": "Characters/responders.png",
+      "rect": [
+        980,
+        314,
+        243,
+        310
+      ],
+      "referenceHeight": 310
+    },
+    "responder.2.0": {
+      "sheet": "Characters/responders.png",
+      "rect": [
+        37,
+        642,
+        246,
+        298
+      ],
+      "referenceHeight": 298
+    },
+    "responder.2.1": {
+      "sheet": "Characters/responders.png",
+      "rect": [
+        347,
+        642,
+        249,
+        298
+      ],
+      "referenceHeight": 298
+    },
+    "responder.2.2": {
+      "sheet": "Characters/responders.png",
+      "rect": [
+        661,
+        642,
+        253,
+        298
+      ],
+      "referenceHeight": 298
+    },
+    "responder.2.3": {
+      "sheet": "Characters/responders.png",
+      "rect": [
+        974,
+        642,
+        249,
+        298
+      ],
+      "referenceHeight": 298
+    },
+    "responder.3.0": {
+      "sheet": "Characters/responders.png",
+      "rect": [
+        84,
+        940,
+        166,
+        287
+      ],
+      "referenceHeight": 289
+    },
+    "responder.3.1": {
+      "sheet": "Characters/responders.png",
+      "rect": [
+        412,
+        940,
+        158,
+        286
+      ],
+      "referenceHeight": 289
+    },
+    "responder.3.2": {
+      "sheet": "Characters/responders.png",
+      "rect": [
+        701,
+        940,
+        174,
+        288
+      ],
+      "referenceHeight": 289
+    },
+    "responder.3.3": {
+      "sheet": "Characters/responders.png",
+      "rect": [
+        1037,
+        940,
+        161,
+        289
+      ],
+      "referenceHeight": 289
+    },
+    "staff.0.0": {
+      "sheet": "Characters/staff.png",
+      "rect": [
+        74,
+        14,
+        188,
+        287
+      ],
+      "referenceHeight": 287
+    },
+    "staff.0.1": {
+      "sheet": "Characters/staff.png",
+      "rect": [
+        386,
+        14,
+        188,
+        286
+      ],
+      "referenceHeight": 287
+    },
+    "staff.0.2": {
+      "sheet": "Characters/staff.png",
+      "rect": [
+        697,
+        14,
+        188,
+        286
+      ],
+      "referenceHeight": 287
+    },
+    "staff.0.3": {
+      "sheet": "Characters/staff.png",
+      "rect": [
+        1007,
+        14,
+        189,
+        287
+      ],
+      "referenceHeight": 287
+    },
+    "staff.1.0": {
+      "sheet": "Characters/staff.png",
+      "rect": [
+        37,
+        327,
+        213,
+        292
+      ],
+      "referenceHeight": 292
+    },
+    "staff.1.1": {
+      "sheet": "Characters/staff.png",
+      "rect": [
+        371,
+        327,
+        192,
+        292
+      ],
+      "referenceHeight": 292
+    },
+    "staff.1.2": {
+      "sheet": "Characters/staff.png",
+      "rect": [
+        631,
+        327,
+        246,
+        291
+      ],
+      "referenceHeight": 292
+    },
+    "staff.1.3": {
+      "sheet": "Characters/staff.png",
+      "rect": [
+        966,
+        327,
+        224,
+        292
+      ],
+      "referenceHeight": 292
+    },
+    "staff.2.0": {
+      "sheet": "Characters/staff.png",
+      "rect": [
+        70,
+        637,
+        177,
+        290
+      ],
+      "referenceHeight": 290
+    },
+    "staff.2.1": {
+      "sheet": "Characters/staff.png",
+      "rect": [
+        397,
+        637,
+        170,
+        290
+      ],
+      "referenceHeight": 290
+    },
+    "staff.2.2": {
+      "sheet": "Characters/staff.png",
+      "rect": [
+        670,
+        637,
+        203,
+        290
+      ],
+      "referenceHeight": 290
+    },
+    "staff.2.3": {
+      "sheet": "Characters/staff.png",
+      "rect": [
+        1016,
+        637,
+        168,
+        290
+      ],
+      "referenceHeight": 290
+    },
+    "staff.3.0": {
+      "sheet": "Characters/staff.png",
+      "rect": [
+        95,
+        945,
+        130,
+        296
+      ],
+      "referenceHeight": 296
+    },
+    "staff.3.1": {
+      "sheet": "Characters/staff.png",
+      "rect": [
+        410,
+        945,
+        127,
+        296
+      ],
+      "referenceHeight": 296
+    },
+    "staff.3.2": {
+      "sheet": "Characters/staff.png",
+      "rect": [
+        668,
+        945,
+        182,
+        296
+      ],
+      "referenceHeight": 296
+    },
+    "staff.3.3": {
+      "sheet": "Characters/staff.png",
+      "rect": [
+        1033,
+        945,
+        130,
+        296
+      ],
+      "referenceHeight": 296
+    },
+    "effect.0.0": {
+      "sheet": "Effects/incident-effects.png",
+      "rect": [
+        80,
+        94,
+        100,
+        132
+      ],
+      "referenceHeight": 204
+    },
+    "effect.0.1": {
+      "sheet": "Effects/incident-effects.png",
+      "rect": [
+        314,
+        48,
+        137,
+        178
+      ],
+      "referenceHeight": 204
+    },
+    "effect.0.2": {
+      "sheet": "Effects/incident-effects.png",
+      "rect": [
+        574,
+        23,
+        131,
+        204
+      ],
+      "referenceHeight": 204
+    },
+    "effect.0.3": {
+      "sheet": "Effects/incident-effects.png",
+      "rect": [
+        845,
+        89,
+        105,
+        137
+      ],
+      "referenceHeight": 204
+    },
+    "effect.1.0": {
+      "sheet": "Effects/incident-effects.png",
+      "rect": [
+        58,
+        311,
+        135,
+        182
+      ],
+      "referenceHeight": 231
+    },
+    "effect.1.1": {
+      "sheet": "Effects/incident-effects.png",
+      "rect": [
+        313,
+        264,
+        150,
+        230
+      ],
+      "referenceHeight": 231
+    },
+    "effect.1.2": {
+      "sheet": "Effects/incident-effects.png",
+      "rect": [
+        561,
+        263,
+        160,
+        231
+      ],
+      "referenceHeight": 231
+    },
+    "effect.1.3": {
+      "sheet": "Effects/incident-effects.png",
+      "rect": [
+        831,
+        302,
+        134,
+        192
+      ],
+      "referenceHeight": 231
+    },
+    "effect.2.0": {
+      "sheet": "Effects/incident-effects.png",
+      "rect": [
+        80,
+        651,
+        77,
+        111
+      ],
+      "referenceHeight": 237
+    },
+    "effect.2.1": {
+      "sheet": "Effects/incident-effects.png",
+      "rect": [
+        318,
+        596,
+        138,
+        166
+      ],
+      "referenceHeight": 237
+    },
+    "effect.2.2": {
+      "sheet": "Effects/incident-effects.png",
+      "rect": [
+        544,
+        525,
+        195,
+        237
+      ],
+      "referenceHeight": 237
+    },
+    "effect.2.3": {
+      "sheet": "Effects/incident-effects.png",
+      "rect": [
+        812,
+        536,
+        148,
+        226
+      ],
+      "referenceHeight": 237
+    },
+    "effect.3.0": {
+      "sheet": "Effects/incident-effects.png",
+      "rect": [
+        56,
+        867,
+        184,
+        68
+      ],
+      "referenceHeight": 174
+    },
+    "effect.3.1": {
+      "sheet": "Effects/incident-effects.png",
+      "rect": [
+        279,
+        829,
+        218,
+        138
+      ],
+      "referenceHeight": 174
+    },
+    "effect.3.2": {
+      "sheet": "Effects/incident-effects.png",
+      "rect": [
+        524,
+        809,
+        231,
+        174
+      ],
+      "referenceHeight": 174
+    },
+    "effect.3.3": {
+      "sheet": "Effects/incident-effects.png",
+      "rect": [
+        787,
+        849,
+        214,
+        121
+      ],
+      "referenceHeight": 174
+    },
+    "effect.4.0": {
+      "sheet": "Effects/incident-effects.png",
+      "rect": [
+        74,
+        1095,
+        166,
+        92
+      ],
+      "referenceHeight": 186
+    },
+    "effect.4.1": {
+      "sheet": "Effects/incident-effects.png",
+      "rect": [
+        272,
+        1078,
+        225,
+        153
+      ],
+      "referenceHeight": 186
+    },
+    "effect.4.2": {
+      "sheet": "Effects/incident-effects.png",
+      "rect": [
+        524,
+        1058,
+        231,
+        186
+      ],
+      "referenceHeight": 186
+    },
+    "effect.4.3": {
+      "sheet": "Effects/incident-effects.png",
+      "rect": [
+        793,
+        1088,
+        208,
+        141
+      ],
+      "referenceHeight": 186
+    },
+    "effect.5.0": {
+      "sheet": "Effects/incident-effects.png",
+      "rect": [
+        80,
+        1340,
+        99,
+        104
+      ],
+      "referenceHeight": 118
+    },
+    "effect.5.1": {
+      "sheet": "Effects/incident-effects.png",
+      "rect": [
+        308,
+        1340,
+        153,
+        104
+      ],
+      "referenceHeight": 118
+    },
+    "effect.5.2": {
+      "sheet": "Effects/incident-effects.png",
+      "rect": [
+        546,
+        1326,
+        185,
+        118
+      ],
+      "referenceHeight": 118
+    },
+    "effect.5.3": {
+      "sheet": "Effects/incident-effects.png",
+      "rect": [
+        818,
+        1340,
+        152,
+        104
+      ],
+      "referenceHeight": 118
+    },
+    "room.apartment.vacant": {
+      "sheet": "Rooms/apartment.png",
+      "rect": [
+        8,
+        13,
+        578,
+        418
+      ],
+      "referenceHeight": 418
+    },
+    "room.apartment.open": {
+      "sheet": "Rooms/apartment.png",
+      "rect": [
+        595,
+        13,
+        580,
+        418
+      ],
+      "referenceHeight": 418
+    },
+    "room.apartment.closed": {
+      "sheet": "Rooms/apartment.png",
+      "rect": [
+        8,
+        455,
+        578,
+        419
+      ],
+      "referenceHeight": 419
+    },
+    "room.apartment.damaged": {
+      "sheet": "Rooms/apartment.png",
+      "rect": [
+        595,
+        455,
+        580,
+        419
+      ],
+      "referenceHeight": 419
+    },
+    "room.apartment.destroyed": {
+      "sheet": "Rooms/apartment.png",
+      "rect": [
+        8,
+        897,
+        578,
+        419
+      ],
+      "referenceHeight": 419
+    },
+    "room.apartment.rebuilding": {
+      "sheet": "Rooms/apartment.png",
+      "rect": [
+        595,
+        897,
+        580,
+        419
+      ],
+      "referenceHeight": 419
+    },
+    "room.garden.vacant": {
+      "sheet": "Rooms/garden.png",
+      "rect": [
+        0,
+        8,
+        1024,
+        238
+      ],
+      "referenceHeight": 238
+    },
+    "room.garden.open": {
+      "sheet": "Rooms/garden.png",
+      "rect": [
+        0,
+        263,
+        1024,
+        240
+      ],
+      "referenceHeight": 240
+    },
+    "room.garden.closed": {
+      "sheet": "Rooms/garden.png",
+      "rect": [
+        0,
+        520,
+        1024,
+        239
+      ],
+      "referenceHeight": 239
+    },
+    "room.garden.damaged": {
+      "sheet": "Rooms/garden.png",
+      "rect": [
+        0,
+        776,
+        1024,
+        240
+      ],
+      "referenceHeight": 240
+    },
+    "room.garden.destroyed": {
+      "sheet": "Rooms/garden.png",
+      "rect": [
+        0,
+        1032,
+        1024,
+        240
+      ],
+      "referenceHeight": 240
+    },
+    "room.garden.rebuilding": {
+      "sheet": "Rooms/garden.png",
+      "rect": [
+        0,
+        1288,
+        1024,
+        239
+      ],
+      "referenceHeight": 239
+    },
+    "room.hotel.vacant": {
+      "sheet": "Rooms/hotel.png",
+      "rect": [
+        0,
+        3,
+        1182,
+        216
+      ],
+      "referenceHeight": 216
+    },
+    "room.hotel.open": {
+      "sheet": "Rooms/hotel.png",
+      "rect": [
+        0,
+        224,
+        1182,
+        217
+      ],
+      "referenceHeight": 217
+    },
+    "room.hotel.closed": {
+      "sheet": "Rooms/hotel.png",
+      "rect": [
+        0,
+        446,
+        1182,
+        217
+      ],
+      "referenceHeight": 217
+    },
+    "room.hotel.damaged": {
+      "sheet": "Rooms/hotel.png",
+      "rect": [
+        0,
+        668,
+        1182,
+        217
+      ],
+      "referenceHeight": 217
+    },
+    "room.hotel.destroyed": {
+      "sheet": "Rooms/hotel.png",
+      "rect": [
+        0,
+        889,
+        1182,
+        218
+      ],
+      "referenceHeight": 218
+    },
+    "room.hotel.rebuilding": {
+      "sheet": "Rooms/hotel.png",
+      "rect": [
+        0,
+        1110,
+        1182,
+        217
+      ],
+      "referenceHeight": 217
+    },
+    "room.housekeeping.vacant": {
+      "sheet": "Rooms/housekeeping.png",
+      "rect": [
+        3,
+        1,
+        1139,
+        230
+      ],
+      "referenceHeight": 230
+    },
+    "room.housekeeping.open": {
+      "sheet": "Rooms/housekeeping.png",
+      "rect": [
+        3,
+        231,
+        1139,
+        230
+      ],
+      "referenceHeight": 230
+    },
+    "room.housekeeping.closed": {
+      "sheet": "Rooms/housekeeping.png",
+      "rect": [
+        3,
+        462,
+        1139,
+        229
+      ],
+      "referenceHeight": 229
+    },
+    "room.housekeeping.damaged": {
+      "sheet": "Rooms/housekeeping.png",
+      "rect": [
+        3,
+        692,
+        1139,
+        227
+      ],
+      "referenceHeight": 227
+    },
+    "room.housekeeping.destroyed": {
+      "sheet": "Rooms/housekeeping.png",
+      "rect": [
+        3,
+        921,
+        1139,
+        229
+      ],
+      "referenceHeight": 229
+    },
+    "room.housekeeping.rebuilding": {
+      "sheet": "Rooms/housekeeping.png",
+      "rect": [
+        3,
+        1152,
+        1139,
+        221
+      ],
+      "referenceHeight": 221
+    },
+    "room.lobby.vacant": {
+      "sheet": "Rooms/lobby.png",
+      "rect": [
+        0,
+        1,
+        1774,
+        142
+      ],
+      "referenceHeight": 142
+    },
+    "room.lobby.open": {
+      "sheet": "Rooms/lobby.png",
+      "rect": [
+        0,
+        147,
+        1774,
+        143
+      ],
+      "referenceHeight": 143
+    },
+    "room.lobby.closed": {
+      "sheet": "Rooms/lobby.png",
+      "rect": [
+        0,
+        295,
+        1774,
+        143
+      ],
+      "referenceHeight": 143
+    },
+    "room.lobby.damaged": {
+      "sheet": "Rooms/lobby.png",
+      "rect": [
+        0,
+        443,
+        1774,
+        143
+      ],
+      "referenceHeight": 143
+    },
+    "room.lobby.destroyed": {
+      "sheet": "Rooms/lobby.png",
+      "rect": [
+        0,
+        590,
+        1774,
+        144
+      ],
+      "referenceHeight": 144
+    },
+    "room.lobby.rebuilding": {
+      "sheet": "Rooms/lobby.png",
+      "rect": [
+        0,
+        738,
+        1774,
+        147
+      ],
+      "referenceHeight": 147
+    },
+    "room.office.vacant": {
+      "sheet": "Rooms/office.png",
+      "rect": [
+        5,
+        6,
+        877,
+        274
+      ],
+      "referenceHeight": 274
+    },
+    "room.office.open": {
+      "sheet": "Rooms/office.png",
+      "rect": [
+        893,
+        6,
+        877,
+        274
+      ],
+      "referenceHeight": 274
+    },
+    "room.office.closed": {
+      "sheet": "Rooms/office.png",
+      "rect": [
+        5,
+        287,
+        877,
+        288
+      ],
+      "referenceHeight": 288
+    },
+    "room.office.damaged": {
+      "sheet": "Rooms/office.png",
+      "rect": [
+        893,
+        287,
+        877,
+        288
+      ],
+      "referenceHeight": 288
+    },
+    "room.office.destroyed": {
+      "sheet": "Rooms/office.png",
+      "rect": [
+        5,
+        581,
+        877,
+        291
+      ],
+      "referenceHeight": 291
+    },
+    "room.office.rebuilding": {
+      "sheet": "Rooms/office.png",
+      "rect": [
+        893,
+        581,
+        877,
+        291
+      ],
+      "referenceHeight": 291
+    },
+    "room.restaurant.vacant": {
+      "sheet": "Rooms/restaurant.png",
+      "rect": [
+        0,
+        3,
+        1182,
+        197
+      ],
+      "referenceHeight": 197
+    },
+    "room.restaurant.open": {
+      "sheet": "Rooms/restaurant.png",
+      "rect": [
+        0,
+        217,
+        1182,
+        205
+      ],
+      "referenceHeight": 205
+    },
+    "room.restaurant.closed": {
+      "sheet": "Rooms/restaurant.png",
+      "rect": [
+        0,
+        438,
+        1182,
+        206
+      ],
+      "referenceHeight": 206
+    },
+    "room.restaurant.damaged": {
+      "sheet": "Rooms/restaurant.png",
+      "rect": [
+        0,
+        660,
+        1182,
+        206
+      ],
+      "referenceHeight": 206
+    },
+    "room.restaurant.destroyed": {
+      "sheet": "Rooms/restaurant.png",
+      "rect": [
+        0,
+        881,
+        1182,
+        207
+      ],
+      "referenceHeight": 207
+    },
+    "room.restaurant.rebuilding": {
+      "sheet": "Rooms/restaurant.png",
+      "rect": [
+        0,
+        1104,
+        1182,
+        214
+      ],
+      "referenceHeight": 214
+    },
+    "room.security.vacant": {
+      "sheet": "Rooms/security.png",
+      "rect": [
+        0,
+        4,
+        1182,
+        208
+      ],
+      "referenceHeight": 208
+    },
+    "room.security.open": {
+      "sheet": "Rooms/security.png",
+      "rect": [
+        0,
+        224,
+        1182,
+        210
+      ],
+      "referenceHeight": 210
+    },
+    "room.security.closed": {
+      "sheet": "Rooms/security.png",
+      "rect": [
+        0,
+        446,
+        1182,
+        210
+      ],
+      "referenceHeight": 210
+    },
+    "room.security.damaged": {
+      "sheet": "Rooms/security.png",
+      "rect": [
+        0,
+        668,
+        1182,
+        209
+      ],
+      "referenceHeight": 209
+    },
+    "room.security.destroyed": {
+      "sheet": "Rooms/security.png",
+      "rect": [
+        0,
+        889,
+        1182,
+        210
+      ],
+      "referenceHeight": 210
+    },
+    "room.security.rebuilding": {
+      "sheet": "Rooms/security.png",
+      "rect": [
+        0,
+        1111,
+        1182,
+        211
+      ],
+      "referenceHeight": 211
+    },
+    "room.shop.vacant": {
+      "sheet": "Rooms/shop.png",
+      "rect": [
+        7,
+        9,
+        1067,
+        209
+      ],
+      "referenceHeight": 209
+    },
+    "room.shop.open": {
+      "sheet": "Rooms/shop.png",
+      "rect": [
+        7,
+        225,
+        1067,
+        214
+      ],
+      "referenceHeight": 214
+    },
+    "room.shop.closed": {
+      "sheet": "Rooms/shop.png",
+      "rect": [
+        7,
+        446,
+        1067,
+        215
+      ],
+      "referenceHeight": 215
+    },
+    "room.shop.damaged": {
+      "sheet": "Rooms/shop.png",
+      "rect": [
+        7,
+        668,
+        1067,
+        220
+      ],
+      "referenceHeight": 220
+    },
+    "room.shop.destroyed": {
+      "sheet": "Rooms/shop.png",
+      "rect": [
+        7,
+        895,
+        1067,
+        249
+      ],
+      "referenceHeight": 249
+    },
+    "room.shop.rebuilding": {
+      "sheet": "Rooms/shop.png",
+      "rect": [
+        7,
+        1150,
+        1067,
+        251
+      ],
+      "referenceHeight": 251
+    },
+    "car.0.0": {
+      "sheet": "Structure/car.png",
+      "rect": [
+        162,
+        35,
+        198,
+        384
+      ],
+      "referenceHeight": 384
+    },
+    "car.0.1": {
+      "sheet": "Structure/car.png",
+      "rect": [
+        590,
+        35,
+        198,
+        384
+      ],
+      "referenceHeight": 384
+    },
+    "car.0.2": {
+      "sheet": "Structure/car.png",
+      "rect": [
+        1016,
+        35,
+        200,
+        384
+      ],
+      "referenceHeight": 384
+    },
+    "car.0.3": {
+      "sheet": "Structure/car.png",
+      "rect": [
+        1446,
+        35,
+        198,
+        384
+      ],
+      "referenceHeight": 384
+    },
+    "car.1.0": {
+      "sheet": "Structure/car.png",
+      "rect": [
+        61,
+        460,
+        383,
+        366
+      ],
+      "referenceHeight": 367
+    },
+    "car.1.1": {
+      "sheet": "Structure/car.png",
+      "rect": [
+        444,
+        460,
+        434,
+        366
+      ],
+      "referenceHeight": 367
+    },
+    "car.1.2": {
+      "sheet": "Structure/car.png",
+      "rect": [
+        923,
+        460,
+        385,
+        367
+      ],
+      "referenceHeight": 367
+    },
+    "car.1.3": {
+      "sheet": "Structure/car.png",
+      "rect": [
+        1354,
+        460,
+        386,
+        366
+      ],
+      "referenceHeight": 367
+    },
+    "elevator.0.0": {
+      "sheet": "Structure/elevator.png",
+      "rect": [
+        39,
+        60,
+        236,
+        311
+      ],
+      "referenceHeight": 311
+    },
+    "elevator.0.1": {
+      "sheet": "Structure/elevator.png",
+      "rect": [
+        352,
+        60,
+        237,
+        311
+      ],
+      "referenceHeight": 311
+    },
+    "elevator.0.2": {
+      "sheet": "Structure/elevator.png",
+      "rect": [
+        665,
+        60,
+        237,
+        311
+      ],
+      "referenceHeight": 311
+    },
+    "elevator.0.3": {
+      "sheet": "Structure/elevator.png",
+      "rect": [
+        979,
+        60,
+        236,
+        311
+      ],
+      "referenceHeight": 311
+    },
+    "elevator.1.0": {
+      "sheet": "Structure/elevator.png",
+      "rect": [
+        24,
+        452,
+        266,
+        325
+      ],
+      "referenceHeight": 326
+    },
+    "elevator.1.1": {
+      "sheet": "Structure/elevator.png",
+      "rect": [
+        337,
+        452,
+        266,
+        325
+      ],
+      "referenceHeight": 326
+    },
+    "elevator.1.2": {
+      "sheet": "Structure/elevator.png",
+      "rect": [
+        651,
+        452,
+        266,
+        325
+      ],
+      "referenceHeight": 326
+    },
+    "elevator.1.3": {
+      "sheet": "Structure/elevator.png",
+      "rect": [
+        964,
+        452,
+        266,
+        326
+      ],
+      "referenceHeight": 326
+    },
+    "elevator.2.0": {
+      "sheet": "Structure/elevator.png",
+      "rect": [
+        39,
+        845,
+        236,
+        329
+      ],
+      "referenceHeight": 330
+    },
+    "elevator.2.1": {
+      "sheet": "Structure/elevator.png",
+      "rect": [
+        352,
+        845,
+        237,
+        329
+      ],
+      "referenceHeight": 330
+    },
+    "elevator.2.2": {
+      "sheet": "Structure/elevator.png",
+      "rect": [
+        665,
+        845,
+        237,
+        329
+      ],
+      "referenceHeight": 330
+    },
+    "elevator.2.3": {
+      "sheet": "Structure/elevator.png",
+      "rect": [
+        979,
+        845,
+        236,
+        330
+      ],
+      "referenceHeight": 330
+    },
+    "structure.0.0": {
+      "sheet": "Structure/structure.png",
+      "rect": [
+        38,
+        141,
+        314,
+        221
+      ],
+      "referenceHeight": 222
+    },
+    "structure.0.1": {
+      "sheet": "Structure/structure.png",
+      "rect": [
+        390,
+        140,
+        316,
+        222
+      ],
+      "referenceHeight": 222
+    },
+    "structure.0.2": {
+      "sheet": "Structure/structure.png",
+      "rect": [
+        743,
+        140,
+        316,
+        222
+      ],
+      "referenceHeight": 222
+    },
+    "structure.0.3": {
+      "sheet": "Structure/structure.png",
+      "rect": [
+        1097,
+        141,
+        316,
+        221
+      ],
+      "referenceHeight": 222
+    },
+    "structure.1.0": {
+      "sheet": "Structure/structure.png",
+      "rect": [
+        142,
+        362,
+        111,
+        362
+      ],
+      "referenceHeight": 362
+    },
+    "structure.1.1": {
+      "sheet": "Structure/structure.png",
+      "rect": [
+        467,
+        362,
+        106,
+        271
+      ],
+      "referenceHeight": 362
+    },
+    "structure.1.2": {
+      "sheet": "Structure/structure.png",
+      "rect": [
+        857,
+        362,
+        118,
+        362
+      ],
+      "referenceHeight": 362
+    },
+    "structure.1.3": {
+      "sheet": "Structure/structure.png",
+      "rect": [
+        1173,
+        362,
+        185,
+        362
+      ],
+      "referenceHeight": 362
+    },
+    "structure.2.0": {
+      "sheet": "Structure/structure.png",
+      "rect": [
+        83,
+        724,
+        207,
+        265
+      ],
+      "referenceHeight": 273
+    },
+    "structure.2.1": {
+      "sheet": "Structure/structure.png",
+      "rect": [
+        380,
+        799,
+        312,
+        195
+      ],
+      "referenceHeight": 273
+    },
+    "structure.2.2": {
+      "sheet": "Structure/structure.png",
+      "rect": [
+        773,
+        724,
+        286,
+        273
+      ],
+      "referenceHeight": 273
+    },
+    "structure.2.3": {
+      "sheet": "Structure/structure.png",
+      "rect": [
+        1173,
+        724,
+        185,
+        260
+      ],
+      "referenceHeight": 273
+    },
+    "building.day.0": {
+      "sheet": "Background/buildings-day.png",
+      "rect": [
+        104,
+        31,
+        151,
+        501
+      ],
+      "referenceHeight": 501
+    },
+    "building.sunrise.0": {
+      "sheet": "Background/buildings-sunrise.png",
+      "rect": [
+        104,
+        31,
+        151,
+        501
+      ],
+      "referenceHeight": 501
+    },
+    "building.sunset.0": {
+      "sheet": "Background/buildings-sunset.png",
+      "rect": [
+        104,
+        31,
+        151,
+        501
+      ],
+      "referenceHeight": 501
+    },
+    "building.night.0": {
+      "sheet": "Background/buildings-night.png",
+      "rect": [
+        104,
+        31,
+        151,
+        501
+      ],
+      "referenceHeight": 501
+    },
+    "building.day.1": {
+      "sheet": "Background/buildings-day.png",
+      "rect": [
+        441,
+        102,
+        271,
+        430
+      ],
+      "referenceHeight": 430
+    },
+    "building.sunrise.1": {
+      "sheet": "Background/buildings-sunrise.png",
+      "rect": [
+        441,
+        102,
+        271,
+        430
+      ],
+      "referenceHeight": 430
+    },
+    "building.sunset.1": {
+      "sheet": "Background/buildings-sunset.png",
+      "rect": [
+        441,
+        102,
+        271,
+        430
+      ],
+      "referenceHeight": 430
+    },
+    "building.night.1": {
+      "sheet": "Background/buildings-night.png",
+      "rect": [
+        441,
+        102,
+        271,
+        430
+      ],
+      "referenceHeight": 430
+    },
+    "building.day.2": {
+      "sheet": "Background/buildings-day.png",
+      "rect": [
+        880,
+        173,
+        175,
+        359
+      ],
+      "referenceHeight": 359
+    },
+    "building.sunrise.2": {
+      "sheet": "Background/buildings-sunrise.png",
+      "rect": [
+        880,
+        173,
+        175,
+        359
+      ],
+      "referenceHeight": 359
+    },
+    "building.sunset.2": {
+      "sheet": "Background/buildings-sunset.png",
+      "rect": [
+        880,
+        173,
+        175,
+        359
+      ],
+      "referenceHeight": 359
+    },
+    "building.night.2": {
+      "sheet": "Background/buildings-night.png",
+      "rect": [
+        880,
+        173,
+        175,
+        359
+      ],
+      "referenceHeight": 359
+    },
+    "building.day.3": {
+      "sheet": "Background/buildings-day.png",
+      "rect": [
+        1297,
+        13,
+        156,
+        519
+      ],
+      "referenceHeight": 519
+    },
+    "building.sunrise.3": {
+      "sheet": "Background/buildings-sunrise.png",
+      "rect": [
+        1297,
+        13,
+        156,
+        519
+      ],
+      "referenceHeight": 519
+    },
+    "building.sunset.3": {
+      "sheet": "Background/buildings-sunset.png",
+      "rect": [
+        1297,
+        13,
+        156,
+        519
+      ],
+      "referenceHeight": 519
+    },
+    "building.night.3": {
+      "sheet": "Background/buildings-night.png",
+      "rect": [
+        1297,
+        13,
+        156,
+        519
+      ],
+      "referenceHeight": 519
+    },
+    "building.day.4": {
+      "sheet": "Background/buildings-day.png",
+      "rect": [
+        62,
+        695,
+        260,
+        306
+      ],
+      "referenceHeight": 306
+    },
+    "building.sunrise.4": {
+      "sheet": "Background/buildings-sunrise.png",
+      "rect": [
+        62,
+        695,
+        260,
+        306
+      ],
+      "referenceHeight": 306
+    },
+    "building.sunset.4": {
+      "sheet": "Background/buildings-sunset.png",
+      "rect": [
+        62,
+        695,
+        260,
+        306
+      ],
+      "referenceHeight": 306
+    },
+    "building.night.4": {
+      "sheet": "Background/buildings-night.png",
+      "rect": [
+        62,
+        695,
+        260,
+        306
+      ],
+      "referenceHeight": 306
+    },
+    "building.day.5": {
+      "sheet": "Background/buildings-day.png",
+      "rect": [
+        463,
+        555,
+        236,
+        445
+      ],
+      "referenceHeight": 445
+    },
+    "building.sunrise.5": {
+      "sheet": "Background/buildings-sunrise.png",
+      "rect": [
+        463,
+        555,
+        236,
+        445
+      ],
+      "referenceHeight": 445
+    },
+    "building.sunset.5": {
+      "sheet": "Background/buildings-sunset.png",
+      "rect": [
+        463,
+        555,
+        236,
+        445
+      ],
+      "referenceHeight": 445
+    },
+    "building.night.5": {
+      "sheet": "Background/buildings-night.png",
+      "rect": [
+        463,
+        555,
+        236,
+        445
+      ],
+      "referenceHeight": 445
+    },
+    "building.day.6": {
+      "sheet": "Background/buildings-day.png",
+      "rect": [
+        876,
+        550,
+        197,
+        453
+      ],
+      "referenceHeight": 453
+    },
+    "building.sunrise.6": {
+      "sheet": "Background/buildings-sunrise.png",
+      "rect": [
+        876,
+        550,
+        197,
+        453
+      ],
+      "referenceHeight": 453
+    },
+    "building.sunset.6": {
+      "sheet": "Background/buildings-sunset.png",
+      "rect": [
+        876,
+        550,
+        197,
+        453
+      ],
+      "referenceHeight": 453
+    },
+    "building.night.6": {
+      "sheet": "Background/buildings-night.png",
+      "rect": [
+        876,
+        550,
+        197,
+        453
+      ],
+      "referenceHeight": 453
+    },
+    "building.day.7": {
+      "sheet": "Background/buildings-day.png",
+      "rect": [
+        1255,
+        606,
+        231,
+        394
+      ],
+      "referenceHeight": 394
+    },
+    "building.sunrise.7": {
+      "sheet": "Background/buildings-sunrise.png",
+      "rect": [
+        1255,
+        606,
+        231,
+        394
+      ],
+      "referenceHeight": 394
+    },
+    "building.sunset.7": {
+      "sheet": "Background/buildings-sunset.png",
+      "rect": [
+        1255,
+        606,
+        231,
+        394
+      ],
+      "referenceHeight": 394
+    },
+    "building.night.7": {
+      "sheet": "Background/buildings-night.png",
+      "rect": [
+        1255,
+        606,
+        231,
+        394
+      ],
+      "referenceHeight": 394
+    },
+    "cloud.0": {
+      "sheet": "Background/cloud-varieties.png",
+      "rect": [
+        145,
+        178,
+        446,
+        254
+      ],
+      "referenceHeight": 254
+    },
+    "cloud.1": {
+      "sheet": "Background/cloud-varieties.png",
+      "rect": [
+        780,
+        162,
+        618,
+        270
+      ],
+      "referenceHeight": 270
+    },
+    "cloud.2": {
+      "sheet": "Background/cloud-varieties.png",
+      "rect": [
+        46,
+        737,
+        641,
+        235
+      ],
+      "referenceHeight": 235
+    },
+    "cloud.3": {
+      "sheet": "Background/cloud-varieties.png",
+      "rect": [
+        766,
+        591,
+        647,
+        410
+      ],
+      "referenceHeight": 410
+    },
+    "building.day.8": {
+      "sheet": "Background/neighborhood-day.png",
+      "rect": [
+        63,
+        47,
+        266,
+        459
+      ],
+      "referenceHeight": 459
+    },
+    "building.sunrise.8": {
+      "sheet": "Background/neighborhood-sunrise.png",
+      "rect": [
+        63,
+        47,
+        266,
+        459
+      ],
+      "referenceHeight": 459
+    },
+    "building.sunset.8": {
+      "sheet": "Background/neighborhood-sunset.png",
+      "rect": [
+        63,
+        47,
+        266,
+        459
+      ],
+      "referenceHeight": 459
+    },
+    "building.night.8": {
+      "sheet": "Background/neighborhood-night.png",
+      "rect": [
+        63,
+        47,
+        266,
+        459
+      ],
+      "referenceHeight": 459
+    },
+    "building.day.9": {
+      "sheet": "Background/neighborhood-day.png",
+      "rect": [
+        438,
+        14,
+        251,
+        493
+      ],
+      "referenceHeight": 493
+    },
+    "building.sunrise.9": {
+      "sheet": "Background/neighborhood-sunrise.png",
+      "rect": [
+        438,
+        14,
+        251,
+        493
+      ],
+      "referenceHeight": 493
+    },
+    "building.sunset.9": {
+      "sheet": "Background/neighborhood-sunset.png",
+      "rect": [
+        438,
+        14,
+        251,
+        493
+      ],
+      "referenceHeight": 493
+    },
+    "building.night.9": {
+      "sheet": "Background/neighborhood-night.png",
+      "rect": [
+        438,
+        14,
+        251,
+        493
+      ],
+      "referenceHeight": 493
+    },
+    "building.day.10": {
+      "sheet": "Background/neighborhood-day.png",
+      "rect": [
+        746,
+        109,
+        495,
+        398
+      ],
+      "referenceHeight": 398
+    },
+    "building.sunrise.10": {
+      "sheet": "Background/neighborhood-sunrise.png",
+      "rect": [
+        746,
+        109,
+        495,
+        398
+      ],
+      "referenceHeight": 398
+    },
+    "building.sunset.10": {
+      "sheet": "Background/neighborhood-sunset.png",
+      "rect": [
+        746,
+        109,
+        495,
+        398
+      ],
+      "referenceHeight": 398
+    },
+    "building.night.10": {
+      "sheet": "Background/neighborhood-night.png",
+      "rect": [
+        746,
+        109,
+        495,
+        398
+      ],
+      "referenceHeight": 398
+    },
+    "building.day.11": {
+      "sheet": "Background/neighborhood-day.png",
+      "rect": [
+        1274,
+        10,
+        205,
+        497
+      ],
+      "referenceHeight": 497
+    },
+    "building.sunrise.11": {
+      "sheet": "Background/neighborhood-sunrise.png",
+      "rect": [
+        1274,
+        10,
+        205,
+        497
+      ],
+      "referenceHeight": 497
+    },
+    "building.sunset.11": {
+      "sheet": "Background/neighborhood-sunset.png",
+      "rect": [
+        1274,
+        10,
+        205,
+        497
+      ],
+      "referenceHeight": 497
+    },
+    "building.night.11": {
+      "sheet": "Background/neighborhood-night.png",
+      "rect": [
+        1274,
+        10,
+        205,
+        497
+      ],
+      "referenceHeight": 497
+    },
+    "building.day.12": {
+      "sheet": "Background/neighborhood-day.png",
+      "rect": [
+        35,
+        517,
+        319,
+        473
+      ],
+      "referenceHeight": 473
+    },
+    "building.sunrise.12": {
+      "sheet": "Background/neighborhood-sunrise.png",
+      "rect": [
+        35,
+        517,
+        319,
+        473
+      ],
+      "referenceHeight": 473
+    },
+    "building.sunset.12": {
+      "sheet": "Background/neighborhood-sunset.png",
+      "rect": [
+        35,
+        517,
+        319,
+        473
+      ],
+      "referenceHeight": 473
+    },
+    "building.night.12": {
+      "sheet": "Background/neighborhood-night.png",
+      "rect": [
+        35,
+        517,
+        319,
+        473
+      ],
+      "referenceHeight": 473
+    },
+    "building.day.13": {
+      "sheet": "Background/neighborhood-day.png",
+      "rect": [
+        395,
+        533,
+        417,
+        457
+      ],
+      "referenceHeight": 457
+    },
+    "building.sunrise.13": {
+      "sheet": "Background/neighborhood-sunrise.png",
+      "rect": [
+        395,
+        533,
+        417,
+        457
+      ],
+      "referenceHeight": 457
+    },
+    "building.sunset.13": {
+      "sheet": "Background/neighborhood-sunset.png",
+      "rect": [
+        395,
+        533,
+        417,
+        457
+      ],
+      "referenceHeight": 457
+    },
+    "building.night.13": {
+      "sheet": "Background/neighborhood-night.png",
+      "rect": [
+        395,
+        533,
+        417,
+        457
+      ],
+      "referenceHeight": 457
+    },
+    "building.day.14": {
+      "sheet": "Background/neighborhood-day.png",
+      "rect": [
+        831,
+        591,
+        408,
+        399
+      ],
+      "referenceHeight": 399
+    },
+    "building.sunrise.14": {
+      "sheet": "Background/neighborhood-sunrise.png",
+      "rect": [
+        831,
+        591,
+        408,
+        399
+      ],
+      "referenceHeight": 399
+    },
+    "building.sunset.14": {
+      "sheet": "Background/neighborhood-sunset.png",
+      "rect": [
+        831,
+        591,
+        408,
+        399
+      ],
+      "referenceHeight": 399
+    },
+    "building.night.14": {
+      "sheet": "Background/neighborhood-night.png",
+      "rect": [
+        831,
+        591,
+        408,
+        399
+      ],
+      "referenceHeight": 399
+    },
+    "building.day.15": {
+      "sheet": "Background/neighborhood-day.png",
+      "rect": [
+        1296,
+        517,
+        187,
+        473
+      ],
+      "referenceHeight": 473
+    },
+    "building.sunrise.15": {
+      "sheet": "Background/neighborhood-sunrise.png",
+      "rect": [
+        1296,
+        517,
+        187,
+        473
+      ],
+      "referenceHeight": 473
+    },
+    "building.sunset.15": {
+      "sheet": "Background/neighborhood-sunset.png",
+      "rect": [
+        1296,
+        517,
+        187,
+        473
+      ],
+      "referenceHeight": 473
+    },
+    "building.night.15": {
+      "sheet": "Background/neighborhood-night.png",
+      "rect": [
+        1296,
+        517,
+        187,
+        473
+      ],
+      "referenceHeight": 473
+    },
+    "building.day.16": {
+      "sheet": "Background/landmarks-day.png",
+      "rect": [
+        33,
+        89,
+        282,
+        386
+      ],
+      "referenceHeight": 386
+    },
+    "building.sunrise.16": {
+      "sheet": "Background/landmarks-sunrise.png",
+      "rect": [
+        33,
+        89,
+        282,
+        386
+      ],
+      "referenceHeight": 386
+    },
+    "building.sunset.16": {
+      "sheet": "Background/landmarks-sunset.png",
+      "rect": [
+        33,
+        89,
+        282,
+        386
+      ],
+      "referenceHeight": 386
+    },
+    "building.night.16": {
+      "sheet": "Background/landmarks-night.png",
+      "rect": [
+        33,
+        89,
+        282,
+        386
+      ],
+      "referenceHeight": 386
+    },
+    "building.day.17": {
+      "sheet": "Background/landmarks-day.png",
+      "rect": [
+        350,
+        62,
+        467,
+        413
+      ],
+      "referenceHeight": 413
+    },
+    "building.sunrise.17": {
+      "sheet": "Background/landmarks-sunrise.png",
+      "rect": [
+        350,
+        62,
+        467,
+        413
+      ],
+      "referenceHeight": 413
+    },
+    "building.sunset.17": {
+      "sheet": "Background/landmarks-sunset.png",
+      "rect": [
+        350,
+        62,
+        467,
+        413
+      ],
+      "referenceHeight": 413
+    },
+    "building.night.17": {
+      "sheet": "Background/landmarks-night.png",
+      "rect": [
+        350,
+        62,
+        467,
+        413
+      ],
+      "referenceHeight": 413
+    },
+    "building.day.18": {
+      "sheet": "Background/landmarks-day.png",
+      "rect": [
+        859,
+        5,
+        318,
+        470
+      ],
+      "referenceHeight": 470
+    },
+    "building.sunrise.18": {
+      "sheet": "Background/landmarks-sunrise.png",
+      "rect": [
+        859,
+        5,
+        318,
+        470
+      ],
+      "referenceHeight": 470
+    },
+    "building.sunset.18": {
+      "sheet": "Background/landmarks-sunset.png",
+      "rect": [
+        859,
+        5,
+        318,
+        470
+      ],
+      "referenceHeight": 470
+    },
+    "building.night.18": {
+      "sheet": "Background/landmarks-night.png",
+      "rect": [
+        859,
+        5,
+        318,
+        470
+      ],
+      "referenceHeight": 470
+    },
+    "building.day.19": {
+      "sheet": "Background/landmarks-day.png",
+      "rect": [
+        1260,
+        4,
+        255,
+        471
+      ],
+      "referenceHeight": 471
+    },
+    "building.sunrise.19": {
+      "sheet": "Background/landmarks-sunrise.png",
+      "rect": [
+        1260,
+        4,
+        255,
+        471
+      ],
+      "referenceHeight": 471
+    },
+    "building.sunset.19": {
+      "sheet": "Background/landmarks-sunset.png",
+      "rect": [
+        1260,
+        4,
+        255,
+        471
+      ],
+      "referenceHeight": 471
+    },
+    "building.night.19": {
+      "sheet": "Background/landmarks-night.png",
+      "rect": [
+        1260,
+        4,
+        255,
+        471
+      ],
+      "referenceHeight": 471
+    },
+    "building.day.20": {
+      "sheet": "Background/landmarks-day.png",
+      "rect": [
+        18,
+        691,
+        478,
+        313
+      ],
+      "referenceHeight": 313
+    },
+    "building.sunrise.20": {
+      "sheet": "Background/landmarks-sunrise.png",
+      "rect": [
+        18,
+        691,
+        478,
+        313
+      ],
+      "referenceHeight": 313
+    },
+    "building.sunset.20": {
+      "sheet": "Background/landmarks-sunset.png",
+      "rect": [
+        18,
+        691,
+        478,
+        313
+      ],
+      "referenceHeight": 313
+    },
+    "building.night.20": {
+      "sheet": "Background/landmarks-night.png",
+      "rect": [
+        18,
+        691,
+        478,
+        313
+      ],
+      "referenceHeight": 313
+    },
+    "building.day.21": {
+      "sheet": "Background/landmarks-day.png",
+      "rect": [
+        530,
+        484,
+        294,
+        526
+      ],
+      "referenceHeight": 526
+    },
+    "building.sunrise.21": {
+      "sheet": "Background/landmarks-sunrise.png",
+      "rect": [
+        530,
+        484,
+        294,
+        526
+      ],
+      "referenceHeight": 526
+    },
+    "building.sunset.21": {
+      "sheet": "Background/landmarks-sunset.png",
+      "rect": [
+        530,
+        484,
+        294,
+        526
+      ],
+      "referenceHeight": 526
+    },
+    "building.night.21": {
+      "sheet": "Background/landmarks-night.png",
+      "rect": [
+        530,
+        484,
+        294,
+        526
+      ],
+      "referenceHeight": 526
+    },
+    "building.day.22": {
+      "sheet": "Background/landmarks-day.png",
+      "rect": [
+        895,
+        564,
+        268,
+        446
+      ],
+      "referenceHeight": 446
+    },
+    "building.sunrise.22": {
+      "sheet": "Background/landmarks-sunrise.png",
+      "rect": [
+        895,
+        564,
+        268,
+        446
+      ],
+      "referenceHeight": 446
+    },
+    "building.sunset.22": {
+      "sheet": "Background/landmarks-sunset.png",
+      "rect": [
+        895,
+        564,
+        268,
+        446
+      ],
+      "referenceHeight": 446
+    },
+    "building.night.22": {
+      "sheet": "Background/landmarks-night.png",
+      "rect": [
+        895,
+        564,
+        268,
+        446
+      ],
+      "referenceHeight": 446
+    },
+    "building.day.23": {
+      "sheet": "Background/landmarks-day.png",
+      "rect": [
+        1247,
+        483,
+        280,
+        527
+      ],
+      "referenceHeight": 527
+    },
+    "building.sunrise.23": {
+      "sheet": "Background/landmarks-sunrise.png",
+      "rect": [
+        1247,
+        483,
+        280,
+        527
+      ],
+      "referenceHeight": 527
+    },
+    "building.sunset.23": {
+      "sheet": "Background/landmarks-sunset.png",
+      "rect": [
+        1247,
+        483,
+        280,
+        527
+      ],
+      "referenceHeight": 527
+    },
+    "building.night.23": {
+      "sheet": "Background/landmarks-night.png",
+      "rect": [
+        1247,
+        483,
+        280,
+        527
+      ],
+      "referenceHeight": 527
+    },
+    "room.cafe.vacant": {
+      "sheet": "Rooms/cafe.png",
+      "rect": [
+        0,
+        0,
+        1254,
+        217
+      ],
+      "referenceHeight": 217
+    },
+    "room.cafe.open": {
+      "sheet": "Rooms/cafe.png",
+      "rect": [
+        0,
+        217,
+        1254,
+        212
+      ],
+      "referenceHeight": 212
+    },
+    "room.cafe.closed": {
+      "sheet": "Rooms/cafe.png",
+      "rect": [
+        0,
+        429,
+        1254,
+        209
+      ],
+      "referenceHeight": 209
+    },
+    "room.cafe.damaged": {
+      "sheet": "Rooms/cafe.png",
+      "rect": [
+        0,
+        638,
+        1254,
+        209
+      ],
+      "referenceHeight": 209
+    },
+    "room.cafe.destroyed": {
+      "sheet": "Rooms/cafe.png",
+      "rect": [
+        0,
+        847,
+        1254,
+        207
+      ],
+      "referenceHeight": 207
+    },
+    "room.cafe.rebuilding": {
+      "sheet": "Rooms/cafe.png",
+      "rect": [
+        0,
+        1054,
+        1254,
+        200
+      ],
+      "referenceHeight": 200
+    },
+    "room.arcade.vacant": {
+      "sheet": "Rooms/arcade.png",
+      "rect": [
+        0,
+        0,
+        1254,
+        216
+      ],
+      "referenceHeight": 216
+    },
+    "room.arcade.open": {
+      "sheet": "Rooms/arcade.png",
+      "rect": [
+        0,
+        216,
+        1254,
+        211
+      ],
+      "referenceHeight": 211
+    },
+    "room.arcade.closed": {
+      "sheet": "Rooms/arcade.png",
+      "rect": [
+        0,
+        427,
+        1254,
+        210
+      ],
+      "referenceHeight": 210
+    },
+    "room.arcade.damaged": {
+      "sheet": "Rooms/arcade.png",
+      "rect": [
+        0,
+        637,
+        1254,
+        210
+      ],
+      "referenceHeight": 210
+    },
+    "room.arcade.destroyed": {
+      "sheet": "Rooms/arcade.png",
+      "rect": [
+        0,
+        847,
+        1254,
+        207
+      ],
+      "referenceHeight": 207
+    },
+    "room.arcade.rebuilding": {
+      "sheet": "Rooms/arcade.png",
+      "rect": [
+        0,
+        1054,
+        1254,
+        200
+      ],
+      "referenceHeight": 200
+    },
+    "room.observatory.vacant": {
+      "sheet": "Rooms/observatory.png",
+      "rect": [
+        0,
+        0,
+        1244,
+        217
+      ],
+      "referenceHeight": 217
+    },
+    "room.observatory.open": {
+      "sheet": "Rooms/observatory.png",
+      "rect": [
+        0,
+        217,
+        1244,
+        210
+      ],
+      "referenceHeight": 210
+    },
+    "room.observatory.closed": {
+      "sheet": "Rooms/observatory.png",
+      "rect": [
+        0,
+        427,
+        1244,
+        212
+      ],
+      "referenceHeight": 212
+    },
+    "room.observatory.damaged": {
+      "sheet": "Rooms/observatory.png",
+      "rect": [
+        0,
+        639,
+        1244,
+        213
+      ],
+      "referenceHeight": 213
+    },
+    "room.observatory.destroyed": {
+      "sheet": "Rooms/observatory.png",
+      "rect": [
+        0,
+        852,
+        1244,
+        210
+      ],
+      "referenceHeight": 210
+    },
+    "room.observatory.rebuilding": {
+      "sheet": "Rooms/observatory.png",
+      "rect": [
+        0,
+        1062,
+        1244,
+        202
+      ],
+      "referenceHeight": 202
+    },
+    "room.fitness.vacant": {
+      "sheet": "Rooms/fitness.png",
+      "rect": [
+        0,
+        0,
+        1246,
+        216
+      ],
+      "referenceHeight": 216
+    },
+    "room.fitness.open": {
+      "sheet": "Rooms/fitness.png",
+      "rect": [
+        0,
+        216,
+        1246,
+        221
+      ],
+      "referenceHeight": 221
+    },
+    "room.fitness.closed": {
+      "sheet": "Rooms/fitness.png",
+      "rect": [
+        0,
+        437,
+        1246,
+        218
+      ],
+      "referenceHeight": 218
+    },
+    "room.fitness.damaged": {
+      "sheet": "Rooms/fitness.png",
+      "rect": [
+        0,
+        655,
+        1246,
+        217
+      ],
+      "referenceHeight": 217
+    },
+    "room.fitness.destroyed": {
+      "sheet": "Rooms/fitness.png",
+      "rect": [
+        0,
+        872,
+        1246,
+        200
+      ],
+      "referenceHeight": 200
+    },
+    "room.fitness.rebuilding": {
+      "sheet": "Rooms/fitness.png",
+      "rect": [
+        0,
+        1072,
+        1246,
+        191
+      ],
+      "referenceHeight": 191
+    },
+    "room.ramen.vacant": {
+      "sheet": "Rooms/ramen.png",
+      "rect": [
+        0,
+        0,
+        1254,
+        209
+      ],
+      "referenceHeight": 209
+    },
+    "room.ramen.open": {
+      "sheet": "Rooms/ramen.png",
+      "rect": [
+        0,
+        209,
+        1254,
+        212
+      ],
+      "referenceHeight": 212
+    },
+    "room.ramen.closed": {
+      "sheet": "Rooms/ramen.png",
+      "rect": [
+        0,
+        421,
+        1254,
+        209
+      ],
+      "referenceHeight": 209
+    },
+    "room.ramen.damaged": {
+      "sheet": "Rooms/ramen.png",
+      "rect": [
+        0,
+        630,
+        1254,
+        209
+      ],
+      "referenceHeight": 209
+    },
+    "room.ramen.destroyed": {
+      "sheet": "Rooms/ramen.png",
+      "rect": [
+        0,
+        839,
+        1254,
+        207
+      ],
+      "referenceHeight": 207
+    },
+    "room.ramen.rebuilding": {
+      "sheet": "Rooms/ramen.png",
+      "rect": [
+        0,
+        1046,
+        1254,
+        208
+      ],
+      "referenceHeight": 208
+    },
+    "room.bookshop.vacant": {
+      "sheet": "Rooms/bookshop.png",
+      "rect": [
+        0,
+        0,
+        1254,
+        209
+      ],
+      "referenceHeight": 209
+    },
+    "room.bookshop.open": {
+      "sheet": "Rooms/bookshop.png",
+      "rect": [
+        0,
+        209,
+        1254,
+        212
+      ],
+      "referenceHeight": 212
+    },
+    "room.bookshop.closed": {
+      "sheet": "Rooms/bookshop.png",
+      "rect": [
+        0,
+        421,
+        1254,
+        209
+      ],
+      "referenceHeight": 209
+    },
+    "room.bookshop.damaged": {
+      "sheet": "Rooms/bookshop.png",
+      "rect": [
+        0,
+        630,
+        1254,
+        209
+      ],
+      "referenceHeight": 209
+    },
+    "room.bookshop.destroyed": {
+      "sheet": "Rooms/bookshop.png",
+      "rect": [
+        0,
+        839,
+        1254,
+        207
+      ],
+      "referenceHeight": 207
+    },
+    "room.bookshop.rebuilding": {
+      "sheet": "Rooms/bookshop.png",
+      "rect": [
+        0,
+        1046,
+        1254,
+        208
+      ],
+      "referenceHeight": 208
+    },
+    "room.coworking.vacant": {
+      "sheet": "Rooms/coworking.png",
+      "rect": [
+        0,
+        0,
+        1254,
+        209
+      ],
+      "referenceHeight": 209
+    },
+    "room.coworking.open": {
+      "sheet": "Rooms/coworking.png",
+      "rect": [
+        0,
+        209,
+        1254,
+        211
+      ],
+      "referenceHeight": 211
+    },
+    "room.coworking.closed": {
+      "sheet": "Rooms/coworking.png",
+      "rect": [
+        0,
+        420,
+        1254,
+        210
+      ],
+      "referenceHeight": 210
+    },
+    "room.coworking.damaged": {
+      "sheet": "Rooms/coworking.png",
+      "rect": [
+        0,
+        630,
+        1254,
+        209
+      ],
+      "referenceHeight": 209
+    },
+    "room.coworking.destroyed": {
+      "sheet": "Rooms/coworking.png",
+      "rect": [
+        0,
+        839,
+        1254,
+        207
+      ],
+      "referenceHeight": 207
+    },
+    "room.coworking.rebuilding": {
+      "sheet": "Rooms/coworking.png",
+      "rect": [
+        0,
+        1046,
+        1254,
+        208
+      ],
+      "referenceHeight": 208
+    },
+    "room.spa.vacant": {
+      "sheet": "Rooms/spa.png",
+      "rect": [
+        0,
+        0,
+        1254,
+        210
+      ],
+      "referenceHeight": 210
+    },
+    "room.spa.open": {
+      "sheet": "Rooms/spa.png",
+      "rect": [
+        0,
+        210,
+        1254,
+        210
+      ],
+      "referenceHeight": 210
+    },
+    "room.spa.closed": {
+      "sheet": "Rooms/spa.png",
+      "rect": [
+        0,
+        420,
+        1254,
+        210
+      ],
+      "referenceHeight": 210
+    },
+    "room.spa.damaged": {
+      "sheet": "Rooms/spa.png",
+      "rect": [
+        0,
+        630,
+        1254,
+        209
+      ],
+      "referenceHeight": 209
+    },
+    "room.spa.destroyed": {
+      "sheet": "Rooms/spa.png",
+      "rect": [
+        0,
+        839,
+        1254,
+        207
+      ],
+      "referenceHeight": 207
+    },
+    "room.spa.rebuilding": {
+      "sheet": "Rooms/spa.png",
+      "rect": [
+        0,
+        1046,
+        1254,
+        208
+      ],
+      "referenceHeight": 208
+    },
+    "room.grandLobby.vacant": {
+      "sheet": "Rooms/grandLobby.png",
+      "rect": [
+        0,
+        0,
+        1672,
+        156
+      ],
+      "referenceHeight": 156
+    },
+    "room.grandLobby.open": {
+      "sheet": "Rooms/grandLobby.png",
+      "rect": [
+        0,
+        156,
+        1672,
+        162
+      ],
+      "referenceHeight": 162
+    },
+    "room.grandLobby.closed": {
+      "sheet": "Rooms/grandLobby.png",
+      "rect": [
+        0,
+        318,
+        1672,
+        160
+      ],
+      "referenceHeight": 160
+    },
+    "room.grandLobby.damaged": {
+      "sheet": "Rooms/grandLobby.png",
+      "rect": [
+        0,
+        478,
+        1672,
+        158
+      ],
+      "referenceHeight": 158
+    },
+    "room.grandLobby.destroyed": {
+      "sheet": "Rooms/grandLobby.png",
+      "rect": [
+        0,
+        636,
+        1672,
+        156
+      ],
+      "referenceHeight": 156
+    },
+    "room.grandLobby.rebuilding": {
+      "sheet": "Rooms/grandLobby.png",
+      "rect": [
+        0,
+        792,
+        1672,
+        149
+      ],
+      "referenceHeight": 149
+    },
+    "lobby.grandAtrium": {
+      "sheet": "Rooms/grandAtrium.png",
+      "rect": [
+        0,
+        0,
+        2048,
+        768
+      ],
+      "referenceHeight": 768
+    },
+    "lobby.grandWall": {
+      "sheet": "Rooms/grandWall.png",
+      "rect": [
+        110,
+        0,
+        1828,
+        768
+      ],
+      "referenceHeight": 768
+    },
+    "lobby.grandFeature": {
+      "sheet": "Rooms/grandAtrium.png",
+      "rect": [
+        30,
+        18,
+        1988,
+        732
+      ],
+      "referenceHeight": 732
+    },
+    "panoramicCar.0": {
+      "sheet": "Structure/panoramic-cars.png",
+      "rect": [
+        90,
+        60,
+        420,
+        884
+      ],
+      "referenceHeight": 884
+    },
+    "panoramicCar.1": {
+      "sheet": "Structure/panoramic-cars.png",
+      "rect": [
+        694,
+        60,
+        738,
+        884
+      ],
+      "referenceHeight": 884
+    },
+    "room.office2.vacant": {
+      "sheet": "Rooms/office2.png",
+      "rect": [
+        5,
+        6,
+        877,
+        274
+      ],
+      "referenceHeight": 274
+    },
+    "room.office2.open": {
+      "sheet": "Rooms/office2.png",
+      "rect": [
+        893,
+        6,
+        877,
+        274
+      ],
+      "referenceHeight": 274
+    },
+    "room.office2.closed": {
+      "sheet": "Rooms/office2.png",
+      "rect": [
+        5,
+        287,
+        877,
+        288
+      ],
+      "referenceHeight": 288
+    },
+    "room.office2.damaged": {
+      "sheet": "Rooms/office2.png",
+      "rect": [
+        893,
+        287,
+        877,
+        288
+      ],
+      "referenceHeight": 288
+    },
+    "room.office2.destroyed": {
+      "sheet": "Rooms/office2.png",
+      "rect": [
+        5,
+        581,
+        877,
+        291
+      ],
+      "referenceHeight": 291
+    },
+    "room.office2.rebuilding": {
+      "sheet": "Rooms/office2.png",
+      "rect": [
+        893,
+        581,
+        877,
+        291
+      ],
+      "referenceHeight": 291
+    },
+    "room.office3.vacant": {
+      "sheet": "Rooms/office3.png",
+      "rect": [
+        5,
+        6,
+        877,
+        274
+      ],
+      "referenceHeight": 274
+    },
+    "room.office3.open": {
+      "sheet": "Rooms/office3.png",
+      "rect": [
+        893,
+        6,
+        877,
+        274
+      ],
+      "referenceHeight": 274
+    },
+    "room.office3.closed": {
+      "sheet": "Rooms/office3.png",
+      "rect": [
+        5,
+        287,
+        877,
+        288
+      ],
+      "referenceHeight": 288
+    },
+    "room.office3.damaged": {
+      "sheet": "Rooms/office3.png",
+      "rect": [
+        893,
+        287,
+        877,
+        288
+      ],
+      "referenceHeight": 288
+    },
+    "room.office3.destroyed": {
+      "sheet": "Rooms/office3.png",
+      "rect": [
+        5,
+        581,
+        877,
+        291
+      ],
+      "referenceHeight": 291
+    },
+    "room.office3.rebuilding": {
+      "sheet": "Rooms/office3.png",
+      "rect": [
+        893,
+        581,
+        877,
+        291
+      ],
+      "referenceHeight": 291
+    },
+    "room.apartment2.vacant": {
+      "sheet": "Rooms/apartment2.png",
+      "rect": [
+        8,
+        13,
+        578,
+        418
+      ],
+      "referenceHeight": 418
+    },
+    "room.apartment2.open": {
+      "sheet": "Rooms/apartment2.png",
+      "rect": [
+        595,
+        13,
+        580,
+        418
+      ],
+      "referenceHeight": 418
+    },
+    "room.apartment2.closed": {
+      "sheet": "Rooms/apartment2.png",
+      "rect": [
+        8,
+        455,
+        578,
+        419
+      ],
+      "referenceHeight": 419
+    },
+    "room.apartment2.damaged": {
+      "sheet": "Rooms/apartment2.png",
+      "rect": [
+        595,
+        455,
+        580,
+        419
+      ],
+      "referenceHeight": 419
+    },
+    "room.apartment2.destroyed": {
+      "sheet": "Rooms/apartment2.png",
+      "rect": [
+        8,
+        897,
+        578,
+        419
+      ],
+      "referenceHeight": 419
+    },
+    "room.apartment2.rebuilding": {
+      "sheet": "Rooms/apartment2.png",
+      "rect": [
+        595,
+        897,
+        580,
+        419
+      ],
+      "referenceHeight": 419
+    },
+    "room.apartment3.vacant": {
+      "sheet": "Rooms/apartment3.png",
+      "rect": [
+        8,
+        13,
+        578,
+        418
+      ],
+      "referenceHeight": 418
+    },
+    "room.apartment3.open": {
+      "sheet": "Rooms/apartment3.png",
+      "rect": [
+        595,
+        13,
+        580,
+        418
+      ],
+      "referenceHeight": 418
+    },
+    "room.apartment3.closed": {
+      "sheet": "Rooms/apartment3.png",
+      "rect": [
+        8,
+        455,
+        578,
+        419
+      ],
+      "referenceHeight": 419
+    },
+    "room.apartment3.damaged": {
+      "sheet": "Rooms/apartment3.png",
+      "rect": [
+        595,
+        455,
+        580,
+        419
+      ],
+      "referenceHeight": 419
+    },
+    "room.apartment3.destroyed": {
+      "sheet": "Rooms/apartment3.png",
+      "rect": [
+        8,
+        897,
+        578,
+        419
+      ],
+      "referenceHeight": 419
+    },
+    "room.apartment3.rebuilding": {
+      "sheet": "Rooms/apartment3.png",
+      "rect": [
+        595,
+        897,
+        580,
+        419
+      ],
+      "referenceHeight": 419
+    },
+    "room.luxuryApartment.vacant": {
+      "sheet": "Rooms/luxuryApartment.png",
+      "rect": [
+        6,
+        6,
+        1012,
+        244
+      ],
+      "referenceHeight": 244
+    },
+    "room.luxuryApartment.open": {
+      "sheet": "Rooms/luxuryApartment.png",
+      "rect": [
+        1030,
+        6,
+        1012,
+        244
+      ],
+      "referenceHeight": 244
+    },
+    "room.luxuryApartment.closed": {
+      "sheet": "Rooms/luxuryApartment.png",
+      "rect": [
+        6,
+        262,
+        1012,
+        244
+      ],
+      "referenceHeight": 244
+    },
+    "room.luxuryApartment.damaged": {
+      "sheet": "Rooms/luxuryApartment.png",
+      "rect": [
+        1030,
+        262,
+        1012,
+        244
+      ],
+      "referenceHeight": 244
+    },
+    "room.luxuryApartment.destroyed": {
+      "sheet": "Rooms/luxuryApartment.png",
+      "rect": [
+        6,
+        518,
+        1012,
+        244
+      ],
+      "referenceHeight": 244
+    },
+    "room.luxuryApartment.rebuilding": {
+      "sheet": "Rooms/luxuryApartment.png",
+      "rect": [
+        1030,
+        518,
+        1012,
+        244
+      ],
+      "referenceHeight": 244
+    },
+    "roomActor.0.0": {
+      "sheet": "Characters/room-poses.png",
+      "rect": [
+        134,
+        57,
+        171,
+        260
+      ],
+      "referenceHeight": 360
+    },
+    "roomActor.0.1": {
+      "sheet": "Characters/room-poses.png",
+      "rect": [
+        512,
+        59,
+        156,
+        258
+      ],
+      "referenceHeight": 360
+    },
+    "roomActor.0.2": {
+      "sheet": "Characters/room-poses.png",
+      "rect": [
+        828,
+        177,
+        360,
+        117
+      ],
+      "referenceHeight": 360
+    },
+    "roomActor.1.0": {
+      "sheet": "Characters/room-poses.png",
+      "rect": [
+        123,
+        370,
+        178,
+        264
+      ],
+      "referenceHeight": 364
+    },
+    "roomActor.1.1": {
+      "sheet": "Characters/room-poses.png",
+      "rect": [
+        503,
+        376,
+        172,
+        258
+      ],
+      "referenceHeight": 364
+    },
+    "roomActor.1.2": {
+      "sheet": "Characters/room-poses.png",
+      "rect": [
+        827,
+        494,
+        364,
+        121
+      ],
+      "referenceHeight": 364
+    },
+    "roomActor.2.0": {
+      "sheet": "Characters/room-poses.png",
+      "rect": [
+        134,
+        668,
+        173,
+        268
+      ],
+      "referenceHeight": 365
+    },
+    "roomActor.2.1": {
+      "sheet": "Characters/room-poses.png",
+      "rect": [
+        511,
+        671,
+        168,
+        265
+      ],
+      "referenceHeight": 365
+    },
+    "roomActor.2.2": {
+      "sheet": "Characters/room-poses.png",
+      "rect": [
+        827,
+        803,
+        365,
+        126
+      ],
+      "referenceHeight": 365
+    },
+    "roomActor.3.0": {
+      "sheet": "Characters/room-poses.png",
+      "rect": [
+        132,
+        978,
+        166,
+        251
+      ],
+      "referenceHeight": 367
+    },
+    "roomActor.3.1": {
+      "sheet": "Characters/room-poses.png",
+      "rect": [
+        515,
+        978,
+        160,
+        252
+      ],
+      "referenceHeight": 367
+    },
+    "roomActor.3.2": {
+      "sheet": "Characters/room-poses.png",
+      "rect": [
+        828,
+        1102,
+        367,
+        111
+      ],
+      "referenceHeight": 367
+    },
+    "vehicle.fireEngine": {
+      "sheet": "Structure/fire-engine.png",
+      "rect": [
+        44,
+        27,
+        1962,
+        720
+      ],
+      "referenceHeight": 720
+    }
+  }
+}

@@ -1,0 +1,8 @@
+Lofty Ambitions Steam promotional key art
+Created 2026-10-24 with the built-in image generation tool, using Assets/Tokyo/Branding/lofty-ambitions-splash-v3.png as brand reference.
+
+Landscape: detailed Tokyo-inspired cutaway tower at electric blue dusk, coral clouds, warm miniature rooms, ramen bar, arcade, apartments, office, rooftop garden, visible elevators, and a large two-line LOFTY AMBITIONS marquee on the left. No other wording, badges, platform logos, dates, or reviews.
+
+Portrait: matching pixel style and palette; full title marquee in the top third and bustling cutaway tower below.
+
+Fire engine: one transparent orthographic side-view red Japanese ladder engine facing right, cream stripe, silver shutters, hose couplings, stowed aerial ladder, two wheel axles, amber/red lights, navy outlines, no writing or background. Final source is integrated into Assets/Tokyo/Runtime/Sheets/Structure/fire-engine.png and mapped by vehicle.fireEngine.
