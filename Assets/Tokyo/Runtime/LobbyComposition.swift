@@ -7,7 +7,9 @@ public struct LobbyComposition {
     public let feature: CGRect?
 
     public init(bounds: CGRect, shafts: [CGRect]) {
-        let occupied = shafts.filter { $0.intersects(bounds) }.map { $0.intersection(bounds) }.sorted { $0.minX < $1.minX }
+        // Foundation on Windows includes touching edges in intersects; only area
+        // inside the lobby can block a furnishing bay.
+        let occupied = shafts.map { $0.intersection(bounds) }.filter { !$0.isEmpty }.sorted { $0.minX < $1.minX }
         var cursor = bounds.minX
         var bays: [CGRect] = []
         for shaft in occupied {

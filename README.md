@@ -4,7 +4,7 @@
 
 A tower management game with Tokyo-inspired pixel artwork. Native macOS controls and a Windows desktop frontend share the same Swift game code, saves, scene rendering, and artwork.
 
-The Windows port is ready for its first PC build and verification. See [Windows build instructions](docs/porting/WINDOWS.md); Windows execution and clean-machine packaging are still pending.
+The Windows test build runs locally: 218 tests, shared replay parity, and source/packaged GUI smoke checks passed on Windows 11 x64. Native save/open and Unicode filenames were also exercised. See [Windows build instructions](docs/porting/WINDOWS.md); clean-machine delivery and full manual acceptance remain pending.
 
 ## Continue on Windows
 

@@ -131,7 +131,13 @@ final class RoomActivityTests: XCTestCase {
     func testAllStyleStatesAndTransparentFurnitureActorsAreBundled() throws {
         let atlas = try TowerAtlas()
         for name in ["office","office2","office3","apartment","apartment2","apartment3","luxuryApartment"] {
-            for state in RoomArtState.allCases { XCTAssertNotNil(atlas.image("room.\(name).\(state.rawValue)")) }
+            for state in RoomArtState.allCases {
+                let key = "room.\(name).\(state.rawValue)"
+                XCTAssertNotNil(atlas.frames[key])
+                #if canImport(AppKit)
+                XCTAssertNotNil(atlas.image(key))
+                #endif
+            }
             let rect = CGRect(x:100,y:100,width:name.hasPrefix("apartment") ? 32:72,height:24)
             for x in stride(from:0.0,through:1.0,by:0.1) {
                 let point = atlas.roomPoint(CGPoint(x:x,y:0.1),name:name,in:rect)
@@ -141,8 +147,12 @@ final class RoomActivityTests: XCTestCase {
         }
         for row in 0..<4 {
             for pose in 0..<3 {
-                let image = try XCTUnwrap(atlas.image("roomActor.\(row).\(pose)"))
+                let key = "roomActor.\(row).\(pose)"
+                XCTAssertNotNil(atlas.frames[key])
+                #if canImport(AppKit)
+                let image = try XCTUnwrap(atlas.image(key))
                 XCTAssertTrue(image.alphaInfo == .last || image.alphaInfo == .premultipliedLast || image.alphaInfo == .first || image.alphaInfo == .premultipliedFirst)
+                #endif
             }
         }
     }

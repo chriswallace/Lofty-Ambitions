@@ -1,8 +1,8 @@
 [CmdletBinding()]
 param([string]$Destination = (Join-Path $PSScriptRoot '..\Vendor\SDL3'))
 $ErrorActionPreference = 'Stop'
-$version = '3.4.0'
-$expectedHash = '4489ba0070b8ce047b8717e4b71fa7e35ac71362e7a6bb2a90a7a27f624b3d5d'
+$version = '3.4.16'
+$expectedHash = '1a784cb2a5c64d56fe7a62090fe9d242d9865f235e4ea9678f1a6ba4e693e7de'
 $url = "https://github.com/libsdl-org/SDL/releases/download/release-$version/SDL3-devel-$version-VC.zip"
 # Digest verified against official GitHub release metadata and downloaded bytes.
 # SDL archive contains x64, x86 and ARM64; the supported game package uses x64.

@@ -136,6 +136,14 @@ public final class TowerSession {
 
 public enum TowerSavePolicy {
     public static func requiresSaveAs(_ url:URL,store:TowerSaveStore)->Bool {
-        url.deletingLastPathComponent().standardizedFileURL == store.recoveryDirectory.standardizedFileURL || url.pathExtension.lowercased() != "loftyambitions"
+        // Directory URL hints and trailing separators do not identify a different folder.
+        let parent = url.deletingLastPathComponent().standardizedFileURL.pathComponents
+        let recovery = store.recoveryDirectory.standardizedFileURL.pathComponents
+        #if os(Windows)
+        let isRecovery = parent.map { $0.lowercased() } == recovery.map { $0.lowercased() }
+        #else
+        let isRecovery = parent == recovery
+        #endif
+        return isRecovery || url.pathExtension.lowercased() != "loftyambitions"
     }
 }

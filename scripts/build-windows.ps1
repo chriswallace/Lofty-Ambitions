@@ -67,7 +67,7 @@ function Invoke-Application([string]$Executable, [string[]]$Arguments, [string]$
     $stderr = Join-Path $diagnostics "$Name.stderr.txt"
     # Start-Process needs explicit quoting for arguments containing spaces on PS 5.1.
     $quoted = @($Arguments | ForEach-Object { '"' + $_.Replace('"','\"') + '"' })
-    $process = Start-Process -FilePath $Executable -ArgumentList $quoted -WorkingDirectory $Directory -RedirectStandardOutput $stdout -RedirectStandardError $stderr -PassThru
+    $process = Start-Process -FilePath $Executable -ArgumentList $quoted -WorkingDirectory $Directory -RedirectStandardOutput $stdout -RedirectStandardError $stderr -WindowStyle Hidden -PassThru
     if (!$process.WaitForExit(120000)) {
         $process.Kill(); $process.WaitForExit()
         throw "$Name exceeded the 120-second timeout. See its stdout/stderr logs."
@@ -267,6 +267,7 @@ in the source archive. Third-party licenses are in Licenses.
         $env:PATH = "$env:SystemRoot\System32;$env:SystemRoot;$env:SystemRoot\System32\Wbem"
         Invoke-Application (Join-Path $package 'TowerReplay.exe') @('--self-check','--fixture',(Join-Path $verification ([IO.Path]::GetFileName($fixture))),'--output',(Join-Path $diagnostics 'packaged-replay.snapshot.json')) $isolated 'packaged-replay'
         Invoke-Application (Join-Path $package 'LoftyDesktop.exe') @('--smoke','--smoke-output',(Join-Path $diagnostics 'packaged-smoke')) $isolated 'packaged-smoke'
+        Invoke-Application (Join-Path $package 'LoftyDesktop.exe') @('--performance-smoke','--tower',(Join-Path $project 'Examples\Express & Local.loftyambitions'),'--smoke-output',(Join-Path $diagnostics 'resize-performance')) $isolated 'resize-performance'
     } finally { $env:PATH = $oldPath }
     foreach ($png in @('desktop-gameplay.png','desktop-progression.png','desktop-building.png')) {
         if (!(Test-Path (Join-Path $diagnostics "packaged-smoke\$png"))) { throw "Packaged smoke screenshot missing: $png" }
@@ -279,7 +280,7 @@ in the source archive. Third-party licenses are in Licenses.
         $files[$relative] = (Get-FileHash -LiteralPath $file.FullName -Algorithm SHA256).Hash.ToLowerInvariant()
     }
     $sourceRevision = if ($env:GITHUB_SHA) { $env:GITHUB_SHA } else { 'unversioned-source-archive' }
-    [ordered]@{ version=$version; platform='windows-x86_64'; sourceRevision=$sourceRevision; swift=$swiftVersion; sdl='3.4.0'; checks='tests, replay parity, source smoke, packaged smoke with developer PATH removed'; cleanMachineValidation='pending'; files=$files } | ConvertTo-Json -Depth 20 | Set-Content -Encoding UTF8 (Join-Path $package 'manifest.json')
+    [ordered]@{ version=$version; platform='windows-x86_64'; sourceRevision=$sourceRevision; swift=$swiftVersion; sdl='3.4.16'; checks='tests, replay parity, source smoke, packaged smoke and maximized 50-floor resize performance with developer PATH removed'; cleanMachineValidation='pending'; files=$files } | ConvertTo-Json -Depth 20 | Set-Content -Encoding UTF8 (Join-Path $package 'manifest.json')
     $zip = Join-Path $OutputDirectory "$packageName.zip"
     Compress-Archive -LiteralPath $package -DestinationPath $zip
     (Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash.ToLowerInvariant() + '  ' + [IO.Path]::GetFileName($zip) | Set-Content -Encoding ASCII "$zip.sha256"

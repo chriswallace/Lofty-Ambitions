@@ -23,6 +23,8 @@ final class DesktopGame {
     let scene:TowerScene
     let atlas:TowerAtlas
     let root=TowerResources.url
+    let sheetPaths:[String:String]
+    let titlePath:String
     let dataURL:URL
     let store:TowerSaveStore
     let smoke:Bool
@@ -39,15 +41,16 @@ final class DesktopGame {
     var restoreSpeed=0,celebrationUntil=0.0,celebrationText=""
     var smokeDirectory:URL?
     var assetMisses=Set<String>()
-    var cloudCache:[UInt64:CloudTexture.Pixels]=[:]
     var signalRevision:UInt64?
     var inputClip:Box?
     var autosaveBlocked=false
     var modalFocus=DesktopModalFocus()
     var displayedDemolition:TowerDemolitionTarget?
+    var uiScale=DesktopUIScale()
+    var effectiveUIScale=1.0
 
     init() throws {
-        smoke=CommandLine.arguments.contains("--smoke")
+        smoke=CommandLine.arguments.contains("--smoke") || CommandLine.arguments.contains("--performance-smoke")
         if let i=CommandLine.arguments.firstIndex(of:"--smoke-output"),CommandLine.arguments.count>i+1 {
             smokeDirectory=URL(fileURLWithPath:CommandLine.arguments[i+1],isDirectory:true)
         }
@@ -55,12 +58,17 @@ final class DesktopGame {
         store=TowerSaveStore(recoveryDirectory:dataURL.appendingPathComponent("Recovery",isDirectory:true))
         interaction=DesktopInteraction(session:session)
         atlas=try TowerAtlas()
+        // Foundation may query the Windows filesystem when constructing URLs.
+        // Resolve each sheet once, never once per sprite in the draw loop.
+        sheetPaths=Dictionary(uniqueKeysWithValues:Set(atlas.frames.values.map(\.sheet)).map {
+            ($0,TowerResources.url.appendingPathComponent("Sheets/\($0)",isDirectory:false).path)
+        })
+        titlePath=TowerResources.url.appendingPathComponent("TitleScreen.png",isDirectory:false).path
         scene=TowerScene(atlas:atlas)
         guard let d=lt_create("Lofty Ambitions",1440,940) else {throw TowerError(String(cString:lt_error()))}
         desktop=d
-        var actualWidth:Int32=0,actualHeight:Int32=0
-        lt_size(desktop,&actualWidth,&actualHeight)
-        width=Double(actualWidth);height=Double(actualHeight)
+        if !smoke,let data=try? Data(contentsOf:dataURL.appendingPathComponent("Interface.json")),let saved=try? JSONDecoder().decode(DesktopUIScale.self,from:data) {uiScale=saved}
+        refreshUIScale(preserveZoom:false)
         if !smoke,FileManager.default.fileExists(atPath:autosaveURL.path) {
             do {session.game=try store.read(autosaveURL)} catch {
                 do {
@@ -76,6 +84,27 @@ final class DesktopGame {
     }
     deinit {lt_destroy(desktop)}
     var autosaveURL:URL {dataURL.appendingPathComponent("Autosave.loftyambitions")}
+    var uiScaleTitle:String {"UI: \(uiScale.requested==0 ? "Auto ":"")\(Int((effectiveUIScale*100).rounded()))%"}
+    func refreshUIScale(preserveZoom:Bool=true) {
+        var rawWidth:Int32=0,rawHeight:Int32=0
+        lt_window_size(desktop,&rawWidth,&rawHeight)
+        let next=uiScale.factor(width:Double(rawWidth),height:Double(rawHeight),contentScale:Double(lt_content_scale(desktop)))
+        if preserveZoom,next != effectiveUIScale {
+            scene.scale=max(0.25,min(16,scene.scale*effectiveUIScale/next))
+            startCell=nil;startPoint=nil;panning=false;keyboardFocus=nil
+        }
+        effectiveUIScale=next;lt_set_ui_scale(desktop,Float(next))
+        var w:Int32=0,h:Int32=0;lt_size(desktop,&w,&h);width=Double(w);height=Double(h)
+    }
+    func cycleUIScale() {
+        uiScale.cycle();refreshUIScale()
+        status="Interface size: \(Int(effectiveUIScale*100))%. Auto follows your display and window size."
+        guard !smoke else{return}
+        do {
+            try FileManager.default.createDirectory(at:dataURL,withIntermediateDirectories:true)
+            try JSONEncoder().encode(uiScale).write(to:dataURL.appendingPathComponent("Interface.json"),options:.atomic)
+        } catch {status="Interface size changed, but the preference could not be saved: \(error.localizedDescription)"}
+    }
     var canvas:Box {
         if focus {return Box(x:0,y:0,w:width,h:height)}
         let side=(panel.isEmpty && interaction.selectedRoom == nil && interaction.selectedElevator == nil) ? 0.0 : 310.0
@@ -108,6 +137,9 @@ final class DesktopGame {
     }
     func choose(_ tool:DesktopTool) {interaction.tool=tool;interaction.selectedRoom=nil;interaction.selectedElevator=nil;panel="";status=tool.title;searching=false}
     func drawScene() {
+        // Fill a newly exposed sky over several frames so resize/zoom keeps
+        // pumping events. The GPU cache owns pixels after their first upload.
+        var cloudUploads=0
         if signalRevision != session.revision {scene.signalCoverage=session.game.neighborhoodCoverage;signalRevision=session.revision}
         scene.showsSignals = !focus
         scene.ambientElapsed=ambient
@@ -128,15 +160,12 @@ final class DesktopGame {
                 let alpha=UInt8(max(0,min(255,Int(opacity*255))))
                 if let frame=atlas.frames[key] {
                     let src=source ?? SceneRect(x:0,y:0,width:Double(frame.rect[2]),height:Double(frame.rect[3]))
-                    lt_image(desktop,root.appendingPathComponent("Sheets/\(frame.sheet)").path,Float(Double(frame.rect[0])+src.x),Float(Double(frame.rect[1])+src.y),Float(src.width),Float(src.height),Float(destination.x+b.x),Float(destination.y+b.y),Float(destination.width),Float(destination.height),flipped ? 1:0,alpha)
+                    lt_image(desktop,sheetPaths[frame.sheet]!,Float(Double(frame.rect[0])+src.x),Float(Double(frame.rect[1])+src.y),Float(src.width),Float(src.height),Float(destination.x+b.x),Float(destination.y+b.y),Float(destination.width),Float(destination.height),flipped ? 1:0,alpha)
                 } else if key.hasPrefix("cloud."),let seed=UInt64(key.dropFirst(6)) {
-                    let pixels:CloudTexture.Pixels
-                    if let cached=cloudCache[seed] {pixels=cached}
-                    else {
-                        pixels=CloudTexture.pixels(seed:seed)
-                        if cloudCache.count>=96,let first=cloudCache.keys.first {cloudCache.removeValue(forKey:first)}
-                        cloudCache[seed]=pixels
-                    }
+                    if lt_cached_pixels(desktop,key,Float(destination.x+b.x),Float(destination.y+b.y),Float(destination.width),Float(destination.height),alpha) {continue}
+                    guard cloudUploads<2 else {continue}
+                    cloudUploads+=1
+                    let pixels=CloudTexture.pixels(seed:seed)
                     pixels.rgba.withUnsafeBufferPointer { p in
                         lt_pixels(desktop,key,p.baseAddress,Int32(pixels.width),Int32(pixels.height),Float(destination.x+b.x),Float(destination.y+b.y),Float(destination.width),Float(destination.height),alpha)
                     }
@@ -185,7 +214,7 @@ final class DesktopGame {
         drawModal()
     }
     func drawTitle() {
-        lt_image(desktop,root.appendingPathComponent("TitleScreen.png").path,0,0,0,0,0,0,Float(width),Float(height),0,255)
+        lt_image(desktop,titlePath,0,0,0,0,0,0,Float(width),Float(height),0,255)
         rect(Box(x:width/2-240,y:height-138,w:480,h:108),0x152A3BEA)
         text("Build your neighborhood in the sky.",width/2-217,height-123,17,0xFFF2D4FF,true)
         button("Enter Tower  [Enter]",Box(x:width/2-130,y:height-86,w:260,h:38)){self.title=false;self.session.speed=1}
@@ -205,7 +234,8 @@ final class DesktopGame {
             (scene.coverage.map{"\($0.title) coverage"} ?? "Coverage: off",126,{self.scene.coverage=self.scene.coverage == nil ? .food:self.scene.coverage == .food ? .shops:nil}),
             ("Save",58,{self.save()}),("Open",58,{self.safeSwitch{self.openDialog("open")}}),("New",54,{self.safeSwitch{self.newTower()}}),
             ("Fit",44,{self.scene.fit(game:self.session.game,width:self.canvas.w,height:self.canvas.h)}),
-            ("−",30,{self.zoom(0.8)}),("+",30,{self.zoom(1.25)}),("Help",50,{self.showPanel("help")})]
+            ("−",30,{self.zoom(0.8)}),("+",30,{self.zoom(1.25)}),("Help",50,{self.showPanel("help")}),
+            (uiScaleTitle,118,{self.cycleUIScale()})]
         x=10
         for (label,w,action) in controls {button(label,Box(x:x,y:48,w:w,h:29),action:action);x+=w+5}
     }
@@ -234,7 +264,7 @@ final class DesktopGame {
                 else {self.choose(.room(room.kind));self.selectedCatalog=room.kind}
             }
             if let frame=atlas.frames["room.\(room.kind.rawValue).open"] {
-                lt_image(desktop,root.appendingPathComponent("Sheets/\(frame.sheet)").path,Float(frame.rect[0]),Float(frame.rect[1]),Float(frame.rect[2]),Float(frame.rect[3]),18,Float(y+9),78,36,0,255)
+                lt_image(desktop,sheetPaths[frame.sheet]!,Float(frame.rect[0]),Float(frame.rect[1]),Float(frame.rect[2]),Float(frame.rect[3]),18,Float(y+9),78,36,0,255)
             }
             text(room.title,105,y+9,12,active ? 0xFFFFFFFF:0x263D48FF,true)
             text(blocker == nil ? "$\(room.cost.formatted()) · \(room.width) cells":"Level \(room.requiredStars) · $\(room.cost.formatted())",105,y+31,10,active ? 0xDBF2EFFF:0x59717AFF)
@@ -452,7 +482,7 @@ final class DesktopGame {
             if smoke {running=false}
             else if session.hasUnsavedChanges {confirm("Save a recovery copy and quit?","Continue safely keeps the current tower in autosave and recovery."){self.finishQuit()}}
             else {finishQuit()}
-        case 8:var w:Int32=0,h:Int32=0;lt_size(desktop,&w,&h);width=Double(w);height=Double(h)
+        case 8:refreshUIScale()
         case 9:fileResult(e.text.map{String(cString:$0)} ?? "")
         case 7:if searching {query += e.text.map{String(cString:$0)} ?? "";catalogScroll=0}
         case 6:key(Int(e.key),mods:Int(e.mods))
@@ -531,6 +561,7 @@ final class DesktopGame {
         running=false
     }
     func run() throws {
+        if CommandLine.arguments.contains("--performance-smoke") {try performanceCheck();return}
         if smoke {try smokeCheck();return}
         var previous=lt_time();lastTick=previous;lastAuto=previous
         while running {
@@ -550,6 +581,44 @@ final class DesktopGame {
             }
             draw();lt_present(desktop);lt_delay(16)
         }
+    }
+    func performanceCheck() throws {
+        guard let index=CommandLine.arguments.firstIndex(of:"--tower"),CommandLine.arguments.count>index+1 else {throw TowerError("Performance smoke requires --tower FILE.")}
+        try FileManager.default.createDirectory(at:dataURL,withIntermediateDirectories:true)
+        session.game=try store.read(URL(fileURLWithPath:CommandLine.arguments[index+1]))
+        session.speed=0;title=false
+        scene.fit(game:session.game,width:canvas.w,height:canvas.h)
+        var reports:[[String:Any]]=[]
+        func frame()->Double {
+            let start=lt_time()
+            var event=LTEvent()
+            while lt_poll(desktop,&event) {handle(event)}
+            draw();lt_present(desktop)
+            return lt_time()-start
+        }
+        for phase in ["maximized","zoomed-out","unscaled","restored","maximized-again"] {
+            if phase=="unscaled" {uiScale=DesktopUIScale(requested:1)}
+            if phase=="restored" {uiScale=DesktopUIScale()}
+            if phase=="restored" {lt_restore(desktop)} else {lt_maximize(desktop)}
+            refreshUIScale()
+            if phase=="zoomed-out" {scene.scale=0.25}
+            // Warm the bounded procedural cache without blocking input for a
+            // whole viewport's cloud generation in a single frame.
+            for _ in 0..<240 {_ = frame()}
+            var before=LTCacheStats();lt_cache_stats(desktop,&before)
+            var samples:[Double]=[]
+            for _ in 0..<120 {samples.append(frame())}
+            var after=LTCacheStats();lt_cache_stats(desktop,&after)
+            let sorted=samples.sorted(),p95=sorted[Int(Double(sorted.count-1)*0.95)]
+            let decodes=after.png_decodes-before.png_decodes
+            var windowWidth:Int32=0,windowHeight:Int32=0;lt_window_size(desktop,&windowWidth,&windowHeight)
+            let report:[String:Any]=["phase":phase,"width":width,"height":height,"windowWidth":windowWidth,"windowHeight":windowHeight,"uiScale":effectiveUIScale,"scale":scene.scale,"frames":samples.count,"averageFPS":Double(samples.count)/samples.reduce(0,+),"p95FrameMilliseconds":p95*1000,"maxFrameMilliseconds":sorted.last!*1000,"steadyPNGDecodes":decodes,"spriteTextures":after.images,"cloudTextures":after.dynamic_images]
+            reports.append(report)
+            try JSONSerialization.data(withJSONObject:reports,options:[.prettyPrinted,.sortedKeys]).write(to:dataURL.appendingPathComponent("performance.json"))
+            guard decodes==0,p95<0.25 else {throw TowerError("Resize regression in \(phase): \(decodes) repeated PNG decodes, p95 \(p95*1000) ms.")}
+        }
+        draw();_ = lt_capture(desktop,dataURL.appendingPathComponent("maximized-gameplay.png").path);lt_present(desktop)
+        print("Resize performance smoke passed: default UI, maximum zoom-out, unscaled 4K, restored, maximized again; no steady-state PNG decoding. Output: \(dataURL.path)")
     }
     func smokeCheck() throws {
         try FileManager.default.createDirectory(at:dataURL,withIntermediateDirectories:true)

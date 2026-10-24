@@ -1,9 +1,9 @@
 # Portable desktop bridge
 
 `include/CDesktop.h` is the entire plain-C boundary. SDL types stay private.
-All API calls are made on the main thread. Build with C11 and SDL3 >= 3.4.0.
-The Windows release dependency is pinned to official SDL 3.4.0; the Mac development
-build has also been compiled against Homebrew SDL 3.4.16.
+All API calls are made on the main thread. Build with C11 and SDL3 >= 3.4.16.
+The Windows release dependency is pinned to official SDL 3.4.16. The original Mac
+development build used Homebrew SDL 3.4.0; revalidation with 3.4.16 is pending.
 
 ## Build and dependency setup
 
@@ -20,11 +20,11 @@ beside the executable, SDL's `LICENSE.txt`, and `Vendor/stb/LICENSE`. Swift runt
 packaging is handled by the application build script. Windows execution is not
 verified by a Mac build of this bridge.
 
-SDL source/release: https://github.com/libsdl-org/SDL/releases/tag/release-3.4.0
+SDL source/release: https://github.com/libsdl-org/SDL/releases/tag/release-3.4.16
 
-Archive: `SDL3-devel-3.4.0-VC.zip`
+Archive: `SDL3-devel-3.4.16-VC.zip`
 
-SHA-256: `4489ba0070b8ce047b8717e4b71fa7e35ac71362e7a6bb2a90a7a27f624b3d5d`
+SHA-256: `1a784cb2a5c64d56fe7a62090fe9d242d9865f235e4ea9678f1a6ba4e693e7de`
 
 Digest checked against the official GitHub release API and independently against
 the downloaded archive. A verbatim SDL license is included as `SDL-LICENSE.txt`.
@@ -42,9 +42,21 @@ repeats; use text-input events for Unicode typing rather than key codes.
 Colors are straight `0xRRGGBBAA`. PNGs use nearest-neighbor filtering. `lt_pixels`
 accepts premultiplied RGBA8 and converts to straight alpha before upload. Dynamic
 keys identify immutable pixels and must change if content changes. Dynamic images
-share the 96-entry / 256-MiB LRU image cache with file textures. Text uses a separate
+use a separate 512-entry / 64-MiB LRU cache; file textures retain their own
+96-entry / 256-MiB cache so a wide sky cannot evict sprite sheets. Cached dynamic
+textures can be drawn without regenerating their pixels. The desktop frontend
+generates at most two missing clouds per frame to keep resize/zoom responsive.
+Text uses a separate
 256-entry / 32-MiB LRU cache, keyed by content, pixel font size, weight and color.
-Physical font rasterization follows display density. Text input is limited to
+Physical font rasterization follows display density.
+The frontend chooses a UI scale from display content scale and native window
+size. `lt_window_size` returns native coordinates; `lt_size` returns the scaled
+layout viewport. `lt_set_ui_scale` applies equally to rendering, font density,
+mouse positions, and drag distances; wheel steps remain unchanged. The default
+UI is at least 125% when space permits and becomes 200% in a maximized 4K window.
+The toolbar size preference is stored separately from tower saves.
+
+Text input is limited to
 4096 UTF-8 bytes per drawing call. Oversized textures are rejected. Capture must
 occur after drawing and before `lt_present`; it writes physical-resolution PNGs.
 

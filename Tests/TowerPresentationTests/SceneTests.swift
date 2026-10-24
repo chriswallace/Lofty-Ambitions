@@ -4,6 +4,24 @@ import TowerArt
 @testable import TowerPresentation
 
 final class SceneTests: XCTestCase {
+    func testRenderGeometryRefreshesAfterResizePanZoomAndTowerChanges() throws {
+        var game=TowerState.demoTower()
+        let reused=TowerScene();reused.reducedMotion=true
+        _ = reused.render(game:game,width:1200,height:800,elapsed:0)
+        // Change both floor extents and inserted shaft width after a render.
+        game.floorSpans=[0:FloorSpan(-10,80)]
+        var lift=game.elevators[0];lift.id=2;game.elevators.append(lift)
+        for (width,height,scale,pan) in [(3840.0,2054.0,0.25,37.0),(1200.0,800.0,2.0,-19.0)] {
+            let fresh=TowerScene();fresh.reducedMotion=true
+            for scene in [reused,fresh] {scene.scale=scale;scene.panX=pan;scene.panY=pan}
+            XCTAssertEqual(reused.render(game:game,width:width,height:height,elapsed:0),fresh.render(game:game,width:width,height:height,elapsed:0))
+            // Input geometry must also see camera changes between render calls.
+            reused.panX+=11;fresh.panX+=11
+            let room=try XCTUnwrap(game.rooms.first{$0.kind == .office})
+            XCTAssertEqual(reused.roomRect(room,game:game,width:width,height:height),fresh.roomRect(room,game:game,width:width,height:height))
+        }
+    }
+
     func testRoomSignalsExposeTheSameVisibleFireTarget() throws {
         var game=TowerState.demoTower()
         let room=try XCTUnwrap(game.rooms.first{$0.kind == .office})

@@ -2,7 +2,7 @@ LOFTY AMBITIONS — FIRST WINDOWS TEST
 
 This is a source/build test kit, not a prebuilt Windows game.
 The Mac and Windows applications use one shared game, artwork and save format.
-Windows execution and final clean-PC delivery have not yet been verified.
+First local Windows build/tests and native save/open passed; final clean-PC delivery is still pending.
 
 1. Extract this ZIP to a writable folder on your Windows 11 x64 PC.
 2. Install Swift 6.4.1 and the official Windows prerequisites:

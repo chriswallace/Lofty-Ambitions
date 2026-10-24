@@ -57,11 +57,15 @@ public final class TowerScene {
     public var travelerMotion=ActorMotion()
     public var interpolatesMotion=true
     var cityStreet:CityLayout.Street?
+    // A render uses one camera and tower state. Avoid scanning every floor and
+    // elevator again for each point transformed into viewport coordinates.
+    var renderOrigin:CGPoint?
+    var renderShaftWidth:CGFloat?
     public init() { atlas = try! TowerAtlas() }
     public init(atlas:TowerAtlas) { self.atlas=atlas }
-    var shaftWidth:CGFloat { CGFloat(game.legacyShaftWidth)*8 }
+    var shaftWidth:CGFloat { renderShaftWidth ?? CGFloat(game.legacyShaftWidth)*8 }
     var towerWidth:CGFloat { CGFloat(game.rightEdge-game.leftEdge)*8+shaftWidth }
-    var origin:CGPoint { CGPoint(x:((bounds.width-towerWidth*scale)/2-CGFloat(game.leftEdge)*8*scale+panX).rounded(),y:(96-panY).rounded()) }
+    var origin:CGPoint { renderOrigin ?? CGPoint(x:((bounds.width-towerWidth*scale)/2-CGFloat(game.leftEdge)*8*scale+panX).rounded(),y:(96-panY).rounded()) }
     public func fit(game:TowerState,width:Double,height:Double) {
         self.game=game;bounds=CGRect(x:0,y:0,width:width,height:height)
         let fit=min((width-80)/towerWidth,(height-160)/(Double(game.topFloor-game.bottomFloor+1)*24+12))

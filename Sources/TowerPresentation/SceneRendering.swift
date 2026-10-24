@@ -6,6 +6,8 @@ extension TowerScene {
     public func render(game:TowerState,width:Double,height:Double,elapsed:Double)->[SceneCommand] {
         guard width.isFinite,height.isFinite,width>0,height>0,scale.isFinite,scale>0 else{return []}
         self.game=game;bounds=CGRect(x:0,y:0,width:width,height:height)
+        renderShaftWidth=shaftWidth;renderOrigin=origin
+        defer {renderOrigin=nil;renderShaftWidth=nil}
         self.elapsed=elapsed.isFinite ? max(0,elapsed):0
         let delta=previousElapsed.map{max(0,min(0.25,self.elapsed-$0))} ?? 0
         previousElapsed=self.elapsed

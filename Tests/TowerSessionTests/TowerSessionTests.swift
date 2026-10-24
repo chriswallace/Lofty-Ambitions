@@ -110,6 +110,21 @@ final class TowerSessionTests: XCTestCase {
         XCTAssertTrue(session.hasUnsavedChanges)
     }
 
+    func testRecoveryPolicyIgnoresDirectoryHintsButKeepsSiblingSavesWritable() {
+        let directory = scratch()
+        for isDirectory in [false, true] {
+            let recovery = directory.appendingPathComponent("Recovery", isDirectory: isDirectory)
+            let store = TowerSaveStore(recoveryDirectory: recovery)
+            let file = directory.appendingPathComponent("Recovery", isDirectory: true).appendingPathComponent("Tower.loftyambitions")
+            XCTAssertTrue(TowerSavePolicy.requiresSaveAs(file, store: store))
+            let sibling = directory.appendingPathComponent("Recovery Other").appendingPathComponent("Tower.loftyambitions")
+            XCTAssertFalse(TowerSavePolicy.requiresSaveAs(sibling, store: store))
+            #if os(Windows)
+            let differentlyCased = directory.appendingPathComponent("RECOVERY").appendingPathComponent("Tower.loftyambitions")
+            XCTAssertTrue(TowerSavePolicy.requiresSaveAs(differentlyCased, store: store))
+            #endif
+        }
+    }
     func testInvalidIncomingSaveDoesNotTouchTowerOrRecovery() throws {
         let directory = scratch()
         defer { try? FileManager.default.removeItem(at: directory) }

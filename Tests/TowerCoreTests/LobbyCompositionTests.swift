@@ -11,11 +11,11 @@ final class LobbyCompositionTests: XCTestCase {
             if let feature = layout.feature {
                 XCTAssertTrue(bounds.contains(feature))
                 XCTAssertEqual(feature.height,96)
-                for shaft in shafts { XCTAssertFalse(feature.intersects(shaft)) }
+                for shaft in shafts { XCTAssertTrue(feature.intersection(shaft).isEmpty) }
             }
             for bay in layout.clearBays {
                 XCTAssertGreaterThan(bay.width,0)
-                for shaft in shafts { XCTAssertFalse(bay.intersects(shaft)) }
+                for shaft in shafts { XCTAssertTrue(bay.intersection(shaft).isEmpty) }
             }
             XCTAssertEqual(layout.clearBays.reduce(0) { $0+$1.width } + widths.reduce(0,+),bounds.width)
         }

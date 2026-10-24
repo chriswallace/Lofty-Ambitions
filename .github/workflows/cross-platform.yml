@@ -41,10 +41,10 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p dist/ci-macos
-          curl -fL 'https://github.com/libsdl-org/SDL/releases/download/release-3.4.0/SDL3-3.4.0.tar.gz' -o "$RUNNER_TEMP/SDL3-3.4.0.tar.gz"
-          echo "082cbf5f429e0d80820f68dc2b507a94d4cc1b4e70817b119bbb8ec6a69584b8  $RUNNER_TEMP/SDL3-3.4.0.tar.gz" | shasum -a 256 -c -
-          tar -xzf "$RUNNER_TEMP/SDL3-3.4.0.tar.gz" -C "$RUNNER_TEMP"
-          cmake -S "$RUNNER_TEMP/SDL3-3.4.0" -B "$RUNNER_TEMP/sdl-build" -DCMAKE_BUILD_TYPE=Release -DCMAKE_OSX_DEPLOYMENT_TARGET=13.0 -DSDL_SHARED=ON -DSDL_STATIC=OFF -DSDL_TESTS=OFF -DSDL_EXAMPLES=OFF -DCMAKE_INSTALL_PREFIX="$RUNNER_TEMP/lofty-sdl" 2>&1 | tee dist/ci-macos/sdl-configure.log
+          curl -fL 'https://github.com/libsdl-org/SDL/releases/download/release-3.4.16/SDL3-3.4.16.tar.gz' -o "$RUNNER_TEMP/SDL3-3.4.16.tar.gz"
+          echo "7322236cd12090c3eb40b9728be4d49c76f66ad17d04369584d4ecad5cf77c68  $RUNNER_TEMP/SDL3-3.4.16.tar.gz" | shasum -a 256 -c -
+          tar -xzf "$RUNNER_TEMP/SDL3-3.4.16.tar.gz" -C "$RUNNER_TEMP"
+          cmake -S "$RUNNER_TEMP/SDL3-3.4.16" -B "$RUNNER_TEMP/sdl-build" -DCMAKE_BUILD_TYPE=Release -DCMAKE_OSX_DEPLOYMENT_TARGET=13.0 -DSDL_SHARED=ON -DSDL_STATIC=OFF -DSDL_TESTS=OFF -DSDL_EXAMPLES=OFF -DCMAKE_INSTALL_PREFIX="$RUNNER_TEMP/lofty-sdl" 2>&1 | tee dist/ci-macos/sdl-configure.log
           cmake --build "$RUNNER_TEMP/sdl-build" --parallel 3 2>&1 | tee dist/ci-macos/sdl-build.log
           cmake --install "$RUNNER_TEMP/sdl-build" 2>&1 | tee dist/ci-macos/sdl-install.log
           echo "LOFTY_SDL_ROOT=$RUNNER_TEMP/lofty-sdl" >> "$GITHUB_ENV"

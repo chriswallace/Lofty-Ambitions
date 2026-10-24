@@ -15,8 +15,10 @@
 #include "../../Vendor/stb/stb_image_write.h"
 
 #define IMAGE_COUNT 96
+#define DYNAMIC_COUNT 512
 #define TEXT_COUNT 256
 #define IMAGE_BUDGET (256u * 1024u * 1024u)
+#define DYNAMIC_BUDGET (64u * 1024u * 1024u)
 #define TEXT_BUDGET (32u * 1024u * 1024u)
 typedef struct { char *key; SDL_Texture *texture; int w,h,px,bold; unsigned color; Uint64 used; size_t bytes; } Cache;
 typedef struct FileResult { char *path; struct FileResult *next; } FileResult;
@@ -26,8 +28,9 @@ typedef struct { SDL_Mutex *mutex; int references; bool alive; FileResult *head,
 typedef struct { DialogQueue *queue; char *default_path; } DialogRequest;
 struct LTDesktop {
     SDL_Window *window; SDL_Renderer *renderer;
-    Cache images[IMAGE_COUNT],texts[TEXT_COUNT];
-    Uint64 frame; float density; char *event_text;
+    Cache images[IMAGE_COUNT],dynamic[DYNAMIC_COUNT],texts[TEXT_COUNT];
+    unsigned long long png_decodes,dynamic_uploads;
+    Uint64 frame; float density,ui_scale; char *event_text;
     unsigned char *font_data[2]; stbtt_fontinfo font[2];
     DialogQueue *dialogs;
 };
@@ -98,9 +101,18 @@ LTDesktop *lt_create(const char *title,int width,int height) {
     if(!SDL_InitSubSystem(SDL_INIT_VIDEO)) return NULL;
     LTDesktop *d=SDL_calloc(1,sizeof(*d));
     if(!d) { SDL_QuitSubSystem(SDL_INIT_VIDEO); return NULL; }
-    d->density=1;
+    d->density=1;d->ui_scale=1;
     d->window=SDL_CreateWindow(title?title:"Lofty Ambitions",width,height,SDL_WINDOW_RESIZABLE|SDL_WINDOW_HIGH_PIXEL_DENSITY);
-    if(d->window) { SDL_SetWindowMinimumSize(d->window,1080,650); d->renderer=SDL_CreateRenderer(d->window,NULL); }
+    if(d->window) {
+        SDL_SetWindowMinimumSize(d->window,1080,650);
+        float preferred=fmaxf(1.25f,lt_content_scale(d));
+        SDL_Rect usable;
+        if(SDL_GetDisplayUsableBounds(SDL_GetDisplayForWindow(d->window),&usable))
+            preferred=fmaxf(1,fminf(preferred,fminf((usable.w-80.0f)/width,(usable.h-80.0f)/height)));
+        SDL_SetWindowSize(d->window,(int)(width*preferred),(int)(height*preferred));
+        SDL_SetWindowPosition(d->window,SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED);
+        d->renderer=SDL_CreateRenderer(d->window,NULL);
+    }
     if(!d->renderer) goto fail;
     SDL_SetRenderVSync(d->renderer,1); SDL_SetRenderDrawBlendMode(d->renderer,SDL_BLENDMODE_BLEND);
     d->dialogs=SDL_calloc(1,sizeof(*d->dialogs));
@@ -123,6 +135,7 @@ void lt_destroy(LTDesktop *d) {
         if(release) queue_free(q);
     }
     for(int i=0;i<IMAGE_COUNT;i++) free_cache(&d->images[i]);
+    for(int i=0;i<DYNAMIC_COUNT;i++) free_cache(&d->dynamic[i]);
     for(int i=0;i<TEXT_COUNT;i++) free_cache(&d->texts[i]);
     SDL_free(d->font_data[0]); SDL_free(d->font_data[1]); SDL_free(d->event_text);
     SDL_DestroyRenderer(d->renderer); SDL_DestroyWindow(d->window); SDL_free(d); SDL_QuitSubSystem(SDL_INIT_VIDEO);
@@ -157,13 +170,33 @@ bool lt_poll(LTDesktop *d,LTEvent *out) {
             out->type=8; { int w,h; lt_size(d,&w,&h); out->x=(float)w; out->y=(float)h; } break;
         default: continue;
         }
+        if(out->type>=2&&out->type<=5) {out->x/=d->ui_scale;out->y/=d->ui_scale;}
+        if(out->type==4) {out->dx/=d->ui_scale;out->dy/=d->ui_scale;}
         return true;
     }
     return false;
 }
-void lt_size(LTDesktop *d,int *w,int *h) { if(d) SDL_GetWindowSize(d->window,w,h); else { if(w)*w=0; if(h)*h=0; } }
+void lt_window_size(LTDesktop *d,int *w,int *h) { if(d) SDL_GetWindowSize(d->window,w,h); else { if(w)*w=0; if(h)*h=0; } }
+void lt_size(LTDesktop *d,int *w,int *h) {
+    int width=0,height=0;lt_window_size(d,&width,&height);
+    if(w)*w=d?(int)(width/d->ui_scale):0;if(h)*h=d?(int)(height/d->ui_scale):0;
+}
+float lt_content_scale(LTDesktop *d) {
+    if(!d||!d->window)return 1;
+    float density=SDL_GetWindowPixelDensity(d->window),scale=SDL_GetWindowDisplayScale(d->window);
+    return density>0&&isfinite(scale)&&scale>0?scale/density:1;
+}
+void lt_set_ui_scale(LTDesktop *d,float scale) {if(d&&isfinite(scale))d->ui_scale=fmaxf(1,fminf(3,scale));}
+void lt_maximize(LTDesktop *d) { if(d) SDL_MaximizeWindow(d->window); }
+void lt_restore(LTDesktop *d) { if(d) SDL_RestoreWindow(d->window); }
+void lt_cache_stats(LTDesktop *d,LTCacheStats *out) {
+    if(!out)return; memset(out,0,sizeof(*out)); if(!d)return;
+    out->png_decodes=d->png_decodes;out->dynamic_uploads=d->dynamic_uploads;
+    for(int i=0;i<IMAGE_COUNT;i++) if(d->images[i].texture)out->images++;
+    for(int i=0;i<DYNAMIC_COUNT;i++) if(d->dynamic[i].texture)out->dynamic_images++;
+}
 void lt_begin(LTDesktop *d,unsigned c) {
-    if(!d) return; int w,h,pw,ph; SDL_GetWindowSize(d->window,&w,&h); SDL_GetRenderOutputSize(d->renderer,&pw,&ph);
+    if(!d) return; int w,h,pw,ph; lt_size(d,&w,&h); SDL_GetRenderOutputSize(d->renderer,&pw,&ph);
     if(w>0&&h>0&&pw>0&&ph>0) { d->density=(float)ph/h; SDL_SetRenderScale(d->renderer,(float)pw/w,(float)ph/h); }
     d->frame++; SDL_SetRenderClipRect(d->renderer,NULL); color(d->renderer,c); SDL_RenderClear(d->renderer);
 }
@@ -176,7 +209,7 @@ void lt_image(LTDesktop *d,const char *path,float sx,float sy,float sw,float sh,
     Cache *c=NULL; for(int i=0;i<IMAGE_COUNT;i++) if(d->images[i].key&&!strcmp(d->images[i].key,path)) { c=&d->images[i]; break; }
     if(!c) {
         size_t n=0; unsigned char *data=SDL_LoadFile(path,&n),*pixels=NULL; int iw=0,ih=0,channels;
-        if(data&&n<=INT_MAX) pixels=stbi_load_from_memory(data,(int)n,&iw,&ih,&channels,4); SDL_free(data);
+        if(data&&n<=INT_MAX) { d->png_decodes++; pixels=stbi_load_from_memory(data,(int)n,&iw,&ih,&channels,4); } SDL_free(data);
         size_t bytes=(size_t)iw*ih*4;
         if(pixels&&(iw>16384||ih>16384||bytes>IMAGE_BUDGET)) { stbi_image_free(pixels); pixels=NULL; SDL_SetError("Image exceeds desktop texture budget: %s",path); }
         c=slot(d->images,IMAGE_COUNT,IMAGE_BUDGET,pixels?bytes:0); c->key=SDL_strdup(path); c->w=iw; c->h=ih;
@@ -189,24 +222,35 @@ void lt_image(LTDesktop *d,const char *path,float sx,float sy,float sw,float sh,
     SDL_SetTextureAlphaMod(c->texture,alpha);
     SDL_RenderTextureRotated(d->renderer,c->texture,&src,&dst,0,NULL,(flip&1)?SDL_FLIP_HORIZONTAL:SDL_FLIP_NONE);
 }
+bool lt_cached_pixels(LTDesktop *d,const char *key,float x,float y,float w,float h,unsigned char alpha) {
+    if(!d||!key||!*key||w<=0||h<=0)return false;
+    for(int i=0;i<DYNAMIC_COUNT;i++) {
+        Cache *c=&d->dynamic[i];
+        if(c->key&&c->texture&&!strcmp(c->key,key)) {
+            c->used=d->frame;SDL_FRect dst={coord(x),coord(y),extent(w),extent(h)};
+            SDL_SetTextureAlphaMod(c->texture,alpha);SDL_RenderTexture(d->renderer,c->texture,NULL,&dst);return true;
+        }
+    }
+    return false;
+}
 void lt_pixels(LTDesktop *d,const char *key,const unsigned char *pixels,int pw,int ph,float x,float y,float w,float h,unsigned char alpha) {
     if(!d||!key||!*key||!pixels||pw<1||ph<1||pw>16384||ph>16384||w<=0||h<=0)return;
-    size_t bytes=(size_t)pw*ph*4; if(bytes>IMAGE_BUDGET)return;
-    /* Prefix dynamic keys so a procedural name cannot alias a PNG pathname. */
+    size_t bytes=(size_t)pw*ph*4; if(bytes>DYNAMIC_BUDGET)return;
+    /* Procedural textures have their own bounded cache: a wide sky must never
+     * evict sprite sheets and trigger PNG decoding on every frame. */
     size_t length=SDL_strlen(key); if(length>4096)return;
-    char *cache_key=SDL_malloc(length+9); if(!cache_key)return;
-    SDL_snprintf(cache_key,length+9,"pixels:%s",key);
-    Cache *c=NULL; for(int i=0;i<IMAGE_COUNT;i++) if(d->images[i].key&&!strcmp(d->images[i].key,cache_key)) { c=&d->images[i];break; }
+    Cache *c=NULL; for(int i=0;i<DYNAMIC_COUNT;i++) if(d->dynamic[i].key&&!strcmp(d->dynamic[i].key,key)) { c=&d->dynamic[i];break; }
     if(!c) {
-        unsigned char *straight=SDL_malloc(bytes); if(!straight) { SDL_free(cache_key);return; }
+        unsigned char *straight=SDL_malloc(bytes); if(!straight)return;
         for(size_t i=0;i<bytes;i+=4) {
             unsigned a=pixels[i+3]; straight[i+3]=(unsigned char)a;
             for(int j=0;j<3;j++)straight[i+j]=a?(unsigned char)SDL_min(255,((unsigned)pixels[i+j]*255+a/2)/a):0;
         }
-        c=slot(d->images,IMAGE_COUNT,IMAGE_BUDGET,bytes); c->key=cache_key;cache_key=NULL;
+        c=slot(d->dynamic,DYNAMIC_COUNT,DYNAMIC_BUDGET,bytes); c->key=SDL_strdup(key);
         c->texture=texture(d,straight,pw,ph,false);c->w=pw;c->h=ph;c->bytes=c->texture?bytes:0;SDL_free(straight);
+        if(c->texture)d->dynamic_uploads++;
     }
-    SDL_free(cache_key);c->used=d->frame;if(!c->texture)return;
+    c->used=d->frame;if(!c->texture)return;
     SDL_FRect dst={coord(x),coord(y),extent(w),extent(h)};SDL_SetTextureAlphaMod(c->texture,alpha);SDL_RenderTexture(d->renderer,c->texture,NULL,&dst);
 }
 /* Decode Unicode scalar values without reading beyond the terminating NUL. */

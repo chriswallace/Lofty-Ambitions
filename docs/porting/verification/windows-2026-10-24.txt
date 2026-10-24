@@ -1,0 +1,47 @@
+Lofty Ambitions 0.13.0 -- Windows verification, 2026-10-24
+
+Source: based on ab11929 plus the Windows fixes accompanying this report.
+Build: diagnostics-20261024-232226-6e6690fb
+Package: Lofty-Ambitions-0.13.0-windows-x86_64-20261024-232226-6e6690fb.zip
+Package SHA-256: 68f977668cbfb25f4caaed4c96d159ffce4bcb5ea1a293bd0d161d82837b99d1
+System: Windows 11 Pro x64, build 22631; NVIDIA GeForce RTX 4070 SUPER.
+Tools: Swift 6.4.1, Visual Studio 2022 C++ x64 tools, Windows SDK 22621.
+SDL: 3.4.16, official VC archive SHA-256
+1a784cb2a5c64d56fe7a62090fe9d242d9865f235e4ea9678f1a6ba4e693e7de.
+
+Automated result: PASS.
+- 218 XCTest cases passed: 185 core, 13 session, 10 presentation, 10 interaction/UI scaling.
+- Source and packaged replay matched the unchanged Mac baseline (all fields;
+  floating-point absolute tolerance 1e-9, not byte-identical JSON formatting).
+- Source and packaged GUI smoke passed: rendered assets, building/progression
+  controls, save/recovery round-trip, and screenshot capture.
+- Packaged executables ran from an unrelated directory with developer PATH
+  entries removed; x64 runtime imports and packaged resources were verified.
+
+Interactive source-build checks with SDL 3.4.16: PASS.
+- Title screen, Enter, keyboard pause, native Save with spaces/Japanese filename.
+- Loaded Mac-created Examples/Express & Local.loftyambitions (50 floors).
+- Cancelled native Open without changing the loaded tower; exited with code 0.
+
+Fixes: gate Apple-only artwork APIs in tests; compare recovery directories by
+normalized path components; use positive-area lobby intersections; update SDL
+from 3.4.0 to 3.4.16 for a reproduced duplicate-callback use-after-free in the
+Windows dialog fallback. Automated helper console windows are hidden.
+
+Still pending: full gameplay acceptance, 100/150/200 percent display-scaling
+matrix, running-simulation performance, reopening a Windows-produced save on Mac,
+separate clean-PC delivery, updated macOS/hosted CI, and real Steamworks setup.
+This is a local test build, not a Steam-submission sign-off.
+Final packaged executable check: native Save completed successfully from an unrelated working directory with developer PATH entries removed. The 50-floor Mac example was restored and saved as Windows Tower Tokyo.loftyambitions. The game remains open and paused for hands-on testing.
+
+Maximize freeze fix and regression verification:
+The shared 96-entry image cache allowed procedural clouds to evict room sprite sheets and repeatedly decode PNGs. Procedural images now have a separate bounded 512-entry / 64 MiB cache. Cached clouds avoid CPU regeneration; new cloud generation is limited to two per frame. Sprite-sheet paths are resolved once instead of querying the Windows filesystem per sprite. Camera origin and shaft width are computed once per render instead of scanning floors/elevators for each transformed point; a regression test compares reused and fresh scenes after camera/tower changes.
+All 218 tests, unchanged replay parity, source/packaged smoke, and the added resize performance check passed. Performance uses the paused Mac-created 50-floor example and excludes the normal loop's 16 ms delay; these are render measurements, not running-simulation FPS.
+Readable UI defaults: 125% minimum when space permits, respect Windows display content scaling, and 200% for maximized 4K. The initial window grows with display scaling. The toolbar UI size control cycles Auto/100/125/150/175/200%, saves the preference in Interface.json, and limits scale in small windows to keep controls visible. Renderer, font rasterization, pointer positions and drag distances share the same scaled coordinate space.
+maximized: 3840x2054 window, 200% UI, 1920x1027 layout, camera scale 0.375, 26.8 render FPS, p95 38.31 ms; 0 steady PNG decodes.
+zoomed-out: 3840x2054 window, 200% UI, 1920x1027 layout, camera scale 0.250, 26.4 render FPS, p95 38.84 ms; 0 steady PNG decodes.
+unscaled: 3840x2054 window, 100% UI, 3840x2054 layout, camera scale 0.500, 26.0 render FPS, p95 39.41 ms; 0 steady PNG decodes.
+restored: 2160x1410 window, 150% UI, 1440x940 layout, camera scale 0.333, 26.6 render FPS, p95 38.56 ms; 0 steady PNG decodes.
+maximized-again: 3840x2054 window, 200% UI, 1920x1027 layout, camera scale 0.250, 26.0 render FPS, p95 39.54 ms; 0 steady PNG decodes.
+
+Final readable-UI interactive check: the packaged executable restored the 50-floor autosave, selected Auto 150% in the 2160x1410 restored window and Auto 200% in the 3840x2054 maximized window. Mouse clicks successfully paused the simulation at 150% and opened the Tower inspector at 200%. The application remained responsive and was left maximized and paused for user testing.

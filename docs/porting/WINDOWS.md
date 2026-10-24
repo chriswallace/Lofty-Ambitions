@@ -1,12 +1,20 @@
 # Windows build and PC verification
 
-Status: **Windows execution and clean-machine delivery remain unverified.** The
-port was prepared on an Apple Silicon Mac. A Mac SDL smoke check verifies the
-portable frontend locally; it does not establish Windows compatibility.
+Status: **First local Windows verification passed on 2026-10-24.** All 215
+Windows tests, replay parity, source smoke, and packaged smoke passed on Windows
+11 x64, including checks with developer directories removed from PATH. Native
+save/open, Unicode filenames, Mac example loading, and dialog cancellation were
+exercised. Clean-machine delivery and full manual acceptance remain pending.
+
+The first PC run fixed recovery-folder URL comparison, touching-edge lobby
+geometry, and a Mac-only artwork test call. SDL is pinned to 3.4.16 because
+3.4.0's Windows modern-dialog fallback could invoke the result callback twice
+and crash the application after file selection. The failing save interaction
+was reproduced under LLDB and passed with 3.4.16.
 
 The project is now connected to `chriswallace/Lofty-Ambitions` on GitHub.
 The workflow in `.github/workflows/cross-platform.yml` runs after publication.
-A successful Windows workflow or PC run has not yet been established.
+A local PC run has passed; updated hosted CI and separate clean-PC results are still required.
 
 ## First PC build
 
@@ -35,7 +43,7 @@ to 6.4.1 so runtime files, notices, and CI use the same release.
 The script performs these checks and writes a separate staging folder under
 `dist\windows`; it never clears an installed game or existing player saves:
 
-1. Download the pinned official SDL 3.4.0 development archive, verify SHA-256, and
+1. Download the pinned official SDL 3.4.16 development archive, verify SHA-256, and
    set the include/library paths. Its archive remains cached under `Vendor\SDL3`.
 2. Run release tests, build `LoftyDesktop.exe` and `TowerReplay.exe`, and replay
    the checked-in construction/transit/fire timeline. Compare every saved field
@@ -130,7 +138,7 @@ platforms; a platform mismatch should be fixed rather than hidden.
 
 The prepared matrix installs official Swift 6.4.1 on macOS and Windows and pins
 all directly invoked actions to verified upstream commit IDs. macOS builds SDL
-3.4.0 from its checksum-verified source release; Windows uses the checksum-verified
+3.4.16 from its checksum-verified source release; Windows uses the checksum-verified
 VC development release. Both compare against the same baseline. The Mac job also
 builds the native application; the Windows job produces a package and diagnostics.
 Logs/captures are retained even after a failed build. The repository has now
@@ -140,5 +148,11 @@ Relevant upstream references:
 
 - [Swift on Windows](https://www.swift.org/install/windows/)
 - [Swift Windows toolchain/runtime layout](https://github.com/swiftlang/swift/blob/main/docs/WindowsToolchain.md)
-- [SDL 3.4.0 release](https://github.com/libsdl-org/SDL/releases/tag/release-3.4.0)
+- [SDL 3.4.16 release](https://github.com/libsdl-org/SDL/releases/tag/release-3.4.16)
 - [Microsoft DLL import inspection](https://learn.microsoft.com/en-us/cpp/build/reference/dependents)
+
+
+Windows maximize follow-up (2026-10-24): isolated procedural and sprite texture caches, bounded cloud generation, and cached sprite-sheet paths fix the reproduced resize freeze. The packaged paused 50-floor render check now covers maximize, minimum zoom, restore, and maximize again, with zero steady PNG decodes. See verification/windows-2026-10-24.txt for timings and limits. Running-simulation performance and separate clean-PC delivery still need acceptance.
+
+
+Readable Windows UI follow-up (2026-10-24): 218 tests pass. Auto UI now starts at 125% where space permits, follows Windows display scaling, and uses 200% in a maximized 4K window. The toolbar UI control saves size preferences. Drawing, font rasterization, mouse coordinates, and drags use the same logical viewport. The paused 50-floor resize check covers default scaling and an unscaled 4K view; see verification/windows-2026-10-24.txt for timings. The separate display-scaling acceptance matrix remains pending.

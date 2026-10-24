@@ -6,8 +6,10 @@ Clone this repository on your Windows 11 x64 PC and open its folder in Codex.
 The current checked-in game includes the native Mac app and portable Windows
 frontend, shared simulation/session/rendering/artwork, Windows packaging, and
 cross-platform CI. The last Mac verification passed 223 tests, native UI checks,
-portable SDL smoke checks, and byte-identical replay parity. Windows execution
-and clean-machine packaging have not yet been verified.
+portable SDL smoke checks, and byte-identical replay parity. The first local
+Windows run now passes 215 tests, replay parity, source/packaged GUI smoke,
+and native save/open checks using SDL 3.4.16. Clean-machine packaging and full
+manual acceptance remain pending. See verification/windows-2026-10-24.txt.
 
 ## First Windows run
 

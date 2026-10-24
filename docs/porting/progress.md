@@ -4,7 +4,7 @@ Plan: `docs/superpowers/plans/2026-10-24-windows-port.md`.
 
 The user delegated platform adaptation and has a PC for testing. Mac keeps its native controls. Both applications share TowerCore, TowerSession, TowerArt, and TowerPresentation. The Windows frontend uses a small SDL adapter and platform-appropriate desktop controls.
 
-No Git metadata exists. Work stayed in the current project, with a pre-port source backup at `/tmp/lofty-before-windows-20261024.tgz`. No repository, remote, commit, or hosted CI run was fabricated.
+The original Mac port was prepared before Git metadata existed, with a pre-port source backup at `/tmp/lofty-before-windows-20261024.tgz`. It was subsequently published to `chriswallace/Lofty-Ambitions` and cloned to the PC. The first Windows verification below uses commit `ab11929` plus local Windows fixes.
 
 ## Completed locally — 2026-10-24
 
@@ -28,4 +28,10 @@ The shared sky uses fine pixel bands; the former native-only facade haze blend i
 
 ## Required PC work
 
-Windows compilation, real Windows graphics/input/dialogs, high-DPI behavior, 50-floor performance, Mac/Windows save exchange, and a package on a Windows machine without developer tools remain unverified. The source kit and `WINDOWS-START-HERE.txt` provide the first PC build command and diagnostics handoff. The generated ZIP is a source test kit, not a tested Windows executable.
+Windows compilation, 215 tests, replay parity, source/packaged graphics smoke, title/keyboard pause, Unicode native save, Mac example loading, dialog cancellation, and a clean application exit have passed locally. A runnable Windows package and diagnostics were produced. Full manual acceptance, the display-scaling matrix, measured 50-floor performance, reopening a Windows save on Mac, and a separate Windows PC without developer tools remain pending. Details: `verification/windows-2026-10-24.txt`.
+
+
+Windows maximize follow-up (2026-10-24): isolated procedural and sprite texture caches, bounded cloud generation, and cached sprite-sheet paths fix the reproduced resize freeze. The packaged paused 50-floor render check now covers maximize, minimum zoom, restore, and maximize again, with zero steady PNG decodes. See verification/windows-2026-10-24.txt for timings and limits. Running-simulation performance and separate clean-PC delivery still need acceptance.
+
+
+Readable Windows UI follow-up (2026-10-24): 218 tests pass. Auto UI now starts at 125% where space permits, follows Windows display scaling, and uses 200% in a maximized 4K window. The toolbar UI control saves size preferences. Drawing, font rasterization, mouse coordinates, and drags use the same logical viewport. The paused 50-floor resize check covers default scaling and an unscaled 4K view; see verification/windows-2026-10-24.txt for timings. The separate display-scaling acceptance matrix remains pending.
